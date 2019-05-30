@@ -11,16 +11,16 @@ const actions = {
   login({ dispatch, commit }, { username, password }) {
     commit('loginRequest', { username })
     userService.methods.login(username, password)
-      .then(
-        user => {
-          commit('loginSuccess', user)
-          router.push('/')
-        },
-        error => {
-          commit('loginFailure', error)
-          dispatch('alert/error', error, { root: true })
-        }
-      )
+     // .then(
+       // user => {
+         // commit('loginSuccess', user)
+          //router.push('/')
+        //},
+       // error => {
+         // commit('loginFailure', error)
+         // dispatch('alert/error', error, { root: true })
+       // }
+      //)
   },
   logout({ commit }) {
     userService.methods.logout()
