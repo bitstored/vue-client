@@ -64,11 +64,25 @@ proto.account_service.AccountPromiseClient =
       options['format'] = 'text'
 
       /**
-   * @private @const {!proto.account_service.AccountClient} The delegate callback based client
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.delegateClient_ = new proto.account_service.AccountClient(
-        hostname, credentials, options)
+      this.client_ = new grpc.web.GrpcWebClientBase(options)
 
+      /**
+   * @private @const {string} The hostname
+   */
+      this.hostname_ = hostname
+
+      /**
+   * @private @const {?Object} The credentials to be used to connect
+   *    to the server
+   */
+      this.credentials_ = credentials
+
+      /**
+   * @private @const {?Object} Options for the client
+   */
+      this.options_ = options
     }
 
 
@@ -78,7 +92,7 @@ proto.account_service.AccountPromiseClient =
  *   !proto.account_service.CreateAccountRequest,
  *   !proto.account_service.CreateAccountResponse>}
  */
-const methodInfo_CreateAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_CreateAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.CreateAccountResponse,
   /** @param {!proto.account_service.CreateAccountRequest} request */
   function(request) {
@@ -91,7 +105,7 @@ const methodInfo_CreateAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.CreateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.CreateAccountResponse)}
  *     callback The callback function(error, response)
@@ -103,8 +117,8 @@ proto.account_service.AccountClient.prototype.createAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/CreateAccount',
       request,
-      metadata,
-      methodInfo_CreateAccount,
+      metadata || {},
+      methodInfo_Account_CreateAccount,
       callback)
     }
 
@@ -112,19 +126,18 @@ proto.account_service.AccountClient.prototype.createAccount =
 /**
  * @param {!proto.account_service.CreateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.CreateAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.createAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.createAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/CreateAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_CreateAccount)
     }
 
 
@@ -134,7 +147,7 @@ proto.account_service.AccountPromiseClient.prototype.createAccount =
  *   !proto.account_service.ResendActivationMailRequest,
  *   !proto.account_service.ResendActivationMailResponse>}
  */
-const methodInfo_ResendActivationMail = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_ResendActivationMail = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.ResendActivationMailResponse,
   /** @param {!proto.account_service.ResendActivationMailRequest} request */
   function(request) {
@@ -147,7 +160,7 @@ const methodInfo_ResendActivationMail = new grpc.web.AbstractClientBase.MethodIn
 /**
  * @param {!proto.account_service.ResendActivationMailRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.ResendActivationMailResponse)}
  *     callback The callback function(error, response)
@@ -159,8 +172,8 @@ proto.account_service.AccountClient.prototype.resendActivationMail =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ResendActivationMail',
       request,
-      metadata,
-      methodInfo_ResendActivationMail,
+      metadata || {},
+      methodInfo_Account_ResendActivationMail,
       callback)
     }
 
@@ -168,19 +181,18 @@ proto.account_service.AccountClient.prototype.resendActivationMail =
 /**
  * @param {!proto.account_service.ResendActivationMailRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.ResendActivationMailResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.resendActivationMail =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.resendActivationMail(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/ResendActivationMail',
+      request,
+      metadata || {},
+      methodInfo_Account_ResendActivationMail)
     }
 
 
@@ -190,7 +202,7 @@ proto.account_service.AccountPromiseClient.prototype.resendActivationMail =
  *   !proto.account_service.ActivateAccountRequest,
  *   !proto.account_service.ActivateAccountResponse>}
  */
-const methodInfo_ActivateAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_ActivateAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.ActivateAccountResponse,
   /** @param {!proto.account_service.ActivateAccountRequest} request */
   function(request) {
@@ -203,7 +215,7 @@ const methodInfo_ActivateAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.ActivateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.ActivateAccountResponse)}
  *     callback The callback function(error, response)
@@ -215,8 +227,8 @@ proto.account_service.AccountClient.prototype.activateAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ActivateAccount',
       request,
-      metadata,
-      methodInfo_ActivateAccount,
+      metadata || {},
+      methodInfo_Account_ActivateAccount,
       callback)
     }
 
@@ -224,19 +236,18 @@ proto.account_service.AccountClient.prototype.activateAccount =
 /**
  * @param {!proto.account_service.ActivateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.ActivateAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.activateAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.activateAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/ActivateAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_ActivateAccount)
     }
 
 
@@ -246,7 +257,7 @@ proto.account_service.AccountPromiseClient.prototype.activateAccount =
  *   !proto.account_service.UpdateAccountRequest,
  *   !proto.account_service.UpdateAccountResponse>}
  */
-const methodInfo_UpdateAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_UpdateAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.UpdateAccountResponse,
   /** @param {!proto.account_service.UpdateAccountRequest} request */
   function(request) {
@@ -259,7 +270,7 @@ const methodInfo_UpdateAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.UpdateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.UpdateAccountResponse)}
  *     callback The callback function(error, response)
@@ -271,8 +282,8 @@ proto.account_service.AccountClient.prototype.updateAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/UpdateAccount',
       request,
-      metadata,
-      methodInfo_UpdateAccount,
+      metadata || {},
+      methodInfo_Account_UpdateAccount,
       callback)
     }
 
@@ -280,19 +291,18 @@ proto.account_service.AccountClient.prototype.updateAccount =
 /**
  * @param {!proto.account_service.UpdateAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.UpdateAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.updateAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.updateAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/UpdateAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_UpdateAccount)
     }
 
 
@@ -302,7 +312,7 @@ proto.account_service.AccountPromiseClient.prototype.updateAccount =
  *   !proto.account_service.DeleteAccountRequest,
  *   !proto.account_service.DeleteAccountResponse>}
  */
-const methodInfo_DeleteAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_DeleteAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.DeleteAccountResponse,
   /** @param {!proto.account_service.DeleteAccountRequest} request */
   function(request) {
@@ -315,7 +325,7 @@ const methodInfo_DeleteAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.DeleteAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.DeleteAccountResponse)}
  *     callback The callback function(error, response)
@@ -327,8 +337,8 @@ proto.account_service.AccountClient.prototype.deleteAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/DeleteAccount',
       request,
-      metadata,
-      methodInfo_DeleteAccount,
+      metadata || {},
+      methodInfo_Account_DeleteAccount,
       callback)
     }
 
@@ -336,19 +346,18 @@ proto.account_service.AccountClient.prototype.deleteAccount =
 /**
  * @param {!proto.account_service.DeleteAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.DeleteAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.deleteAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.deleteAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/DeleteAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_DeleteAccount)
     }
 
 
@@ -358,7 +367,7 @@ proto.account_service.AccountPromiseClient.prototype.deleteAccount =
  *   !proto.account_service.GetAccountRequest,
  *   !proto.account_service.GetAccountResponse>}
  */
-const methodInfo_GetAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_GetAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.GetAccountResponse,
   /** @param {!proto.account_service.GetAccountRequest} request */
   function(request) {
@@ -371,7 +380,7 @@ const methodInfo_GetAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.GetAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.GetAccountResponse)}
  *     callback The callback function(error, response)
@@ -383,8 +392,8 @@ proto.account_service.AccountClient.prototype.getAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/GetAccount',
       request,
-      metadata,
-      methodInfo_GetAccount,
+      metadata || {},
+      methodInfo_Account_GetAccount,
       callback)
     }
 
@@ -392,19 +401,18 @@ proto.account_service.AccountClient.prototype.getAccount =
 /**
  * @param {!proto.account_service.GetAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.GetAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.getAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.getAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/GetAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_GetAccount)
     }
 
 
@@ -414,7 +422,7 @@ proto.account_service.AccountPromiseClient.prototype.getAccount =
  *   !proto.account_service.LoginRequest,
  *   !proto.account_service.LoginResponse>}
  */
-const methodInfo_Login = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_Login = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.LoginResponse,
   /** @param {!proto.account_service.LoginRequest} request */
   function(request) {
@@ -427,7 +435,7 @@ const methodInfo_Login = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.LoginRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.LoginResponse)}
  *     callback The callback function(error, response)
@@ -439,8 +447,8 @@ proto.account_service.AccountClient.prototype.login =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/Login',
       request,
-      metadata,
-      methodInfo_Login,
+      metadata || {},
+      methodInfo_Account_Login,
       callback)
     }
 
@@ -448,19 +456,18 @@ proto.account_service.AccountClient.prototype.login =
 /**
  * @param {!proto.account_service.LoginRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.LoginResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.login =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.login(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/Login',
+      request,
+      metadata || {},
+      methodInfo_Account_Login)
     }
 
 
@@ -470,7 +477,7 @@ proto.account_service.AccountPromiseClient.prototype.login =
  *   !proto.account_service.LogoutRequest,
  *   !proto.account_service.LogoutResponse>}
  */
-const methodInfo_Logout = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_Logout = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.LogoutResponse,
   /** @param {!proto.account_service.LogoutRequest} request */
   function(request) {
@@ -483,7 +490,7 @@ const methodInfo_Logout = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.LogoutRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.LogoutResponse)}
  *     callback The callback function(error, response)
@@ -495,8 +502,8 @@ proto.account_service.AccountClient.prototype.logout =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/Logout',
       request,
-      metadata,
-      methodInfo_Logout,
+      metadata || {},
+      methodInfo_Account_Logout,
       callback)
     }
 
@@ -504,19 +511,18 @@ proto.account_service.AccountClient.prototype.logout =
 /**
  * @param {!proto.account_service.LogoutRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.LogoutResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.logout =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.logout(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/Logout',
+      request,
+      metadata || {},
+      methodInfo_Account_Logout)
     }
 
 
@@ -526,7 +532,7 @@ proto.account_service.AccountPromiseClient.prototype.logout =
  *   !proto.account_service.ResetPasswordRequest,
  *   !proto.account_service.ResetPasswordResponse>}
  */
-const methodInfo_ResetPassword = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_ResetPassword = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.ResetPasswordResponse,
   /** @param {!proto.account_service.ResetPasswordRequest} request */
   function(request) {
@@ -539,7 +545,7 @@ const methodInfo_ResetPassword = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.ResetPasswordRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.ResetPasswordResponse)}
  *     callback The callback function(error, response)
@@ -551,8 +557,8 @@ proto.account_service.AccountClient.prototype.resetPassword =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ResetPassword',
       request,
-      metadata,
-      methodInfo_ResetPassword,
+      metadata || {},
+      methodInfo_Account_ResetPassword,
       callback)
     }
 
@@ -560,19 +566,18 @@ proto.account_service.AccountClient.prototype.resetPassword =
 /**
  * @param {!proto.account_service.ResetPasswordRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.ResetPasswordResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.resetPassword =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.resetPassword(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/ResetPassword',
+      request,
+      metadata || {},
+      methodInfo_Account_ResetPassword)
     }
 
 
@@ -582,7 +587,7 @@ proto.account_service.AccountPromiseClient.prototype.resetPassword =
  *   !proto.account_service.LockAccountRequest,
  *   !proto.account_service.LockAccountResponse>}
  */
-const methodInfo_LockAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_LockAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.LockAccountResponse,
   /** @param {!proto.account_service.LockAccountRequest} request */
   function(request) {
@@ -595,7 +600,7 @@ const methodInfo_LockAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.LockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.LockAccountResponse)}
  *     callback The callback function(error, response)
@@ -607,8 +612,8 @@ proto.account_service.AccountClient.prototype.lockAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/LockAccount',
       request,
-      metadata,
-      methodInfo_LockAccount,
+      metadata || {},
+      methodInfo_Account_LockAccount,
       callback)
     }
 
@@ -616,19 +621,18 @@ proto.account_service.AccountClient.prototype.lockAccount =
 /**
  * @param {!proto.account_service.LockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.LockAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.lockAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.lockAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/LockAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_LockAccount)
     }
 
 
@@ -638,7 +642,7 @@ proto.account_service.AccountPromiseClient.prototype.lockAccount =
  *   !proto.account_service.RequestUnlockAccountRequest,
  *   !proto.account_service.RequestUnlockAccountResponse>}
  */
-const methodInfo_RequestUnlockAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_RequestUnlockAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.RequestUnlockAccountResponse,
   /** @param {!proto.account_service.RequestUnlockAccountRequest} request */
   function(request) {
@@ -651,7 +655,7 @@ const methodInfo_RequestUnlockAccount = new grpc.web.AbstractClientBase.MethodIn
 /**
  * @param {!proto.account_service.RequestUnlockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.RequestUnlockAccountResponse)}
  *     callback The callback function(error, response)
@@ -663,8 +667,8 @@ proto.account_service.AccountClient.prototype.requestUnlockAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/RequestUnlockAccount',
       request,
-      metadata,
-      methodInfo_RequestUnlockAccount,
+      metadata || {},
+      methodInfo_Account_RequestUnlockAccount,
       callback)
     }
 
@@ -672,19 +676,18 @@ proto.account_service.AccountClient.prototype.requestUnlockAccount =
 /**
  * @param {!proto.account_service.RequestUnlockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.RequestUnlockAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.requestUnlockAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.requestUnlockAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/RequestUnlockAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_RequestUnlockAccount)
     }
 
 
@@ -694,7 +697,7 @@ proto.account_service.AccountPromiseClient.prototype.requestUnlockAccount =
  *   !proto.account_service.UnlockAccountRequest,
  *   !proto.account_service.UnlockAccountResponse>}
  */
-const methodInfo_UnlockAccount = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_UnlockAccount = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.UnlockAccountResponse,
   /** @param {!proto.account_service.UnlockAccountRequest} request */
   function(request) {
@@ -707,7 +710,7 @@ const methodInfo_UnlockAccount = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.UnlockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.UnlockAccountResponse)}
  *     callback The callback function(error, response)
@@ -719,8 +722,8 @@ proto.account_service.AccountClient.prototype.unlockAccount =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/UnlockAccount',
       request,
-      metadata,
-      methodInfo_UnlockAccount,
+      metadata || {},
+      methodInfo_Account_UnlockAccount,
       callback)
     }
 
@@ -728,19 +731,18 @@ proto.account_service.AccountClient.prototype.unlockAccount =
 /**
  * @param {!proto.account_service.UnlockAccountRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.UnlockAccountResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.unlockAccount =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.unlockAccount(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/UnlockAccount',
+      request,
+      metadata || {},
+      methodInfo_Account_UnlockAccount)
     }
 
 
@@ -750,7 +752,7 @@ proto.account_service.AccountPromiseClient.prototype.unlockAccount =
  *   !proto.account_service.ListUsersRequest,
  *   !proto.account_service.ListUsersResponse>}
  */
-const methodInfo_ListUsers = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Account_ListUsers = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.ListUsersResponse,
   /** @param {!proto.account_service.ListUsersRequest} request */
   function(request) {
@@ -763,7 +765,7 @@ const methodInfo_ListUsers = new grpc.web.AbstractClientBase.MethodInfo(
 /**
  * @param {!proto.account_service.ListUsersRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.account_service.ListUsersResponse)}
  *     callback The callback function(error, response)
@@ -775,8 +777,8 @@ proto.account_service.AccountClient.prototype.listUsers =
       return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ListUsers',
       request,
-      metadata,
-      methodInfo_ListUsers,
+      metadata || {},
+      methodInfo_Account_ListUsers,
       callback)
     }
 
@@ -784,19 +786,18 @@ proto.account_service.AccountClient.prototype.listUsers =
 /**
  * @param {!proto.account_service.ListUsersRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.account_service.ListUsersResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.account_service.AccountPromiseClient.prototype.listUsers =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.listUsers(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/account_service.Account/ListUsers',
+      request,
+      metadata || {},
+      methodInfo_Account_ListUsers)
     }
 
 

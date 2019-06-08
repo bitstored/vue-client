@@ -1,44 +1,52 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import { userService } from '../services'
 import { router } from '../router'
 
-const user = JSON.parse(localStorage.getItem('user'))
-const state = user
-  ? { status: { loggedIn: true }, user }
+const session_token = localStorage.getItem('token')
+const state = session_token != 'undefined'
+  ? { status: { loggedIn: true }, session_token }
   : { status: {}, user: null }
 
 const actions = {
   login({ dispatch, commit }, { username, password }) {
     commit('loginRequest', { username })
     userService.methods.login(username, password)
-     // .then(
-       // user => {
-         // commit('loginSuccess', user)
-          //router.push('/')
-        //},
-       // error => {
-         // commit('loginFailure', error)
-         // dispatch('alert/error', error, { root: true })
-       // }
-      //)
+      .then(
+        token => {
+          commit('loginSuccess', token)
+          this.loggedIn = true
+          router.push('/')
+        }
+      )
+      .catch(
+        error => {
+          commit('loginFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
   },
+
   logout({ commit }) {
     userService.methods.logout()
     commit('logout')
   },
+
   register({ dispatch, commit }, user) {
     commit('registerRequest', user)
 
-    userService.register(user)
+    userService.methods.register(user)
       .then(
-        user => {
+        session_token => {
           commit('registerSuccess', user)
           router.push('/login')
           setTimeout(() => {
             // display success message after route change completes
             dispatch('alert/success', 'Registration successful', { root: true })
           })
-        },
+        }
+      )
+      .catch(
         error => {
           commit('registerFailure', error)
           dispatch('alert/error', error, { root: true })

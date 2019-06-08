@@ -23,12 +23,21 @@
           id="login-buttons"
           class="col-md-2"
         >
-          <router-link to="/login">
+          <router-link
+            v-show="visible_login"
+            to="/login" >
             Login
-          </router-link>|
-          <router-link to="/register">
+          </router-link>
+          <router-link
+            v-show="visible_login"
+            to="/register" >
             Register
           </router-link>
+          <button
+            v-show="invisible_login"
+            :onClick="logout" >
+            Logout
+          </button>
         </div>
       </div>
     </div>
@@ -51,6 +60,8 @@
 </template>
 
 <script>
+import { mapState, mapActions} from 'vuex'
+
 document.addEventListener('scroll', () => {
   if (document.documentElement.scrollTop >= 60) {
     document.getElementById('header-nav').classList.add('fixed-header')
@@ -61,9 +72,32 @@ document.addEventListener('scroll', () => {
     document.getElementById('header-title').classList.remove('visible-title')
   }
 })
+const session_token = localStorage.getItem('token')
+const logged = session_token != 'undefined'
+  ? { status: { loggedIn: true }, session_token }
+  : { status: {}, user: null }
 
 export default {
-  name: 'BitsHeader'
+  name: 'BitsHeader',
+  components: {
+
+  },
+  data() {
+    return {
+      visible_login: !logged,
+      invisible_login: logged,
+    }
+  },
+  computed: {
+    ...mapState('account', ['status'])
+  },
+  methods: {
+    ...mapActions('account', ['logout']),
+    logout() {
+      localStorage.removeItem('token')
+      this.logout()
+    }
+  }
 }
 </script>
 

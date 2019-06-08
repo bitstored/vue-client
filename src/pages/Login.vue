@@ -35,6 +35,13 @@
         >
           Password is required
         </div>
+        <div
+          v-show="submitted && error"
+          id="login_failed_error"
+          class="invalid-feedback"
+        >
+          Can't find an user with providen data.
+        </div>
       </div>
       <div class="form-group">
         <button
@@ -75,6 +82,7 @@ export default {
     return {
       username: '',
       password: '',
+      error: '',
       submitted: false
     }
   },

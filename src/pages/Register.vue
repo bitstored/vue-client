@@ -144,7 +144,26 @@
           v-if="submitted && errors.has('phoneNumber')"
           class="invalid-feedback"
         >
-          {{ errors.first('confirmPassword') }}
+          {{ errors.first('phoneNumber') }}
+        </div>
+      </div>
+      <div
+        class="form-group"
+      >
+        <label htmlFor="bithday">Birthday</label>
+        <input
+          v-validate="{ required: true}"
+          id="birthday-picker"
+          v-model="user.birthday"
+          :class="{ 'is-invalid': submitted && errors.has('birthday') }"
+          name="birthday"
+          type="date"
+          class="form-control">
+        <div
+          v-if="submitted && errors.has('birthday')"
+          class="invalid-feedback"
+        >
+          {{ errors.first('birthday') }}
         </div>
       </div>
 
@@ -171,7 +190,8 @@
     </form>
   </div>
 </template>
-
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vuejs-datepicker"></script>
 <script>
 import { mapState, mapActions } from 'vuex'
 
@@ -186,10 +206,12 @@ export default {
         photo: '',
         email: '',
         birthday: '',
+        phoneNumber: '',
       },
       submitted: false
     }
   },
+
   computed: {
     ...mapState('account', ['status'])
   },
@@ -216,5 +238,9 @@ export default {
   height: 100%;
   width: 100%;
 }
+#birthday-picker{
+  color: darkgray;
+}
+
 </style>
 

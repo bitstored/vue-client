@@ -9,12 +9,14 @@ import {grpc, BrowserHeaders} from 'grpc-web-client'
 
 const {
   LoginRequest,
-  LoginResponse
+  LoginResponse,
+  CreateAccountRequest,
+  User,
 } = require('../pb/user_service_pb')
 const {
   AccountClient
 } = require('../pb/user_service_grpc_web_pb')
-
+const client = new AccountClient('http://localhost:8081', {}, {})
 export const userService = {
   data: {
     debug: true,
@@ -42,7 +44,8 @@ export const userService = {
     },
     login: function (username, password) {
 
-      const client = new AccountClient('http://localhost:8081', {}, {})
+
+
       const login_request = new LoginRequest()
       login_request.setUsername(username)
       login_request.setPassword(password)
@@ -58,14 +61,23 @@ export const userService = {
           'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
           'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
           'Content-Type': 'application/grpc',
-          // 'cache': 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-          // 'credentials': 'same-origin',
         }
       }
-      client.login(login_request, requestOptions, (response, error) => {
-        console.log(response, error)
-      })
 
+      return new Promise(function (resolve, reject) {
+        client.login(login_request, requestOptions, (error, response) => {
+          var token = response == null ? null : response.getSessionToken_asB64()
+
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            localStorage.setItem('token', token)
+            resolve(response)
+          }
+        }
+        )
+      })
 
       // return fetch('https://localhost:5008/user/api/v1/login', requestOptions)
       //   .then(err => {
@@ -89,14 +101,47 @@ export const userService = {
     },
 
     register: function (user) {
+      const request = new CreateAccountRequest()
+      const proto_user = new User()
+      proto_user.setFirstName(user.firstName)
+      proto_user.setLastName(user.lastName)
+      proto_user.setUsername(user.username)
+      proto_user.setPassword(user.password)
+      proto_user.setBirthday(user.birthday + 'T00:00:00.000Z')
+      proto_user.setPhoto(user.photo.value)
+      proto_user.setEmail(user.email)
+      proto_user.setPhoneNumber(user.phoneNumber)
+
+      request.setUser(proto_user)
       const requestOptions = {
         method: 'POST',
+        // body: JSON.stringify({
+        //   'username': username,
+        //   'password': password
+        // }),
         headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(user)
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
       }
-      // return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse)
+
+      return new Promise(function (resolve, reject) {
+        client.createAccount(request, requestOptions, (error, response) => {
+
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            localStorage.setItem('user_id', JSON.stringify(response.getUserId()))
+            console.log('Success')
+            resolve(response)
+          }
+        }
+        )
+      })
     },
 
     getAll: function () {

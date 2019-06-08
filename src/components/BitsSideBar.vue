@@ -15,13 +15,36 @@
           About
         </router-link>
       </li>
+      <li>
+        <router-link
+          v-show="logged"
+          to="/profile">
+          My Profile
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          v-show="logged"
+          to="/drive"
+         >
+          My Drive
+        </router-link>
+      </li>
     </ul>
   </nav>
 </template>
 
 <script>
+const session_token = localStorage.getItem('token')
+const logged = session_token != '' ? true : false
+
 export default {
-  name: 'BitsSideBar'
+  name: 'BitsSideBar',
+  data() {
+    return {
+      logged: logged
+    }
+  },
 }
 </script>
 
