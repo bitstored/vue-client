@@ -32,67 +32,128 @@
         Delete drive
       </router-link>
     </div>
-    <div class="row">
-      <p></p>
-    </div>
     <div class="row table">
       <ul
         v-if="folders.length"
         id="folders-list">
         <li>
           <div class="row">
-            <button class="empty-button" id="back-button">
+            <button
+              id="back-button"
+              class="empty-button"
+            >
               <img
                 :src="back_icon"
                 class="img_resize"
                 style="height:80px;width:80px;">
             </button>
           </div>
-            <div class="row" style="align-content:center;">
-              <p>Back</p>
-            </div>
+          <div
+            class="row"
+            style="align-content:center;"
+          >
+            <p>Back</p>
+          </div>
         </li>
         <li
-          v-for="folder in folders"
+          v-for="folder in folders "
           :key="folder.id">
           <div >
             <div class="row">
               <button
+                id="folder-button"
                 class="empty-button"
-                id="folder-button">
+              >
                 <img
                   :src="folder_icon"
                   class="img_resize"
                   style="height:80px;width:80px;">
               </button>
             </div>
-            <div class="row" style="  align-items:center;">
+            <div
+              class="row"
+              style="  align-items:center;"
+            >
               {{ folder.name }}
             </div>
             <div class="button-group">
               <button
+                id="edit-button"
                 class="empty-button"
-                id="edit-button">
-              <img
-              :src="edit_icon"
-              class="img_resize"
-              style="height:20px;width:20px;">
+              >
+                <img
+                  :src="edit_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;"
+                >
               </button>
               <router-link
                 class="empty-button"
-                to='file/delete'>
-              <img
-              :src="delete_icon"
-              class="img_resize"
-              style="height:20px;width:20px;">
+                to="file/delete">
+                <img
+                  :src="delete_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;"
+                >
               </router-link>
               <router-link
                 class="empty-button"
-                to='file/download'>
+                to="file/download">
                 <img
-                :src="download_icon"
-                class="img_resize"
-                style="height:20px;width:20px;">
+                  :src="download_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;"
+                >
+              </router-link>
+            </div>
+          </div>
+        </li>
+        <li
+          v-for="file in files"
+          :key="file.id">
+          <div >
+            <div class="row">
+              <button
+                id="folder-button"
+                class="empty-button"
+              >
+                <img
+                  :src="get_icon(file.type)"
+                  class="img_resize"
+                  style="height:80px;width:80px;">
+              </button>
+            </div>
+            <div
+              class="row"
+              style="  align-items:center;"
+            >
+              {{ file.name }}
+            </div>
+            <div class="button-group">
+              <button
+                id="edit-button"
+                class="empty-button"
+              >
+                <img
+                  :src="edit_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;">
+              </button>
+              <router-link
+                class="empty-button"
+                to="file/delete">
+                <img
+                  :src="delete_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;">
+              </router-link>
+              <router-link
+                class="empty-button"
+                to="file/download">
+                <img
+                  :src="download_icon"
+                  class="img_resize"
+                  style="height:20px;width:20px;">
               </router-link>
             </div>
           </div>
@@ -112,7 +173,7 @@ export default {
       create_file_img: create_file,
       parent_folder: {id:'flid:12345678'},
       folders: [{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},           {name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'}],
-      files: [{name:'file1', type: 1, is_private: true, id: '1'}, {name:'file2', type: 2, is_private: false, id:'1' }],
+      files: [{name:'file1', type: 1, is_private: true, id: '1'}, {name:'file2', type: 2, is_private: false, id:'1' }, {name:'file1', type: 3, is_private: true, id: '3'}, {name:'file4', type: 4, is_private: false, id:'1' }],
       edit_icon:edit_icon,
       download_icon:download_icon,
       delete_icon:delete_icon,
@@ -160,10 +221,9 @@ router-link{
 }
 div {
   display: block;
-
 }
 div.row {
-   margin-right: 0px;
+  margin-right: 0px;
   margin-left: 0px;
 }
 .container {
@@ -175,7 +235,7 @@ div.row {
 }
 #folders-list li {
 	display: inline;
-  margin: 0 100px;
+  margin: 5px 40px;
 }
 .table {
 	display: table;   /* Allow the centering to work */
@@ -184,8 +244,7 @@ div.row {
 ul#folders {
 	min-width: 696px;
 	list-style: none;
-	padding-top: 20px;
-	}
+}
 #folders-list {
   display:flex;
   flex-direction: row;

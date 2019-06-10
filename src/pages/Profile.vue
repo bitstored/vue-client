@@ -110,7 +110,6 @@ export default {
       this.getByToken(token)
         .then(
           user => {
-            console.log('in view',  user)
             this.username = user.getUsername()
             this.first_name = user.getFirstName()
             this.last_name = user.getLastName()

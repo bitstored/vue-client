@@ -39,12 +39,12 @@ export default {
 <style>
 .page-content{
   margin-top: 65px;
-  margin-left: 15%;
+  margin-left: 10%;
   width: 100%;
 }
 .page-side-bar{
   margin-top: 65px;
-  width: 15%;
+  width: 10%;
 }
 .page-header{
   width: 100%;
