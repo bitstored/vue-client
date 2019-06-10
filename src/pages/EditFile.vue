@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    Edit file
   </div>
 </template>
 <script>

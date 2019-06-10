@@ -54,6 +54,12 @@ message User {
     string phone_number = 7;
     bytes photo = 8;
     uint32 available_mb = 9;
+    bool is_admin = 10;
+    bool is_locked = 11;
+    bool is_activated = 12;
+    string last_login = 13;
+    string last_edited = 14;
+    string created = 15;
 }
 
 message CreateAccountRequest {
@@ -64,11 +70,11 @@ message CreateAccountResponse {
     string user_id = 1;
 }
 message ActivateAccountRequest {
-    bytes activation_token = 1;
+    string activation_token = 1;
     string activation_date = 2;
 }
 message ActivateAccountResponse {
-    bytes session_token = 1;
+    string session_token = 1;
 }
 message ResendActivationMailRequest {
     string email = 1;
@@ -82,29 +88,30 @@ message UpdateAccountRequest {
 message UpdateAccountResponse {
 }
 message DeleteAccountRequest{
-    bytes session_token = 1;
+    string session_token = 1;
 }
 message DeleteAccountResponse{
 }
 message GetAccountRequest{
-    bytes session_token = 1;
+    string id = 1;
 }
 message GetAccountResponse{
+    User user = 1;
 }
 message LoginRequest{
     string username = 1;
     string password = 2;
 }
 message LoginResponse{
-    bytes session_token = 1;
+    string session_token = 1;
 }
 message LogoutRequest{
-    bytes session_token = 1;
+    string session_token = 1;
 }
 message LogoutResponse{
 }
 message ResetPasswordRequest{
-    bytes session_token = 1;
+    string session_token = 1;
     string email = 2;
     string old_password = 3;
     string new_password = 4;
@@ -112,13 +119,15 @@ message ResetPasswordRequest{
 message ResetPasswordResponse{
 }
 message LockAccountRequest{
-    bytes session_token = 1;
+    string session_token = 1;
+    string user_id = 2;
 }
 message LockAccountResponse{
 }
 message UnlockAccountRequest{
     string email = 1;
-    string token = 2;
+    string session_token = 2;
+    string user_id = 3;
 }
 message UnlockAccountResponse{
 }
@@ -129,6 +138,7 @@ message RequestUnlockAccountRequest{
 message RequestUnlockAccountResponse{
 }
 message ListUsersRequest {
+    string session_token = 1;
 }
 message ListUsersResponse {
     repeated User users = 1;

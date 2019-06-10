@@ -9,8 +9,9 @@ import {grpc, BrowserHeaders} from 'grpc-web-client'
 
 const {
   LoginRequest,
-  LoginResponse,
+  LogoutRequest,
   CreateAccountRequest,
+  GetAccountRequest,
   User,
 } = require('../pb/user_service_pb')
 const {
@@ -44,8 +45,6 @@ export const userService = {
     },
     login: function (username, password) {
 
-
-
       const login_request = new LoginRequest()
       login_request.setUsername(username)
       login_request.setPassword(password)
@@ -66,7 +65,7 @@ export const userService = {
 
       return new Promise(function (resolve, reject) {
         client.login(login_request, requestOptions, (error, response) => {
-          var token = response == null ? null : response.getSessionToken_asB64()
+          var token = response == null ? null : response.getSessionToken()
 
           if (error != null) {
             console.log('err', error)
@@ -96,8 +95,30 @@ export const userService = {
     },
 
     logout: function () {
+      const logout_request = new LogoutRequest()
+      const requestOptions = {
+        method: 'GET',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.logout(logout_request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            localStorage.removeItem('token')
+            reject(error)
+          } else {
+            localStorage.removeItem('token')
+          }
+        })
+      })
       // remove user from local storage to log user out
-      localStorage.removeItem('user')
     },
 
     register: function (user) {
@@ -154,13 +175,44 @@ export const userService = {
     },
 
 
-    getById: function (id) {
+    getByToken: function (token) {
+      const request = new GetAccountRequest()
+      request.setId(token)
       const requestOptions = {
         method: 'GET',
-        headers: authHeader()
+        // body: JSON.stringify({
+        //   'username': username,
+        //   'password': password
+        // }),
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
       }
 
-      // return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse)
+      return new Promise(function (resolve, reject) {
+        client.getAccount(request, requestOptions, (error, response) => {
+          console.log('plm\n\n\n\n', response, error)
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            console.log(response.getUser())
+            localStorage.setItem('email', response.getUser().getEmail())
+            localStorage.setItem('first_name', response.getUser().getFirstName())
+            localStorage.setItem('last_name', response.getUser().getLastName())
+            localStorage.setItem('username', response.getUser().getUsername())
+            localStorage.setItem('birthday', response.getUser().getBirthday())
+            localStorage.setItem('last_login', response.getUser().getLastLogin())
+            localStorage.setItem('last_edited', response.getUser().getLastEdited())
+            localStorage.setItem('photo', response.getUser().getPhoto())
+            resolve(response.getUser())
+          }
+        })
+      })
     },
 
     update: function (user) {

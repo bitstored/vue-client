@@ -1,20 +1,22 @@
 <template>
-  <div class="DefaultLayout">
-    <div class="row">
-      <bits-header/>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <bits-side-bar/>
+  <div class="app-container">
+    <div class="DefaultLayout">
+      <div class="page-header table">
+        <bits-header/>
       </div>
-      <div class="col-md-8">
-        <main class="DefaultLayoutMain">
-          <slot/>
-        </main>
+      <div >
+        <div class="page-side-bar">
+          <bits-side-bar/>
+        </div>
+        <div class="page-content">
+          <main class="DefaultLayoutMain">
+            <slot/>
+          </main>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <bits-footer/>
+      <div class="">
+        <bits-footer/>
+      </div>
     </div>
   </div>
 </template>
@@ -33,3 +35,32 @@ export default {
   }
 }
 </script>
+
+<style>
+.page-content{
+  margin-top: 65px;
+  margin-left: 15%;
+  width: 100%;
+}
+.page-side-bar{
+  margin-top: 65px;
+  width: 15%;
+}
+.page-header{
+  width: 100%;
+  height: 8%;
+  position: relative;
+  display: inline;
+  align-items: flex-start;
+}
+
+@media (min-width: 1500px) {
+  .container{
+    max-width:  1500px;
+  }
+  .page-header{
+    width:  1500px;
+  }
+}
+
+</style>

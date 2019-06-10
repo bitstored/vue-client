@@ -4,7 +4,7 @@ import { userService } from '../services'
 import { router } from '../router'
 
 const session_token = localStorage.getItem('token')
-const state = session_token != 'undefined'
+const state = session_token != null
   ? { status: { loggedIn: true }, session_token }
   : { status: {}, user: null }
 
@@ -29,6 +29,12 @@ const actions = {
 
   logout({ commit }) {
     userService.methods.logout()
+      .catch(
+        error => {
+          commit('logoutFailure', error)
+        }
+      )
+    router.go('/login')
     commit('logout')
   },
 
@@ -37,9 +43,10 @@ const actions = {
 
     userService.methods.register(user)
       .then(
-        session_token => {
+        rsp => {
           commit('registerSuccess', user)
           router.push('/login')
+          console.log('register rsp', rsp)
           setTimeout(() => {
             // display success message after route change completes
             dispatch('alert/success', 'Registration successful', { root: true })

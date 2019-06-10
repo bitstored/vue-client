@@ -68,6 +68,11 @@ export const router = new VueRouter({
     component: require('../pages/UserAPI').default
   },
   {
+    path: '/logout',
+    name: 'logout',
+    component: require('../pages/Logout').default
+  },
+  {
     path: '*',
     redirect: '/notfound'
   }

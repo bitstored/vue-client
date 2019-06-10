@@ -96,7 +96,13 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
       password: jspb.Message.getFieldWithDefault(msg, 6, ''),
       phoneNumber: jspb.Message.getFieldWithDefault(msg, 7, ''),
       photo: msg.getPhoto_asB64(),
-      availableMb: jspb.Message.getFieldWithDefault(msg, 9, 0)
+      availableMb: jspb.Message.getFieldWithDefault(msg, 9, 0),
+      isAdmin: jspb.Message.getFieldWithDefault(msg, 10, false),
+      isLocked: jspb.Message.getFieldWithDefault(msg, 11, false),
+      isActivated: jspb.Message.getFieldWithDefault(msg, 12, false),
+      lastLogin: jspb.Message.getFieldWithDefault(msg, 13, ''),
+      lastEdited: jspb.Message.getFieldWithDefault(msg, 14, ''),
+      created: jspb.Message.getFieldWithDefault(msg, 15, '')
     }
 
     if (includeInstance) {
@@ -168,6 +174,30 @@ proto.account_service.User.deserializeBinaryFromReader = function(msg, reader) {
     case 9:
       var value = /** @type {number} */ (reader.readUint32())
       msg.setAvailableMb(value)
+      break
+    case 10:
+      var value = /** @type {boolean} */ (reader.readBool())
+      msg.setIsAdmin(value)
+      break
+    case 11:
+      var value = /** @type {boolean} */ (reader.readBool())
+      msg.setIsLocked(value)
+      break
+    case 12:
+      var value = /** @type {boolean} */ (reader.readBool())
+      msg.setIsActivated(value)
+      break
+    case 13:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setLastLogin(value)
+      break
+    case 14:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setLastEdited(value)
+      break
+    case 15:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setCreated(value)
       break
     default:
       reader.skipField()
@@ -258,6 +288,48 @@ proto.account_service.User.serializeBinaryToWriter = function(message, writer) {
   if (f !== 0) {
     writer.writeUint32(
       9,
+      f
+    )
+  }
+  f = message.getIsAdmin()
+  if (f) {
+    writer.writeBool(
+      10,
+      f
+    )
+  }
+  f = message.getIsLocked()
+  if (f) {
+    writer.writeBool(
+      11,
+      f
+    )
+  }
+  f = message.getIsActivated()
+  if (f) {
+    writer.writeBool(
+      12,
+      f
+    )
+  }
+  f = message.getLastLogin()
+  if (f.length > 0) {
+    writer.writeString(
+      13,
+      f
+    )
+  }
+  f = message.getLastEdited()
+  if (f.length > 0) {
+    writer.writeString(
+      14,
+      f
+    )
+  }
+  f = message.getCreated()
+  if (f.length > 0) {
+    writer.writeString(
+      15,
       f
     )
   }
@@ -420,6 +492,102 @@ proto.account_service.User.prototype.getAvailableMb = function() {
 /** @param {number} value */
 proto.account_service.User.prototype.setAvailableMb = function(value) {
   jspb.Message.setProto3IntField(this, 9, value)
+}
+
+
+/**
+ * optional bool is_admin = 10;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.account_service.User.prototype.getIsAdmin = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 10, false))
+}
+
+
+/** @param {boolean} value */
+proto.account_service.User.prototype.setIsAdmin = function(value) {
+  jspb.Message.setProto3BooleanField(this, 10, value)
+}
+
+
+/**
+ * optional bool is_locked = 11;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.account_service.User.prototype.getIsLocked = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 11, false))
+}
+
+
+/** @param {boolean} value */
+proto.account_service.User.prototype.setIsLocked = function(value) {
+  jspb.Message.setProto3BooleanField(this, 11, value)
+}
+
+
+/**
+ * optional bool is_activated = 12;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.account_service.User.prototype.getIsActivated = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 12, false))
+}
+
+
+/** @param {boolean} value */
+proto.account_service.User.prototype.setIsActivated = function(value) {
+  jspb.Message.setProto3BooleanField(this, 12, value)
+}
+
+
+/**
+ * optional string last_login = 13;
+ * @return {string}
+ */
+proto.account_service.User.prototype.getLastLogin = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.User.prototype.setLastLogin = function(value) {
+  jspb.Message.setProto3StringField(this, 13, value)
+}
+
+
+/**
+ * optional string last_edited = 14;
+ * @return {string}
+ */
+proto.account_service.User.prototype.getLastEdited = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.User.prototype.setLastEdited = function(value) {
+  jspb.Message.setProto3StringField(this, 14, value)
+}
+
+
+/**
+ * optional string created = 15;
+ * @return {string}
+ */
+proto.account_service.User.prototype.getCreated = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.User.prototype.setCreated = function(value) {
+  jspb.Message.setProto3StringField(this, 15, value)
 }
 
 
@@ -798,7 +966,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.ActivateAccountRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      activationToken: msg.getActivationToken_asB64(),
+      activationToken: jspb.Message.getFieldWithDefault(msg, 1, ''),
       activationDate: jspb.Message.getFieldWithDefault(msg, 2, '')
     }
 
@@ -837,7 +1005,7 @@ proto.account_service.ActivateAccountRequest.deserializeBinaryFromReader = funct
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setActivationToken(value)
       break
     case 2:
@@ -873,9 +1041,9 @@ proto.account_service.ActivateAccountRequest.prototype.serializeBinary = functio
  */
 proto.account_service.ActivateAccountRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getActivationToken_asU8()
+  f = message.getActivationToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -891,41 +1059,17 @@ proto.account_service.ActivateAccountRequest.serializeBinaryToWriter = function(
 
 
 /**
- * optional bytes activation_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.ActivateAccountRequest.prototype.getActivationToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes activation_token = 1;
- * This is a type-conversion wrapper around `getActivationToken()`
+ * optional string activation_token = 1;
  * @return {string}
  */
-proto.account_service.ActivateAccountRequest.prototype.getActivationToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getActivationToken()))
+proto.account_service.ActivateAccountRequest.prototype.getActivationToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes activation_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getActivationToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.ActivateAccountRequest.prototype.getActivationToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getActivationToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.ActivateAccountRequest.prototype.setActivationToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -991,7 +1135,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.ActivateAccountResponse.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -1029,7 +1173,7 @@ proto.account_service.ActivateAccountResponse.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
       break
     default:
@@ -1061,9 +1205,9 @@ proto.account_service.ActivateAccountResponse.prototype.serializeBinary = functi
  */
 proto.account_service.ActivateAccountResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -1072,41 +1216,17 @@ proto.account_service.ActivateAccountResponse.serializeBinaryToWriter = function
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.ActivateAccountResponse.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.ActivateAccountResponse.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.ActivateAccountResponse.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.ActivateAccountResponse.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.ActivateAccountResponse.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -1717,7 +1837,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.DeleteAccountRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -1755,7 +1875,7 @@ proto.account_service.DeleteAccountRequest.deserializeBinaryFromReader = functio
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
       break
     default:
@@ -1787,9 +1907,9 @@ proto.account_service.DeleteAccountRequest.prototype.serializeBinary = function(
  */
 proto.account_service.DeleteAccountRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -1798,41 +1918,17 @@ proto.account_service.DeleteAccountRequest.serializeBinaryToWriter = function(me
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.DeleteAccountRequest.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.DeleteAccountRequest.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.DeleteAccountRequest.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.DeleteAccountRequest.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.DeleteAccountRequest.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -1999,7 +2095,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.GetAccountRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      id: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -2037,8 +2133,8 @@ proto.account_service.GetAccountRequest.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSessionToken(value)
+      var value = /** @type {string} */ (reader.readString())
+      msg.setId(value)
       break
     default:
       reader.skipField()
@@ -2069,9 +2165,9 @@ proto.account_service.GetAccountRequest.prototype.serializeBinary = function() {
  */
 proto.account_service.GetAccountRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getId()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -2080,41 +2176,17 @@ proto.account_service.GetAccountRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.GetAccountRequest.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string id = 1;
  * @return {string}
  */
-proto.account_service.GetAccountRequest.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.GetAccountRequest.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.GetAccountRequest.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
-proto.account_service.GetAccountRequest.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+/** @param {string} value */
+proto.account_service.GetAccountRequest.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -2165,7 +2237,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.GetAccountResponse.toObject = function(includeInstance, msg) {
     var f, obj = {
-
+      user: (f = msg.getUser()) && proto.account_service.User.toObject(includeInstance, f)
     }
 
     if (includeInstance) {
@@ -2202,6 +2274,11 @@ proto.account_service.GetAccountResponse.deserializeBinaryFromReader = function(
     }
     var field = reader.getFieldNumber()
     switch (field) {
+    case 1:
+      var value = new proto.account_service.User
+      reader.readMessage(value,proto.account_service.User.deserializeBinaryFromReader)
+      msg.setUser(value)
+      break
     default:
       reader.skipField()
       break
@@ -2231,6 +2308,44 @@ proto.account_service.GetAccountResponse.prototype.serializeBinary = function() 
  */
 proto.account_service.GetAccountResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
+  f = message.getUser()
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.account_service.User.serializeBinaryToWriter
+    )
+  }
+}
+
+
+/**
+ * optional User user = 1;
+ * @return {?proto.account_service.User}
+ */
+proto.account_service.GetAccountResponse.prototype.getUser = function() {
+  return /** @type{?proto.account_service.User} */ (
+    jspb.Message.getWrapperField(this, proto.account_service.User, 1))
+}
+
+
+/** @param {?proto.account_service.User|undefined} value */
+proto.account_service.GetAccountResponse.prototype.setUser = function(value) {
+  jspb.Message.setWrapperField(this, 1, value)
+}
+
+
+proto.account_service.GetAccountResponse.prototype.clearUser = function() {
+  this.setUser(undefined)
+}
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.account_service.GetAccountResponse.prototype.hasUser = function() {
+  return jspb.Message.getField(this, 1) != null
 }
 
 
@@ -2450,7 +2565,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.LoginResponse.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -2488,7 +2603,7 @@ proto.account_service.LoginResponse.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
       break
     default:
@@ -2520,9 +2635,9 @@ proto.account_service.LoginResponse.prototype.serializeBinary = function() {
  */
 proto.account_service.LoginResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -2531,41 +2646,17 @@ proto.account_service.LoginResponse.serializeBinaryToWriter = function(message, 
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.LoginResponse.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.LoginResponse.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.LoginResponse.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.LoginResponse.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.LoginResponse.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -2616,7 +2707,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.LogoutRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -2654,7 +2745,7 @@ proto.account_service.LogoutRequest.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
       break
     default:
@@ -2686,9 +2777,9 @@ proto.account_service.LogoutRequest.prototype.serializeBinary = function() {
  */
 proto.account_service.LogoutRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -2697,41 +2788,17 @@ proto.account_service.LogoutRequest.serializeBinaryToWriter = function(message, 
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.LogoutRequest.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.LogoutRequest.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.LogoutRequest.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.LogoutRequest.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.LogoutRequest.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -2898,7 +2965,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.ResetPasswordRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64(),
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, ''),
       email: jspb.Message.getFieldWithDefault(msg, 2, ''),
       oldPassword: jspb.Message.getFieldWithDefault(msg, 3, ''),
       newPassword: jspb.Message.getFieldWithDefault(msg, 4, '')
@@ -2939,7 +3006,7 @@ proto.account_service.ResetPasswordRequest.deserializeBinaryFromReader = functio
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
       break
     case 2:
@@ -2983,9 +3050,9 @@ proto.account_service.ResetPasswordRequest.prototype.serializeBinary = function(
  */
 proto.account_service.ResetPasswordRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
       f
     )
@@ -3015,41 +3082,17 @@ proto.account_service.ResetPasswordRequest.serializeBinaryToWriter = function(me
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.ResetPasswordRequest.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.ResetPasswordRequest.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.ResetPasswordRequest.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
 }
 
 
-/**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
- */
-proto.account_service.ResetPasswordRequest.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.ResetPasswordRequest.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
@@ -3261,7 +3304,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.LockAccountRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-      sessionToken: msg.getSessionToken_asB64()
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      userId: jspb.Message.getFieldWithDefault(msg, 2, '')
     }
 
     if (includeInstance) {
@@ -3299,8 +3343,12 @@ proto.account_service.LockAccountRequest.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber()
     switch (field) {
     case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setSessionToken(value)
+      break
+    case 2:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setUserId(value)
       break
     default:
       reader.skipField()
@@ -3331,10 +3379,17 @@ proto.account_service.LockAccountRequest.prototype.serializeBinary = function() 
  */
 proto.account_service.LockAccountRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
-  f = message.getSessionToken_asU8()
+  f = message.getSessionToken()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       1,
+      f
+    )
+  }
+  f = message.getUserId()
+  if (f.length > 0) {
+    writer.writeString(
+      2,
       f
     )
   }
@@ -3342,41 +3397,32 @@ proto.account_service.LockAccountRequest.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional bytes session_token = 1;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.LockAccountRequest.prototype.getSessionToken = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
-
-
-/**
- * optional bytes session_token = 1;
- * This is a type-conversion wrapper around `getSessionToken()`
+ * optional string session_token = 1;
  * @return {string}
  */
-proto.account_service.LockAccountRequest.prototype.getSessionToken_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSessionToken()))
+proto.account_service.LockAccountRequest.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.LockAccountRequest.prototype.setSessionToken = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
 /**
- * optional bytes session_token = 1;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSessionToken()`
- * @return {!Uint8Array}
+ * optional string user_id = 2;
+ * @return {string}
  */
-proto.account_service.LockAccountRequest.prototype.getSessionToken_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSessionToken()))
+proto.account_service.LockAccountRequest.prototype.getUserId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
 }
 
 
-/** @param {!(string|Uint8Array)} value */
-proto.account_service.LockAccountRequest.prototype.setSessionToken = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value)
+/** @param {string} value */
+proto.account_service.LockAccountRequest.prototype.setUserId = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value)
 }
 
 
@@ -3544,7 +3590,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
   proto.account_service.UnlockAccountRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
       email: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      token: jspb.Message.getFieldWithDefault(msg, 2, '')
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 2, ''),
+      userId: jspb.Message.getFieldWithDefault(msg, 3, '')
     }
 
     if (includeInstance) {
@@ -3587,7 +3634,11 @@ proto.account_service.UnlockAccountRequest.deserializeBinaryFromReader = functio
       break
     case 2:
       var value = /** @type {string} */ (reader.readString())
-      msg.setToken(value)
+      msg.setSessionToken(value)
+      break
+    case 3:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setUserId(value)
       break
     default:
       reader.skipField()
@@ -3625,10 +3676,17 @@ proto.account_service.UnlockAccountRequest.serializeBinaryToWriter = function(me
       f
     )
   }
-  f = message.getToken()
+  f = message.getSessionToken()
   if (f.length > 0) {
     writer.writeString(
       2,
+      f
+    )
+  }
+  f = message.getUserId()
+  if (f.length > 0) {
+    writer.writeString(
+      3,
       f
     )
   }
@@ -3651,17 +3709,32 @@ proto.account_service.UnlockAccountRequest.prototype.setEmail = function(value) 
 
 
 /**
- * optional string token = 2;
+ * optional string session_token = 2;
  * @return {string}
  */
-proto.account_service.UnlockAccountRequest.prototype.getToken = function() {
+proto.account_service.UnlockAccountRequest.prototype.getSessionToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
 }
 
 
 /** @param {string} value */
-proto.account_service.UnlockAccountRequest.prototype.setToken = function(value) {
+proto.account_service.UnlockAccountRequest.prototype.setSessionToken = function(value) {
   jspb.Message.setProto3StringField(this, 2, value)
+}
+
+
+/**
+ * optional string user_id = 3;
+ * @return {string}
+ */
+proto.account_service.UnlockAccountRequest.prototype.getUserId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.UnlockAccountRequest.prototype.setUserId = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value)
 }
 
 
@@ -4113,7 +4186,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  */
   proto.account_service.ListUsersRequest.toObject = function(includeInstance, msg) {
     var f, obj = {
-
+      sessionToken: jspb.Message.getFieldWithDefault(msg, 1, '')
     }
 
     if (includeInstance) {
@@ -4150,6 +4223,10 @@ proto.account_service.ListUsersRequest.deserializeBinaryFromReader = function(ms
     }
     var field = reader.getFieldNumber()
     switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString())
+      msg.setSessionToken(value)
+      break
     default:
       reader.skipField()
       break
@@ -4179,6 +4256,28 @@ proto.account_service.ListUsersRequest.prototype.serializeBinary = function() {
  */
 proto.account_service.ListUsersRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined
+  f = message.getSessionToken()
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    )
+  }
+}
+
+
+/**
+ * optional string session_token = 1;
+ * @return {string}
+ */
+proto.account_service.ListUsersRequest.prototype.getSessionToken = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
+}
+
+
+/** @param {string} value */
+proto.account_service.ListUsersRequest.prototype.setSessionToken = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value)
 }
 
 
