@@ -33,11 +33,12 @@ const actions = {
         .then(
           user => {
             if (user != null) {
-            //commit('getSuccess', {state, user})
+              //commit('getSuccess', {state, user})
               resolve(user)
             } else {
               this.loggedIn = false
               localStorage.removeItem('token')
+              sessionStorage.setItem('user_id', user.getCreated())
               router.go('/login')
             }
           }

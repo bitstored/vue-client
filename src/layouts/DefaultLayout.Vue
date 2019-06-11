@@ -43,12 +43,11 @@ export default {
   margin-top: 25px;
 }
 .page-side-bar{
-  width: 10%;
+  width: 13%;
 }
 .page-header{
   width: 100%;
   height: 8%;
-  margin-top: 5px;
   position: relative;
   align-items: flex-start;
 }

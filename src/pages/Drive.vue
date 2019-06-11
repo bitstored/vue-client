@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="row"> {{ $name }}</div>
+    <div
+      class="row"
+      style="align-item:center"> <h2>{{ name }}</h2></div>
     <div class="row drive-menu">
       <router-link
         to="/file/upload"
@@ -163,17 +165,19 @@
   </div>
 </template>
 <script>
+import { mapState, mapActions} from 'vuex'
+
 export default {
-  name: 'Drive',
   data() {
     return {
+      name: 'Drive',
       folder_path:[],
       delete_img: delete_i,
       upload_file_img: upload_file,
       create_file_img: create_file,
-      parent_folder: {id:'flid:12345678'},
-      folders: [{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},           {name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'},{name:'Folder1', id: 'flid:12345678'}, {name:'Folder2', id: 'flid:12345678'}],
-      files: [{name:'file1', type: 1, is_private: true, id: '1'}, {name:'file2', type: 2, is_private: false, id:'1' }, {name:'file1', type: 3, is_private: true, id: '3'}, {name:'file4', type: 4, is_private: false, id:'1' }],
+      current_folder: '',
+      folders: [],
+      files: [],
       edit_icon:edit_icon,
       download_icon:download_icon,
       delete_icon:delete_icon,
@@ -181,7 +185,28 @@ export default {
       back_icon: back_icon,
     }
   },
+  computed: {
+    ...mapState('files', ['status'])
+  },
+  created() {
+    this.getDrive()
+  },
   methods: {
+    ...mapActions('files', ['getDriveId']),
+    getDrive() {
+      var uid = localStorage.getItem('user_id')
+      this.getDriveId(uid)
+        .then(
+          rsp => {
+            localStorage.setItem('drive_id', rsp.getDriveId())
+          }
+        )
+        .catch(
+          err => {
+            console.log('Drive', err)
+          }
+        )
+    },
     get_icon(type) {
       if (type == 1) {
         return image_icon
