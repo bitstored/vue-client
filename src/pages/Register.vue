@@ -48,6 +48,7 @@
       >
         <label htmlFor="photo">Photo</label>
         <input
+          id="profile_photo"
           type="file"
           name="photo"
           class="form-control"
@@ -221,6 +222,7 @@ export default {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
+          this.user.photo = document.getElementById('profile_photo').value
           this.register(this.user)
         }
       })

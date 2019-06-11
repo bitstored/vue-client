@@ -4,7 +4,7 @@
       id="header-fixed"
       class="header-banner"
     >
-      <div class="row">
+      <div class="row header-bg">
         <div class="col-md-4 col-sm-4">
           <router-link to="/">
             <img
@@ -179,8 +179,12 @@ h3 {
   align-content: center;
   color: #555555;
 }
+.header-bg{
+  height: 100%;
+}
 #login-buttons {
   align-self: center;
   color: #555555;
 }
+
 </style>

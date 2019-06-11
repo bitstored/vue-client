@@ -43,7 +43,17 @@ export const router = new VueRouter({
     component: require('../pages/EditProfile').default
   },
   {
-    path: '/file/edit',
+    path: '/profile/delete',
+    name: 'delete_profile',
+    component: require('../pages/DeleteProfile').default
+  },
+  {
+    path: '/profile/lock',
+    name: 'lock_profile',
+    component: require('../pages/LockProfile').default
+  },
+  {
+    path: '/file/edit/:id',
     name: 'edit_file',
     component: require('../pages/EditFile').default
   },

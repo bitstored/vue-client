@@ -200,15 +200,6 @@ export const userService = {
             console.log('err', error)
             reject(error)
           } else {
-            console.log(response.getUser())
-            localStorage.setItem('email', response.getUser().getEmail())
-            localStorage.setItem('first_name', response.getUser().getFirstName())
-            localStorage.setItem('last_name', response.getUser().getLastName())
-            localStorage.setItem('username', response.getUser().getUsername())
-            localStorage.setItem('birthday', response.getUser().getBirthday())
-            localStorage.setItem('last_login', response.getUser().getLastLogin())
-            localStorage.setItem('last_edited', response.getUser().getLastEdited())
-            localStorage.setItem('photo', response.getUser().getPhoto())
             resolve(response.getUser())
           }
         })

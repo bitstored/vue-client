@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row"> {{ name }}</div>
+    <div class="row"> {{ $name }}</div>
     <div class="row drive-menu">
       <router-link
         to="/file/upload"
@@ -225,6 +225,8 @@ div {
 div.row {
   margin-right: 0px;
   margin-left: 0px;
+    width: 100%;
+
 }
 .container {
   align-self: auto;
@@ -242,7 +244,7 @@ div.row {
 	margin: 0 auto;
 }
 ul#folders {
-	min-width: 696px;
+  width: 800px;
 	list-style: none;
 }
 #folders-list {

@@ -38,29 +38,32 @@ export default {
 
 <style>
 .page-content{
-  margin-top: 65px;
   margin-left: 10%;
   width: 100%;
+  margin-top: 25px;
 }
 .page-side-bar{
-  margin-top: 65px;
   width: 10%;
 }
 .page-header{
   width: 100%;
   height: 8%;
+  margin-top: 5px;
   position: relative;
-  display: inline;
   align-items: flex-start;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
   .container{
     max-width:  1500px;
   }
   .page-header{
-    width:  1500px;
+    width:  1600px;
   }
 }
-
+@media (max-width: 200px) {
+  .page-side-bar{
+  width: 100px;
+}
+}
 </style>
