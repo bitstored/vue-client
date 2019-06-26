@@ -40,7 +40,6 @@ const actions = {
 
   register({ dispatch, commit }, user) {
     commit('registerRequest', user)
-
     userService.methods.register(user)
       .then(
         rsp => {
@@ -56,6 +55,28 @@ const actions = {
       .catch(
         error => {
           commit('registerFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
+
+  update({ dispatch, commit }, user) {
+    commit('updateRequest', user)
+
+    userService.methods.update(user)
+      .then(
+        rsp => {
+          commit('updateSuccess', user)
+          router.push('/profile')
+          console.log('update rsp', rsp)
+          setTimeout(() => {
+            dispatch('alert/success', 'Update successful', { root: true })
+          })
+        }
+      )
+      .catch(
+        error => {
+          commit('updateFailure', error)
           dispatch('alert/error', error, { root: true })
         }
       )
@@ -86,6 +107,15 @@ const mutations = {
     state.status = {}
   },
   registerFailure(state, error) {
+    state.status = {}
+  },
+  updateRequest(state, user) {
+    state.user = user
+  },
+  updateSuccess(state) {
+    state.status = {}
+  },
+  updateFailure(state, error) {
     state.status = {}
   }
 }

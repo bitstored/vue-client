@@ -204,7 +204,6 @@ export default {
         lastName: '',
         username: '',
         password: '',
-        photo: '',
         email: '',
         birthday: '',
         phoneNumber: '',
@@ -222,8 +221,11 @@ export default {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
-          this.user.photo = document.getElementById('profile_photo').value
-          this.register(this.user)
+          const reader = new FileReader()
+          reader.onload = () => {
+            this.register({...this.user, 'photo': reader.result})
+          }
+          reader.readAsBinaryString(document.getElementById('profile_photo').files[0])
         }
       })
     }

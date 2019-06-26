@@ -10,6 +10,8 @@ import {grpc, BrowserHeaders} from 'grpc-web-client'
 const {
   LoginRequest,
   LogoutRequest,
+  UpdateAccountRequest,
+  UpdateAccountResponse,
   CreateAccountRequest,
   GetAccountRequest,
   User,
@@ -129,7 +131,7 @@ export const userService = {
       proto_user.setUsername(user.username)
       proto_user.setPassword(user.password)
       proto_user.setBirthday(user.birthday + 'T00:00:00.000Z')
-      proto_user.setPhoto(user.photo.value)
+      proto_user.setPhoto(user.photo)
       proto_user.setEmail(user.email)
       proto_user.setPhoneNumber(user.phoneNumber)
 
@@ -209,10 +211,25 @@ export const userService = {
     update: function (user) {
       const requestOptions = {
         method: 'PUT',
-        headers: authHeader(), // { ...authHeader(), 'Content-Type': 'application/json' },
+        headers: {
+          ...authHeader(),
+          'mode': 'no-cors',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        },
         body: JSON.stringify(user)
       }
+      const updateRequest = new UpdateAccountRequest()
+      updateRequest.setUser(user)
 
+      return new Promise(function (resolve, reject) {
+        client.updateAccount(updateRequest, requestOptions, (error, response) => {
+          console.log('update done')
+        }
+        )
+      })
       // return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse)
     },
 

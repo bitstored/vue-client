@@ -115,6 +115,7 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 
+
 export default {
   data () {
     return {
@@ -133,13 +134,13 @@ export default {
     ...mapState('account', ['status'])
   },
   methods: {
-    ...mapActions('account', ['edit']),
+    ...mapActions('account', ['update']),
     handleSubmit () {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
           this.user.photo = document.getElementById('profile_photo').value
-          this.register(this.user)
+          this.update(this.user)
         }
       })
     }
