@@ -52,6 +52,7 @@
           type="file"
           name="photo"
           class="form-control"
+          accept="image/*"
         >
       </div>
       <div
