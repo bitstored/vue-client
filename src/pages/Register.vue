@@ -225,7 +225,7 @@ export default {
           reader.onload = () => {
             this.register({...this.user, 'photo': reader.result})
           }
-          reader.readAsBinaryString(document.getElementById('profile_photo').files[0])
+          reader.readAsText(document.getElementById('profile_photo').files[0])
         }
       })
     }

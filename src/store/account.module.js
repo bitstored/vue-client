@@ -54,6 +54,7 @@ const actions = {
       )
       .catch(
         error => {
+          console.log(error)
           commit('registerFailure', error)
           dispatch('alert/error', error, { root: true })
         }

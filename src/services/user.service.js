@@ -20,6 +20,10 @@ const {
   AccountClient
 } = require('../pb/user_service_grpc_web_pb')
 const client = new AccountClient('http://localhost:8081', {}, {})
+const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {})
+enableDevTools([
+  client,
+])
 export const userService = {
   data: {
     debug: true,
@@ -131,7 +135,7 @@ export const userService = {
       proto_user.setUsername(user.username)
       proto_user.setPassword(user.password)
       proto_user.setBirthday(user.birthday + 'T00:00:00.000Z')
-      proto_user.setPhoto(user.photo)
+      proto_user.setPhoto(btoa(unescape(encodeURIComponent(user.photo))))
       proto_user.setEmail(user.email)
       proto_user.setPhoneNumber(user.phoneNumber)
 
