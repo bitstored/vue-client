@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <div class="DefaultLayout">
-      <div class="page-header table">
+      <div class="page-header">
         <bits-header/>
       </div>
       <div >
@@ -40,27 +40,33 @@ export default {
 .page-content{
   margin-left: 10%;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 .page-side-bar{
-  width: 13%;
+  width: 10%;
 }
 .page-header{
   width: 100%;
   height: 8%;
+  margin-left: 0%;
   position: relative;
   align-items: flex-start;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 2880px) {
+  .app-container{
+    max-width:  2880px;
+  }
   .container{
-    max-width:  1500px;
+    max-width:  2880px;
+      margin-left: 10%;
+
   }
   .page-header{
-    width:  1600px;
+    max-width:  2880px;
   }
 }
-@media (max-width: 200px) {
+@media (max-width: 800px) {
   .page-side-bar{
   width: 100px;
 }

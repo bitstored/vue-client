@@ -119,7 +119,6 @@ export default {
 
 <style>
 header {
-  width: 100%;
 }
 .header-banner {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -127,7 +126,6 @@ header {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 100%;
   align-content: flex-start;
   background-color: #eeeeee;
   height: 65px;
@@ -178,9 +176,6 @@ header {
 h3 {
   align-content: center;
   color: #555555;
-}
-.header-bg{
-  height: 100%;
 }
 #login-buttons {
   align-self: center;

@@ -114,7 +114,8 @@ export default {
             this.first_name = user.getFirstName()
             this.last_name = user.getLastName()
             this.email = user.getEmail()
-            this.photo = this.get_photo(user.getPhoto())
+            var raw_photo = 'data:image/png;base64,'+ decodeURIComponent(escape(atob(user.getPhoto())))
+            this.photo = raw_photo
             this.last_login = user.getLastLogin().substring(0, 10)
             this.last_edited = user.getLastEdited().substring(0, 10)
             this.birthday = user.getBirthday().substring(0, 10)

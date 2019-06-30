@@ -78,6 +78,8 @@ export const userService = {
             reject(error)
           } else {
             localStorage.setItem('token', token)
+            localStorage.setItem('username', username)
+
             resolve(response)
           }
         }
@@ -212,29 +214,40 @@ export const userService = {
       })
     },
 
-    update: function (user) {
+    update: function (profile) {
+      const user = new User()
+      user.setFirstName(profile.firstName)
+      user.setLastName(profile.lastName)
+      user.setPhoto(btoa(unescape(encodeURIComponent(profile.photo))))
+      user.setPassword(profile.password)
+      user.setUsername(localStorage.getItem('username'))
+      const updateRequest = new UpdateAccountRequest()
+      updateRequest.setUser(user)
+      updateRequest.setCreationDate(localStorage.getItem('token'))
       const requestOptions = {
         method: 'PUT',
         headers: {
-          ...authHeader(),
           'mode': 'no-cors',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
           'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
           'Content-Type': 'application/grpc',
         },
-        body: JSON.stringify(user)
+        // body: JSON.stringify(updateRequest)
       }
-      const updateRequest = new UpdateAccountRequest()
-      updateRequest.setUser(user)
+
 
       return new Promise(function (resolve, reject) {
         client.updateAccount(updateRequest, requestOptions, (error, response) => {
-          console.log('update done')
-        }
-        )
+          console.log('plm\n\n\n\n', response, error)
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(true)
+          }
+        })
       })
-      // return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse)
     },
 
     // prefixed function name with underscore because delete is a reserved word in javascript

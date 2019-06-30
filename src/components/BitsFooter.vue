@@ -29,5 +29,6 @@ export default {
   position: absolute;
   width: 100%;
   background-color: #eeeeee;
+
 }
 </style>

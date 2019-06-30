@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>Upload file</div>
+    <div>Create file</div>
     <form
       enctype="multipart/form-data"
       @submit.prevent="handleSubmit"
@@ -10,8 +10,8 @@
       >
         <label htmlFor="file">File</label>
         <input
-          id="uploaded_dile"
-          type="file"
+          id="created_file"
+          type="text"
           name="file"
           class="form-control"
         >

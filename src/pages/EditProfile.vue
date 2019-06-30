@@ -139,8 +139,11 @@ export default {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
-          this.user.photo = document.getElementById('profile_photo').value
-          this.update(this.user)
+          const reader = new FileReader()
+          reader.onload = () => {
+            this.update({...this.user, 'photo': reader.result})
+          }
+          reader.readAsText(document.getElementById('profile_photo').files[0])
         }
       })
     }

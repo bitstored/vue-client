@@ -63,6 +63,11 @@ export const router = new VueRouter({
     component: require('../pages/UploadFile').default
   },
   {
+    path: '/file/create',
+    name: 'create_file',
+    component: require('../pages/CreateFile').default
+  },
+  {
     path: '/users',
     name: 'users',
     component: require('../pages/Users').default
