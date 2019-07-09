@@ -73,25 +73,7 @@
           {{ errors.first('password') }}
         </div>
       </div>
-      <div
-        class="form-group"
-      >
-        <label htmlFor="bithday">Birthday</label>
-        <input
-          v-validate="{ required: true}"
-          id="birthday-picker"
-          v-model="user.birthday"
-          :class="{ 'is-invalid': submitted && errors.has('birthday') }"
-          name="birthday"
-          type="date"
-          class="form-control">
-        <div
-          v-if="submitted && errors.has('birthday')"
-          class="invalid-feedback"
-        >
-          {{ errors.first('birthday') }}
-        </div>
-      </div>
+
 
       <div
         class="form-group"
@@ -124,7 +106,6 @@ export default {
         lastName: '',
         password: '',
         photo: null,
-        birthday: '',
       },
       submitted: false
     }
@@ -143,7 +124,7 @@ export default {
           reader.onload = () => {
             this.update({...this.user, 'photo': reader.result})
           }
-          reader.readAsText(document.getElementById('profile_photo').files[0])
+          reader.readAsDataURL(document.getElementById('profile_photo').files[0])
         }
       })
     }

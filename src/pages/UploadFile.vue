@@ -63,6 +63,8 @@ export default {
         name: '',
         secret: '',
         type: '',
+        is_writable: false,
+        is_private: false,
       },
       uploading: false,
       submitted: false
@@ -77,11 +79,15 @@ export default {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
+          this.file.name = document.getElementById('uploaded_file').files[0].name
+          this.file.type = document.getElementById('uploaded_file').files[0].split('.').pop()
+
           const reader = new FileReader()
           reader.onload = () => {
             this.upload({...this.file, data: reader.result})
           }
           reader.readAsText(document.getElementById('uploaded_file').files[0])
+
         }
       })
     }
