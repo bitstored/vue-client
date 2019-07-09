@@ -73,6 +73,11 @@ export const router = new VueRouter({
     component: require('../pages/Users').default
   },
   {
+    path: '/folder/:folderID',
+    name: 'drive',
+    component: require('../pages/Drive').default
+  },
+  {
     path: '/drive',
     name: 'drive',
     component: require('../pages/Drive').default

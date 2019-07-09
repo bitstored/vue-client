@@ -10,11 +10,18 @@
       >
         <label htmlFor="file">File</label>
         <input
+          v-validate="'required'"
           id="uploaded_file"
           type="file"
           name="file"
           class="form-control"
         >
+        <div
+          v-show="submitted && !file.data"
+          class="invalid-feedback"
+        >
+          File is required
+        </div>
       </div>
       <div
         class="form-group"
@@ -27,6 +34,32 @@
           name="secret"
           class="form-control"
         >
+        <div
+          v-show="submitted && !file.secret"
+          class="invalid-feedback"
+        >
+          Secret phrase is required
+        </div>
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          v-model="file.is_private"
+          type="checkbox"
+          name="is_secret"
+        >
+        <label for="is_writable">Is Secret</label>
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          v-model="file.is_writable"
+          type="checkbox"
+          name="is_writable"
+        >
+        <label for="is_writable">Is Editable</label>
       </div>
       <div
         class="form-group"
@@ -48,6 +81,7 @@
           Cancel
         </router-link>
       </div>
+
     </form>
   </div>
 </template>
@@ -67,11 +101,12 @@ export default {
         is_private: false,
       },
       uploading: false,
+      error: '',
       submitted: false
     }
   },
   computed: {
-    ...mapState('account', ['status'])
+    ...mapState('files', ['status'])
   },
   methods: {
     ...mapActions('files', ['upload']),
@@ -80,7 +115,7 @@ export default {
       this.$validator.validate().then(valid => {
         if (valid) {
           this.file.name = document.getElementById('uploaded_file').files[0].name
-          this.file.type = document.getElementById('uploaded_file').files[0].split('.').pop()
+          this.file.type = document.getElementById('uploaded_file').files[0].name.split('.').pop()
 
           const reader = new FileReader()
           reader.onload = () => {

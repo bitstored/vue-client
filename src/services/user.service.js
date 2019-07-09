@@ -16,14 +16,18 @@ const {
   GetAccountRequest,
   User,
 } = require('../pb/user_service_pb')
+
 const {
   AccountClient
 } = require('../pb/user_service_grpc_web_pb')
+
 const client = new AccountClient('http://localhost:8081', {}, {})
 const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {})
+
 enableDevTools([
   client,
 ])
+
 export const userService = {
   data: {
     debug: true,
@@ -144,10 +148,7 @@ export const userService = {
       request.setUser(proto_user)
       const requestOptions = {
         method: 'POST',
-        // body: JSON.stringify({
-        //   'username': username,
-        //   'password': password
-        // }),
+
         headers: {
           'mode': 'no-cors', // no-cors, cors, *same-origin
           'Access-Control-Allow-Origin': '*',

@@ -22,9 +22,12 @@ const state = session_token != null ?
 
 const actions = {
   upload({ dispatch, commit }, file) {
-    console.log(file)
     commit('uploadRequest', file.name)
-    fileService.methods.uploadFile(file, 1)
+    var userId = localStorage.getItem('user_id')
+    file.parent = state.current
+    console.log(file)
+
+    fileService.methods.uploadFile(file, userId)
       .then(
         rsp => {
           commit('uploadSuccess', file.name)
@@ -50,6 +53,7 @@ const actions = {
           response => {
             if (response != null) {
               //commit('getSuccess', {state, user})
+              state.current = response.array[0]
               resolve(response)
             } else {
               router.go('/profile')

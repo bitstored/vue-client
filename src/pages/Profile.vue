@@ -115,7 +115,6 @@ export default {
             this.last_name = user.getLastName()
             this.email = user.getEmail()
             var raw_photo = 'data:image/png;base64, '+ decodeURIComponent(unescape(btoa(user.getPhoto())))
-            console.log(user.getPhoto())
             this.photo = raw_photo
             this.last_login = user.getLastLogin().substring(0, 10)
             this.last_edited = user.getLastEdited().substring(0, 10)

@@ -11,14 +11,21 @@ import {
 
 const {
   File,
+  Type,
   UploadFileRequest,
   GetFolderContentRequest,
   GetMyDriveIdRequest,
 } = require('../pb/file_service_pb')
+
 const {
   FileManagementClient
 } = require('../pb/file_service_grpc_web_pb')
+
 const client = new FileManagementClient('http://localhost:8081', {}, {})
+const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {})
+enableDevTools([
+  client,
+])
 export const fileService = {
   data: {
     debug: true,
@@ -32,19 +39,23 @@ export const fileService = {
       const rpc_file = new File()
       rpc_file.setParentIdentifier(file.parent)
       rpc_file.setName(file.name)
-      rpc_file.setFileType(file.type)
+      var type = Type.OTHER
+      if (file.type == 'pdf') {
+        type = Type.PDF
+      }
+      rpc_file.setFileType(type)
+      file.data = file.data.split('').map(function(c) { return c.charCodeAt() })
       rpc_file.setContent(file.data)
+      rpc_file.setWritable(file.is_writable)
+      rpc_file.setPrivate(file.is_private)
 
       request.setFile(rpc_file)
       request.setUserId(userid)
+      file.secret = file.secret.split('').map(function(c) { return c.charCodeAt() })
       request.setSecretPhrase(file.secret)
+
       const requestOptions = {
         method: 'POST',
-        body: JSON.stringify({
-          'file': rpc_file,
-          'userId': userid,
-          'secretPhrase': file.secret
-        }),
         headers: {
           'mode': 'no-cors', // no-cors, cors, *same-origin
           'Access-Control-Allow-Origin': '*',
@@ -53,13 +64,15 @@ export const fileService = {
           'Content-Type': 'application/grpc',
         }
       }
-
+      console.log(request)
       return new Promise(function (resolve, reject) {
         client.uploadFile(request, requestOptions, (error, response) => {
           if (error != null) {
             console.log('err', error)
             reject(error)
           } else {
+            console.log('response', response)
+
             resolve(response)
           }
         })
