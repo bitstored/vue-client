@@ -10,7 +10,7 @@
       >
         <label htmlFor="file">File</label>
         <input
-          id="uploaded_dile"
+          id="uploaded_file"
           type="file"
           name="file"
           class="form-control"
@@ -52,7 +52,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'UploadFile',
@@ -64,11 +64,27 @@ export default {
         secret: '',
         type: '',
       },
-      uploading: false
+      uploading: false,
+      submitted: false
     }
   },
   computed: {
     ...mapState('account', ['status'])
   },
+  methods: {
+    ...mapActions('files', ['upload']),
+    handleSubmit () {
+      this.submitted = true
+      this.$validator.validate().then(valid => {
+        if (valid) {
+          const reader = new FileReader()
+          reader.onload = () => {
+            this.upload({...this.file, data: reader.result})
+          }
+          reader.readAsText(document.getElementById('uploaded_file').files[0])
+        }
+      })
+    }
+  }
 }
 </script>

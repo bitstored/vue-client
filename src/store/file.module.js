@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import {
-  fileService
+  fileService, userService
 } from '../services'
 import {
   router
@@ -21,6 +21,26 @@ const state = session_token != null ?
   }
 
 const actions = {
+  upload({ dispatch, commit }, file) {
+    console.log(file)
+    commit('uploadRequest', file.name)
+    fileService.methods.uploadFile(file, 1)
+      .then(
+        rsp => {
+          commit('uploadSuccess', file.name)
+          console.log('upload rsp', rsp)
+          setTimeout(() => {
+            dispatch('alert/success', 'Upload successful', { root: true })
+          })
+        }
+      )
+      .catch(
+        error => {
+          commit('uploadFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
   getDriveId({
     commit
   }, userId) {
@@ -50,21 +70,11 @@ const actions = {
 }
 
 const mutations = {
-  loginRequest(state, user) {
-    state.status = {
-      loggingIn: true
-    }
-    state.user = user
+  uploadRequest(state, user) {
   },
-  loginSuccess(state, user) {
-    state.status = {
-      loggedIn: true
-    }
-    state.user = user
+  uploadSuccess(state, user) {
   },
-  loginFailure(state) {
-    state.status = {}
-    state.user = null
+  uploadFailure(state) {
   },
   logout(state) {
     state.status = {}

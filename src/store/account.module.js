@@ -63,7 +63,6 @@ const actions = {
 
   update({ dispatch, commit }, user) {
     commit('updateRequest', user)
-    console.log(user)
     userService.methods.update(user)
       .then(
         rsp => {

@@ -26,22 +26,24 @@ export const fileService = {
     postResults: []
   },
   methods: {
-    uploadFile: function(file, userid, secret) {
+    uploadFile: function(file, userid) {
+
       const request = new UploadFileRequest()
       const rpc_file = new File()
       rpc_file.setParentIdentifier(file.parent)
       rpc_file.setName(file.name)
-      rpc_file.setType(file.type)
+      rpc_file.setFileType(file.type)
+      rpc_file.setContent(file.data)
 
       request.setFile(rpc_file)
       request.setUserId(userid)
-      request.setSecretPhrase(secret)
+      request.setSecretPhrase(file.secret)
       const requestOptions = {
         method: 'POST',
         body: JSON.stringify({
           'file': rpc_file,
           'userId': userid,
-          'secretPhrase': secret
+          'secretPhrase': file.secret
         }),
         headers: {
           'mode': 'no-cors', // no-cors, cors, *same-origin
