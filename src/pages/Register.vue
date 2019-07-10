@@ -53,6 +53,7 @@
           name="photo"
           class="form-control"
           accept="image/*"
+          multiple="false"
         >
       </div>
       <div
@@ -205,6 +206,7 @@ export default {
         lastName: '',
         username: '',
         password: '',
+        photo: '',
         email: '',
         birthday: '',
         phoneNumber: '',
@@ -226,7 +228,7 @@ export default {
           reader.onload = () => {
             this.register({...this.user, 'photo': reader.result})
           }
-          reader.readAsText(document.getElementById('profile_photo').files[0])
+          reader.readAsDataURL(document.getElementById('profile_photo').files[0])
         }
       })
     }

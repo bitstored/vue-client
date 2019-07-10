@@ -16,13 +16,23 @@ const actions = {
       )
   },
 
-  delete({ commit }, id) {
-    commit('deleteRequest', id)
-
-    userService.delete(id)
+  _delete({ commit }) {
+    commit('deleteRequest')
+    var token = localStorage.getItem('token')
+    userService.methods._delete(token)
       .then(
-        user => commit('deleteSuccess', id),
-        error => commit('deleteSuccess', { id, error: error.toString() })
+        ok => {
+          localStorage.clear()
+          router.go('/login')
+          commit('deleteSuccess', token)
+        }
+      )
+      .catch(
+        err => {
+          // eslint-disable-next-line no-console
+          console.log(err)
+          alert('Unable to delete account')
+        }
       )
   },
 
@@ -33,7 +43,6 @@ const actions = {
         .then(
           user => {
             if (user != null) {
-              //commit('getSuccess', {state, user})
               resolve(user)
             } else {
               this.loggedIn = false
@@ -78,11 +87,7 @@ const mutations = {
   },
   deleteRequest(state, id) {
     // add 'deleting:true' property to user being deleted
-    state.all.items = state.all.items.map(user =>
-      user.id === id
-        ? { user, deleting: true }
-        : user
-    )
+    state = {}
   },
   getByTokenRequest(state, id) {
 

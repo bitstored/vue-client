@@ -52,6 +52,8 @@
           type="file"
           name="photo"
           class="form-control"
+          accept="image/*"
+          multiple="false"
         >
       </div>
       <div
@@ -105,7 +107,7 @@ export default {
         firstName: '',
         lastName: '',
         password: '',
-        photo: null,
+        photo: '',
       },
       submitted: false
     }

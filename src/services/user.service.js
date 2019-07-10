@@ -14,6 +14,7 @@ const {
   UpdateAccountResponse,
   CreateAccountRequest,
   GetAccountRequest,
+  DeleteAccountRequest,
   User,
 } = require('../pb/user_service_pb')
 
@@ -89,21 +90,6 @@ export const userService = {
         }
         )
       })
-
-      // return fetch('https://localhost:5008/user/api/v1/login', requestOptions)
-      //   .then(err => {
-      //     console.log('err', err)
-      //   })
-      //   .then(user => {
-      //     console.log('user', user)
-      //     // login successful if there's a jwt token in the response
-      //     if (user.token) {
-      //       // store user details and jwt token in local storage to keep user logged in between page refreshes
-      //       localStorage.setItem('user', JSON.stringify(user))
-      //     }
-
-      //     return ''
-      //   })
     },
 
     logout: function () {
@@ -141,7 +127,7 @@ export const userService = {
       proto_user.setUsername(user.username)
       proto_user.setPassword(user.password)
       proto_user.setBirthday(user.birthday + 'T00:00:00.000Z')
-      proto_user.setPhoto(btoa(unescape(encodeURIComponent(user.photo))))
+      proto_user.setPhoto(user.photo)
       proto_user.setEmail(user.email)
       proto_user.setPhoneNumber(user.phoneNumber)
 
@@ -219,14 +205,13 @@ export const userService = {
       const user = new User()
       user.setFirstName(profile.firstName)
       user.setLastName(profile.lastName)
-      user.setPhoto(btoa(unescape(encodeURIComponent(profile.photo))))
+      user.setPhoto(profile.photo)
       user.setPassword(profile.password)
-      user.setUsername(localStorage.getItem('username'))
       const updateRequest = new UpdateAccountRequest()
       updateRequest.setUser(user)
       updateRequest.setCreationDate(localStorage.getItem('token'))
       const requestOptions = {
-        method: 'PUT',
+        method: 'POST',
         headers: {
           'mode': 'no-cors',
           'Access-Control-Allow-Origin': '*',
@@ -234,13 +219,9 @@ export const userService = {
           'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
           'Content-Type': 'application/grpc',
         },
-        // body: JSON.stringify(updateRequest)
       }
-
-
       return new Promise(function (resolve, reject) {
         client.updateAccount(updateRequest, requestOptions, (error, response) => {
-          console.log('plm\n\n\n\n', response, error)
           if (error != null) {
             console.log('err', error)
             reject(error)
@@ -252,13 +233,30 @@ export const userService = {
     },
 
     // prefixed function name with underscore because delete is a reserved word in javascript
-    _delete: function (id) {
+    _delete: function (token) {
+      const request = new DeleteAccountRequest()
+      request.setSessionToken(token)
       const requestOptions = {
-        method: 'DELETE',
-        headers: authHeader()
+        method: 'GET',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
       }
 
-      // return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse)
+      return new Promise(function (resolve, reject) {
+        client.deleteAccount(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(true)
+          }
+        })
+      })
     }
   }
 }

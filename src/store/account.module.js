@@ -40,6 +40,7 @@ const actions = {
 
   register({ dispatch, commit }, user) {
     commit('registerRequest', user)
+    console.log(user.photo)
     userService.methods.register(user)
       .then(
         rsp => {
