@@ -226,7 +226,7 @@ export const userService = {
             console.log('err', error)
             reject(error)
           } else {
-            resolve(true)
+            resolve(response)
           }
         })
       })

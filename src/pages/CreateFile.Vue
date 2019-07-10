@@ -1,6 +1,8 @@
+
 <template>
   <div>
-    <div>Create file</div>
+    <div >
+      <h3 style="color: green">Create file</h3></div>
     <form
       enctype="multipart/form-data"
       @submit.prevent="handleSubmit"
@@ -8,13 +10,41 @@
       <div
         class="form-group"
       >
-        <label htmlFor="file">File</label>
+        <label htmlFor="name">File Name</label>
         <input
-          id="created_file"
+          id="file_name"
           type="text"
-          name="file"
+          name="name"
           class="form-control"
         >
+      </div>
+       <div
+        class="form-group"
+      >
+        <label for="type">File Type</label>
+        <b-form-select
+          v-validate="'required'"
+          v-model="file.Type"
+          value="txt"
+          :options="file_types"
+          name="type"
+          class="form-control"
+        >
+        </b-form-select>
+      </div>
+
+      <div
+        class="form-group"
+      >
+        <label for="content">Content</label>
+        <ckeditor
+          :editor="editor"
+          v-model="file.data"
+          name="content"
+          class="ck-editor"
+          :config="editorConfig"
+         >
+        </ckeditor>
       </div>
       <div
         class="form-group"
@@ -31,11 +61,31 @@
       <div
         class="form-group"
       >
+        <input
+          v-model="file.is_private"
+          type="checkbox"
+          name="is_secret"
+        >
+        <label for="is_writable">Is Secret</label>
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          v-model="file.is_writable"
+          type="checkbox"
+          name="is_writable"
+        >
+        <label for="is_writable">Is Editable</label>
+      </div>
+      <div
+        class="form-group"
+      >
         <button
           :disabled="status.uploading"
           class="btn btn-primary"
         >
-          Upload
+          Create
         </button>
         <img
           v-show="status.uploading"
@@ -53,16 +103,27 @@
 </template>
 <script>
 import { mapState } from 'vuex'
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default {
   name: 'UploadFile',
   data() {
     return {
+      file_types: [
+        {value: 'txt', text: 'Text file'},
+        {value: '', text: 'Other'},
+      ],
+      editor: ClassicEditor,
+      editorConfig: {
+        toolbar: [ 'bold', 'italic', '|', 'link' ]
+      },
       file: {
         data: '',
         name: '',
         secret: '',
         type: '',
+        is_writable: false,
+        is_private: false,
       },
       uploading: false
     }
@@ -72,3 +133,11 @@ export default {
   },
 }
 </script>
+<style>
+.ck-editor .ck-content{
+  height: 400px;
+  text-align: left;
+
+}
+
+</style>

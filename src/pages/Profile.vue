@@ -117,10 +117,10 @@ export default {
             this.last_login = user.getLastLogin().substring(0, 10)
             this.last_edited = user.getLastEdited().substring(0, 10)
             this.birthday = user.getBirthday().substring(0, 10)
-            if (user.getPhoto == '') {
+            if (user.getPhoto() == '') {
               this.photo = this.no_photo
             } else {
-              this.photo = new TextDecoder().decode(user.getPhoto())
+              this.photo = user.getPhoto()
             }
           })
     },

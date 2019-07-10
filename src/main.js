@@ -13,6 +13,10 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import {faUserSecret} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
+import CKEditor from '@ckeditor/ckeditor5-vue'
+import { BFormSelect } from 'bootstrap-vue'
+Vue.component('b-form-select', BFormSelect)
+Vue.use( CKEditor )
 Vue.use(Vue2Filters)
 
 Vue.use(VeeValidate)

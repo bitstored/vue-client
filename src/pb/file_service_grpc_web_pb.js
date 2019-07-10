@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 /**
  * @fileoverview gRPC-Web generated client stub for file_service
  * @enhanceable
@@ -8,11 +10,11 @@
 
 
 
-const grpc = {};
-grpc.web = require('grpc-web');
+const grpc = {}
+grpc.web = require('grpc-web')
 
-const proto = {};
-proto.file_service = require('./file_service_pb.js');
+const proto = {}
+proto.file_service = require('./file_service_pb.js')
 
 /**
  * @param {string} hostname
@@ -24,30 +26,30 @@ proto.file_service = require('./file_service_pb.js');
  */
 proto.file_service.FileManagementClient =
     function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
+      if (!options) options = {}
+      options['format'] = 'text'
 
-  /**
+      /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
+      this.client_ = new grpc.web.GrpcWebClientBase(options)
 
-  /**
+      /**
    * @private @const {string} The hostname
    */
-  this.hostname_ = hostname;
+      this.hostname_ = hostname
 
-  /**
+      /**
    * @private @const {?Object} The credentials to be used to connect
    *    to the server
    */
-  this.credentials_ = credentials;
+      this.credentials_ = credentials
 
-  /**
+      /**
    * @private @const {?Object} Options for the client
    */
-  this.options_ = options;
-};
+      this.options_ = options
+    }
 
 
 /**
@@ -60,16 +62,16 @@ proto.file_service.FileManagementClient =
  */
 proto.file_service.FileManagementPromiseClient =
     function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
+      if (!options) options = {}
+      options['format'] = 'text'
 
-  /**
+      /**
    * @private @const {!proto.file_service.FileManagementClient} The delegate callback based client
    */
-  this.delegateClient_ = new proto.file_service.FileManagementClient(
-      hostname, credentials, options);
+      this.delegateClient_ = new proto.file_service.FileManagementClient(
+        hostname, credentials, options)
 
-};
+    }
 
 
 /**
@@ -78,20 +80,20 @@ proto.file_service.FileManagementPromiseClient =
  *   !proto.file_service.CreateDriveRequest,
  *   !proto.file_service.CreateDriveResponse>}
  */
-const methodInfo_CreateDrive = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_CreateDrive = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.CreateDriveResponse,
   /** @param {!proto.file_service.CreateDriveRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.CreateDriveResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.CreateDriveRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.CreateDriveResponse)}
  *     callback The callback function(error, response)
@@ -100,32 +102,32 @@ const methodInfo_CreateDrive = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.createDrive =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateDrive',
       request,
       metadata,
       methodInfo_CreateDrive,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.CreateDriveRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.CreateDriveResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.createDrive =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.createDrive(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.createDrive(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -134,20 +136,20 @@ proto.file_service.FileManagementPromiseClient.prototype.createDrive =
  *   !proto.file_service.CreateNewFileRequest,
  *   !proto.file_service.CreateNewFileResponse>}
  */
-const methodInfo_CreateNewFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_CreateNewFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.CreateNewFileResponse,
   /** @param {!proto.file_service.CreateNewFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.CreateNewFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.CreateNewFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.CreateNewFileResponse)}
  *     callback The callback function(error, response)
@@ -156,32 +158,32 @@ const methodInfo_CreateNewFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.createNewFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFile',
       request,
       metadata,
       methodInfo_CreateNewFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.CreateNewFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.CreateNewFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.createNewFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.createNewFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -190,20 +192,20 @@ proto.file_service.FileManagementPromiseClient.prototype.createNewFile =
  *   !proto.file_service.CreateNewFolderRequest,
  *   !proto.file_service.CreateNewFolderResponse>}
  */
-const methodInfo_CreateNewFolder = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_CreateNewFolder = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.CreateNewFolderResponse,
   /** @param {!proto.file_service.CreateNewFolderRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.CreateNewFolderResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.CreateNewFolderRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.CreateNewFolderResponse)}
  *     callback The callback function(error, response)
@@ -212,32 +214,32 @@ const methodInfo_CreateNewFolder = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.createNewFolder =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFolder',
       request,
       metadata,
       methodInfo_CreateNewFolder,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.CreateNewFolderRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.CreateNewFolderResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFolder =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.createNewFolder(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.createNewFolder(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -246,20 +248,20 @@ proto.file_service.FileManagementPromiseClient.prototype.createNewFolder =
  *   !proto.file_service.GetFolderContentRequest,
  *   !proto.file_service.GetFolderContentResponse>}
  */
-const methodInfo_GetFolderContent = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_GetFolderContent = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.GetFolderContentResponse,
   /** @param {!proto.file_service.GetFolderContentRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.GetFolderContentResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.GetFolderContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.GetFolderContentResponse)}
  *     callback The callback function(error, response)
@@ -268,32 +270,32 @@ const methodInfo_GetFolderContent = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.getFolderContent =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFolderContent',
       request,
       metadata,
       methodInfo_GetFolderContent,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.GetFolderContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.GetFolderContentResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFolderContent =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.getFolderContent(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.getFolderContent(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -302,20 +304,20 @@ proto.file_service.FileManagementPromiseClient.prototype.getFolderContent =
  *   !proto.file_service.GetFileContentRequest,
  *   !proto.file_service.GetFileContentResponse>}
  */
-const methodInfo_GetFileContent = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_GetFileContent = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.GetFileContentResponse,
   /** @param {!proto.file_service.GetFileContentRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.GetFileContentResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.GetFileContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.GetFileContentResponse)}
  *     callback The callback function(error, response)
@@ -324,32 +326,32 @@ const methodInfo_GetFileContent = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.getFileContent =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileContent',
       request,
       metadata,
       methodInfo_GetFileContent,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.GetFileContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.GetFileContentResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileContent =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.getFileContent(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.getFileContent(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -358,20 +360,20 @@ proto.file_service.FileManagementPromiseClient.prototype.getFileContent =
  *   !proto.file_service.GetFileTreeRequest,
  *   !proto.file_service.GetFileTreeResponse>}
  */
-const methodInfo_GetFileTree = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_GetFileTree = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.GetFileTreeResponse,
   /** @param {!proto.file_service.GetFileTreeRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.GetFileTreeResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.GetFileTreeRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.GetFileTreeResponse)}
  *     callback The callback function(error, response)
@@ -380,32 +382,32 @@ const methodInfo_GetFileTree = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.getFileTree =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileTree',
       request,
       metadata,
       methodInfo_GetFileTree,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.GetFileTreeRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.GetFileTreeResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileTree =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.getFileTree(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.getFileTree(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -414,20 +416,20 @@ proto.file_service.FileManagementPromiseClient.prototype.getFileTree =
  *   !proto.file_service.UpdateFileContentRequest,
  *   !proto.file_service.UpdateFileContentResponse>}
  */
-const methodInfo_UpdateFileContent = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_UpdateFileContent = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.UpdateFileContentResponse,
   /** @param {!proto.file_service.UpdateFileContentRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.UpdateFileContentResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.UpdateFileContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.UpdateFileContentResponse)}
  *     callback The callback function(error, response)
@@ -436,32 +438,32 @@ const methodInfo_UpdateFileContent = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.updateFileContent =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UpdateFileContent',
       request,
       metadata,
       methodInfo_UpdateFileContent,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.UpdateFileContentRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.UpdateFileContentResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.updateFileContent =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.updateFileContent(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.updateFileContent(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -470,20 +472,20 @@ proto.file_service.FileManagementPromiseClient.prototype.updateFileContent =
  *   !proto.file_service.DeleteFileRequest,
  *   !proto.file_service.DeleteFileResponse>}
  */
-const methodInfo_DeleteFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_DeleteFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.DeleteFileResponse,
   /** @param {!proto.file_service.DeleteFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.DeleteFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.DeleteFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.DeleteFileResponse)}
  *     callback The callback function(error, response)
@@ -492,32 +494,32 @@ const methodInfo_DeleteFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.deleteFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DeleteFile',
       request,
       metadata,
       methodInfo_DeleteFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.DeleteFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.DeleteFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.deleteFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.deleteFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.deleteFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -526,20 +528,20 @@ proto.file_service.FileManagementPromiseClient.prototype.deleteFile =
  *   !proto.file_service.RenameFileRequest,
  *   !proto.file_service.RenameFileResponse>}
  */
-const methodInfo_RenameFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_RenameFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.RenameFileResponse,
   /** @param {!proto.file_service.RenameFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.RenameFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.RenameFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.RenameFileResponse)}
  *     callback The callback function(error, response)
@@ -548,32 +550,32 @@ const methodInfo_RenameFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.renameFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/RenameFile',
       request,
       metadata,
       methodInfo_RenameFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.RenameFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.RenameFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.renameFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.renameFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.renameFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -582,20 +584,20 @@ proto.file_service.FileManagementPromiseClient.prototype.renameFile =
  *   !proto.file_service.MoveFileRequest,
  *   !proto.file_service.MoveFileResponse>}
  */
-const methodInfo_MoveFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_MoveFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.MoveFileResponse,
   /** @param {!proto.file_service.MoveFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.MoveFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.MoveFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.MoveFileResponse)}
  *     callback The callback function(error, response)
@@ -604,32 +606,32 @@ const methodInfo_MoveFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.moveFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/MoveFile',
       request,
       metadata,
       methodInfo_MoveFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.MoveFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.MoveFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.moveFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.moveFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.moveFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -638,20 +640,20 @@ proto.file_service.FileManagementPromiseClient.prototype.moveFile =
  *   !proto.file_service.UploadFileRequest,
  *   !proto.file_service.UploadFileResponse>}
  */
-const methodInfo_UploadFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_UploadFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.UploadFileResponse,
   /** @param {!proto.file_service.UploadFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.UploadFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.UploadFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.UploadFileResponse)}
  *     callback The callback function(error, response)
@@ -660,32 +662,32 @@ const methodInfo_UploadFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.uploadFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UploadFile',
       request,
       metadata,
       methodInfo_UploadFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.UploadFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.UploadFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.uploadFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.uploadFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.uploadFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -694,20 +696,20 @@ proto.file_service.FileManagementPromiseClient.prototype.uploadFile =
  *   !proto.file_service.ShareFileRequest,
  *   !proto.file_service.ShareFileResponse>}
  */
-const methodInfo_ShareFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_ShareFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.ShareFileResponse,
   /** @param {!proto.file_service.ShareFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.ShareFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.ShareFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.ShareFileResponse)}
  *     callback The callback function(error, response)
@@ -716,32 +718,32 @@ const methodInfo_ShareFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.shareFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ShareFile',
       request,
       metadata,
       methodInfo_ShareFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.ShareFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.ShareFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.shareFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.shareFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.shareFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -750,20 +752,20 @@ proto.file_service.FileManagementPromiseClient.prototype.shareFile =
  *   !proto.file_service.DownloadFileRequest,
  *   !proto.file_service.DownloadFileResponse>}
  */
-const methodInfo_DownloadFile = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_DownloadFile = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.DownloadFileResponse,
   /** @param {!proto.file_service.DownloadFileRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.DownloadFileResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.DownloadFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.DownloadFileResponse)}
  *     callback The callback function(error, response)
@@ -772,32 +774,32 @@ const methodInfo_DownloadFile = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.downloadFile =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DownloadFile',
       request,
       metadata,
       methodInfo_DownloadFile,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.DownloadFileRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.DownloadFileResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.downloadFile =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.downloadFile(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.downloadFile(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -806,20 +808,20 @@ proto.file_service.FileManagementPromiseClient.prototype.downloadFile =
  *   !proto.file_service.ComputeSizeRequest,
  *   !proto.file_service.ComputeSizeResponse>}
  */
-const methodInfo_ComputeSize = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_ComputeSize = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.ComputeSizeResponse,
   /** @param {!proto.file_service.ComputeSizeRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.ComputeSizeResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.ComputeSizeRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.ComputeSizeResponse)}
  *     callback The callback function(error, response)
@@ -828,32 +830,32 @@ const methodInfo_ComputeSize = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.computeSize =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ComputeSize',
       request,
       metadata,
       methodInfo_ComputeSize,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.ComputeSizeRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.ComputeSizeResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.computeSize =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.computeSize(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.computeSize(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
 /**
@@ -862,20 +864,20 @@ proto.file_service.FileManagementPromiseClient.prototype.computeSize =
  *   !proto.file_service.GetMyDriveIdRequest,
  *   !proto.file_service.GetMyDriveIdResponse>}
  */
-const methodInfo_GetMyDriveId = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_FileManagement_GetMyDriveId = new grpc.web.AbstractClientBase.MethodInfo(
   proto.file_service.GetMyDriveIdResponse,
   /** @param {!proto.file_service.GetMyDriveIdRequest} request */
   function(request) {
-    return request.serializeBinary();
+    return request.serializeBinary()
   },
   proto.file_service.GetMyDriveIdResponse.deserializeBinary
-);
+)
 
 
 /**
  * @param {!proto.file_service.GetMyDriveIdRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @param {function(?grpc.web.Error, ?proto.file_service.GetMyDriveIdResponse)}
  *     callback The callback function(error, response)
@@ -884,33 +886,33 @@ const methodInfo_GetMyDriveId = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.file_service.FileManagementClient.prototype.getMyDriveId =
     function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
+      return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetMyDriveId',
       request,
       metadata,
       methodInfo_GetMyDriveId,
-      callback);
-};
+      callback)
+    }
 
 
 /**
  * @param {!proto.file_service.GetMyDriveIdRequest} request The
  *     request proto
- * @param {!Object<string, string>} metadata User defined
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.file_service.GetMyDriveIdResponse>}
- *     The XHR Node Readable Stream
+ *     A native promise that resolves to the response
  */
 proto.file_service.FileManagementPromiseClient.prototype.getMyDriveId =
     function(request, metadata) {
-  return new Promise((resolve, reject) => {
-    this.delegateClient_.getMyDriveId(
-      request, metadata, (error, response) => {
-        error ? reject(error) : resolve(response);
-      });
-  });
-};
+      return new Promise((resolve, reject) => {
+        this.delegateClient_.getMyDriveId(
+          request, metadata, (error, response) => {
+            error ? reject(error) : resolve(response)
+          })
+      })
+    }
 
 
-module.exports = proto.file_service;
+module.exports = proto.file_service
 

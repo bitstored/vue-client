@@ -13,10 +13,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^12.3.0",
+    "@ckeditor/ckeditor5-vue": "^1.0.0-beta.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.26",
     "google-protobuf": "^3.8.0-rc.1",
     "grpc-web": "^1.0.4",
     "grpc-web-client": "^0.7.0",

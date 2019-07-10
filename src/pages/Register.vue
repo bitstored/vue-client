@@ -226,7 +226,7 @@ export default {
         if (valid) {
           const reader = new FileReader()
           reader.onload = () => {
-            this.register({...this.user, 'photo': reader.result})
+            this.register({...this.user, 'photo': ''})
           }
           reader.readAsDataURL(document.getElementById('profile_photo').files[0])
         }

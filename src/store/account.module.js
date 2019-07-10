@@ -40,7 +40,6 @@ const actions = {
 
   register({ dispatch, commit }, user) {
     commit('registerRequest', user)
-    console.log(user.photo)
     userService.methods.register(user)
       .then(
         rsp => {
@@ -48,7 +47,6 @@ const actions = {
           router.push('/login')
           console.log('register rsp', rsp)
           setTimeout(() => {
-            // display success message after route change completes
             dispatch('alert/success', 'Registration successful', { root: true })
           })
         }
