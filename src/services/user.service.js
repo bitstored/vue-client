@@ -127,7 +127,7 @@ export const userService = {
       proto_user.setUsername(user.username)
       proto_user.setPassword(user.password)
       proto_user.setBirthday(user.birthday + 'T00:00:00.000Z')
-      proto_user.setPhoto(user.photo)
+      proto_user.setPhoto(btoa(unescape(encodeURIComponent(user.photo))))
       proto_user.setEmail(user.email)
       proto_user.setPhoneNumber(user.phoneNumber)
 
@@ -205,7 +205,7 @@ export const userService = {
       const user = new User()
       user.setFirstName(profile.firstName)
       user.setLastName(profile.lastName)
-      user.setPhoto(profile.photo)
+      user.setPhoto(btoa(unescape(encodeURIComponent(profile.photo))))
       user.setPassword(profile.password)
       const updateRequest = new UpdateAccountRequest()
       updateRequest.setUser(user)

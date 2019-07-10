@@ -1,6 +1,3 @@
-/* eslint-disable no-redeclare */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 /**
  * @fileoverview
  * @enhanceable
@@ -10,45 +7,45 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf')
-var goog = jspb
-var global = Function('return this')()
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-goog.exportSymbol('proto.file_service.ComputeSizeRequest', null, global)
-goog.exportSymbol('proto.file_service.ComputeSizeResponse', null, global)
-goog.exportSymbol('proto.file_service.CreateDriveRequest', null, global)
-goog.exportSymbol('proto.file_service.CreateDriveResponse', null, global)
-goog.exportSymbol('proto.file_service.CreateNewFileRequest', null, global)
-goog.exportSymbol('proto.file_service.CreateNewFileResponse', null, global)
-goog.exportSymbol('proto.file_service.CreateNewFolderRequest', null, global)
-goog.exportSymbol('proto.file_service.CreateNewFolderResponse', null, global)
-goog.exportSymbol('proto.file_service.DeleteFileRequest', null, global)
-goog.exportSymbol('proto.file_service.DeleteFileResponse', null, global)
-goog.exportSymbol('proto.file_service.DownloadFileRequest', null, global)
-goog.exportSymbol('proto.file_service.DownloadFileResponse', null, global)
-goog.exportSymbol('proto.file_service.FSLevel', null, global)
-goog.exportSymbol('proto.file_service.FSTree', null, global)
-goog.exportSymbol('proto.file_service.File', null, global)
-goog.exportSymbol('proto.file_service.Folder', null, global)
-goog.exportSymbol('proto.file_service.GetFileContentRequest', null, global)
-goog.exportSymbol('proto.file_service.GetFileContentResponse', null, global)
-goog.exportSymbol('proto.file_service.GetFileTreeRequest', null, global)
-goog.exportSymbol('proto.file_service.GetFileTreeResponse', null, global)
-goog.exportSymbol('proto.file_service.GetFolderContentRequest', null, global)
-goog.exportSymbol('proto.file_service.GetFolderContentResponse', null, global)
-goog.exportSymbol('proto.file_service.GetMyDriveIdRequest', null, global)
-goog.exportSymbol('proto.file_service.GetMyDriveIdResponse', null, global)
-goog.exportSymbol('proto.file_service.MoveFileRequest', null, global)
-goog.exportSymbol('proto.file_service.MoveFileResponse', null, global)
-goog.exportSymbol('proto.file_service.RenameFileRequest', null, global)
-goog.exportSymbol('proto.file_service.RenameFileResponse', null, global)
-goog.exportSymbol('proto.file_service.ShareFileRequest', null, global)
-goog.exportSymbol('proto.file_service.ShareFileResponse', null, global)
-goog.exportSymbol('proto.file_service.Type', null, global)
-goog.exportSymbol('proto.file_service.UpdateFileContentRequest', null, global)
-goog.exportSymbol('proto.file_service.UpdateFileContentResponse', null, global)
-goog.exportSymbol('proto.file_service.UploadFileRequest', null, global)
-goog.exportSymbol('proto.file_service.UploadFileResponse', null, global)
+goog.exportSymbol('proto.file_service.ComputeSizeRequest', null, global);
+goog.exportSymbol('proto.file_service.ComputeSizeResponse', null, global);
+goog.exportSymbol('proto.file_service.CreateDriveRequest', null, global);
+goog.exportSymbol('proto.file_service.CreateDriveResponse', null, global);
+goog.exportSymbol('proto.file_service.CreateNewFileRequest', null, global);
+goog.exportSymbol('proto.file_service.CreateNewFileResponse', null, global);
+goog.exportSymbol('proto.file_service.CreateNewFolderRequest', null, global);
+goog.exportSymbol('proto.file_service.CreateNewFolderResponse', null, global);
+goog.exportSymbol('proto.file_service.DeleteFileRequest', null, global);
+goog.exportSymbol('proto.file_service.DeleteFileResponse', null, global);
+goog.exportSymbol('proto.file_service.DownloadFileRequest', null, global);
+goog.exportSymbol('proto.file_service.DownloadFileResponse', null, global);
+goog.exportSymbol('proto.file_service.FSLevel', null, global);
+goog.exportSymbol('proto.file_service.FSTree', null, global);
+goog.exportSymbol('proto.file_service.File', null, global);
+goog.exportSymbol('proto.file_service.Folder', null, global);
+goog.exportSymbol('proto.file_service.GetFileContentRequest', null, global);
+goog.exportSymbol('proto.file_service.GetFileContentResponse', null, global);
+goog.exportSymbol('proto.file_service.GetFileTreeRequest', null, global);
+goog.exportSymbol('proto.file_service.GetFileTreeResponse', null, global);
+goog.exportSymbol('proto.file_service.GetFolderContentRequest', null, global);
+goog.exportSymbol('proto.file_service.GetFolderContentResponse', null, global);
+goog.exportSymbol('proto.file_service.GetMyDriveIdRequest', null, global);
+goog.exportSymbol('proto.file_service.GetMyDriveIdResponse', null, global);
+goog.exportSymbol('proto.file_service.MoveFileRequest', null, global);
+goog.exportSymbol('proto.file_service.MoveFileResponse', null, global);
+goog.exportSymbol('proto.file_service.RenameFileRequest', null, global);
+goog.exportSymbol('proto.file_service.RenameFileResponse', null, global);
+goog.exportSymbol('proto.file_service.ShareFileRequest', null, global);
+goog.exportSymbol('proto.file_service.ShareFileResponse', null, global);
+goog.exportSymbol('proto.file_service.Type', null, global);
+goog.exportSymbol('proto.file_service.UpdateFileContentRequest', null, global);
+goog.exportSymbol('proto.file_service.UpdateFileContentResponse', null, global);
+goog.exportSymbol('proto.file_service.UploadFileRequest', null, global);
+goog.exportSymbol('proto.file_service.UploadFileResponse', null, global);
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -61,11 +58,11 @@ goog.exportSymbol('proto.file_service.UploadFileResponse', null, global)
  * @constructor
  */
 proto.file_service.GetMyDriveIdRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetMyDriveIdRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetMyDriveIdRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetMyDriveIdRequest.displayName = 'proto.file_service.GetMyDriveIdRequest'
+  proto.file_service.GetMyDriveIdRequest.displayName = 'proto.file_service.GetMyDriveIdRequest';
 }
 
 
@@ -80,12 +77,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetMyDriveIdRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetMyDriveIdRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetMyDriveIdRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetMyDriveIdRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -94,16 +91,16 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetMyDriveIdRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      userId: jspb.Message.getFieldWithDefault(msg, 1, '')
-    }
+proto.file_service.GetMyDriveIdRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    userId: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -113,10 +110,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetMyDriveIdRequest}
  */
 proto.file_service.GetMyDriveIdRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetMyDriveIdRequest
-  return proto.file_service.GetMyDriveIdRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetMyDriveIdRequest;
+  return proto.file_service.GetMyDriveIdRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -129,21 +126,21 @@ proto.file_service.GetMyDriveIdRequest.deserializeBinary = function(bytes) {
 proto.file_service.GetMyDriveIdRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -151,10 +148,10 @@ proto.file_service.GetMyDriveIdRequest.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.file_service.GetMyDriveIdRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetMyDriveIdRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetMyDriveIdRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -165,15 +162,15 @@ proto.file_service.GetMyDriveIdRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetMyDriveIdRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getUserId()
+  var f = undefined;
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -181,14 +178,14 @@ proto.file_service.GetMyDriveIdRequest.serializeBinaryToWriter = function(messag
  * @return {string}
  */
 proto.file_service.GetMyDriveIdRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetMyDriveIdRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 
@@ -203,11 +200,11 @@ proto.file_service.GetMyDriveIdRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.GetMyDriveIdResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetMyDriveIdResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetMyDriveIdResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetMyDriveIdResponse.displayName = 'proto.file_service.GetMyDriveIdResponse'
+  proto.file_service.GetMyDriveIdResponse.displayName = 'proto.file_service.GetMyDriveIdResponse';
 }
 
 
@@ -222,12 +219,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetMyDriveIdResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetMyDriveIdResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetMyDriveIdResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetMyDriveIdResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -236,16 +233,16 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetMyDriveIdResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      driveId: jspb.Message.getFieldWithDefault(msg, 1, '')
-    }
+proto.file_service.GetMyDriveIdResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    driveId: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -255,10 +252,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetMyDriveIdResponse}
  */
 proto.file_service.GetMyDriveIdResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetMyDriveIdResponse
-  return proto.file_service.GetMyDriveIdResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetMyDriveIdResponse;
+  return proto.file_service.GetMyDriveIdResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -271,21 +268,21 @@ proto.file_service.GetMyDriveIdResponse.deserializeBinary = function(bytes) {
 proto.file_service.GetMyDriveIdResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setDriveId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDriveId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -293,10 +290,10 @@ proto.file_service.GetMyDriveIdResponse.deserializeBinaryFromReader = function(m
  * @return {!Uint8Array}
  */
 proto.file_service.GetMyDriveIdResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetMyDriveIdResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetMyDriveIdResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -307,15 +304,15 @@ proto.file_service.GetMyDriveIdResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetMyDriveIdResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getDriveId()
+  var f = undefined;
+  f = message.getDriveId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -323,14 +320,14 @@ proto.file_service.GetMyDriveIdResponse.serializeBinaryToWriter = function(messa
  * @return {string}
  */
 proto.file_service.GetMyDriveIdResponse.prototype.getDriveId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetMyDriveIdResponse.prototype.setDriveId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 
@@ -345,11 +342,11 @@ proto.file_service.GetMyDriveIdResponse.prototype.setDriveId = function(value) {
  * @constructor
  */
 proto.file_service.ComputeSizeRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.ComputeSizeRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.ComputeSizeRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.ComputeSizeRequest.displayName = 'proto.file_service.ComputeSizeRequest'
+  proto.file_service.ComputeSizeRequest.displayName = 'proto.file_service.ComputeSizeRequest';
 }
 
 
@@ -364,12 +361,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.ComputeSizeRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.ComputeSizeRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.ComputeSizeRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.ComputeSizeRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -378,16 +375,16 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.ComputeSizeRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      userId: jspb.Message.getFieldWithDefault(msg, 1, '')
-    }
+proto.file_service.ComputeSizeRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    userId: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -397,10 +394,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.ComputeSizeRequest}
  */
 proto.file_service.ComputeSizeRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.ComputeSizeRequest
-  return proto.file_service.ComputeSizeRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.ComputeSizeRequest;
+  return proto.file_service.ComputeSizeRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -413,21 +410,21 @@ proto.file_service.ComputeSizeRequest.deserializeBinary = function(bytes) {
 proto.file_service.ComputeSizeRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -435,10 +432,10 @@ proto.file_service.ComputeSizeRequest.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.ComputeSizeRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.ComputeSizeRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.ComputeSizeRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -449,15 +446,15 @@ proto.file_service.ComputeSizeRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.ComputeSizeRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getUserId()
+  var f = undefined;
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -465,14 +462,14 @@ proto.file_service.ComputeSizeRequest.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.ComputeSizeRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.ComputeSizeRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 
@@ -487,11 +484,11 @@ proto.file_service.ComputeSizeRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.ComputeSizeResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.ComputeSizeResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.ComputeSizeResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.ComputeSizeResponse.displayName = 'proto.file_service.ComputeSizeResponse'
+  proto.file_service.ComputeSizeResponse.displayName = 'proto.file_service.ComputeSizeResponse';
 }
 
 
@@ -506,12 +503,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.ComputeSizeResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.ComputeSizeResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.ComputeSizeResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.ComputeSizeResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -520,17 +517,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.ComputeSizeResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      initialSize: jspb.Message.getFieldWithDefault(msg, 1, 0),
-      compressedSize: jspb.Message.getFieldWithDefault(msg, 2, 0)
-    }
+proto.file_service.ComputeSizeResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    initialSize: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    compressedSize: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -540,10 +537,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.ComputeSizeResponse}
  */
 proto.file_service.ComputeSizeResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.ComputeSizeResponse
-  return proto.file_service.ComputeSizeResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.ComputeSizeResponse;
+  return proto.file_service.ComputeSizeResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -556,25 +553,25 @@ proto.file_service.ComputeSizeResponse.deserializeBinary = function(bytes) {
 proto.file_service.ComputeSizeResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64())
-      msg.setInitialSize(value)
-      break
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setInitialSize(value);
+      break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt64())
-      msg.setCompressedSize(value)
-      break
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCompressedSize(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -582,10 +579,10 @@ proto.file_service.ComputeSizeResponse.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.file_service.ComputeSizeResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.ComputeSizeResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.ComputeSizeResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -596,22 +593,22 @@ proto.file_service.ComputeSizeResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.ComputeSizeResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getInitialSize()
+  var f = undefined;
+  f = message.getInitialSize();
   if (f !== 0) {
     writer.writeInt64(
       1,
       f
-    )
+    );
   }
-  f = message.getCompressedSize()
+  f = message.getCompressedSize();
   if (f !== 0) {
     writer.writeInt64(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -619,14 +616,14 @@ proto.file_service.ComputeSizeResponse.serializeBinaryToWriter = function(messag
  * @return {number}
  */
 proto.file_service.ComputeSizeResponse.prototype.getInitialSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0))
-}
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
 
 
 /** @param {number} value */
 proto.file_service.ComputeSizeResponse.prototype.setInitialSize = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value)
-}
+  jspb.Message.setProto3IntField(this, 1, value);
+};
 
 
 /**
@@ -634,14 +631,14 @@ proto.file_service.ComputeSizeResponse.prototype.setInitialSize = function(value
  * @return {number}
  */
 proto.file_service.ComputeSizeResponse.prototype.getCompressedSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0))
-}
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
 
 
 /** @param {number} value */
 proto.file_service.ComputeSizeResponse.prototype.setCompressedSize = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value)
-}
+  jspb.Message.setProto3IntField(this, 2, value);
+};
 
 
 
@@ -656,11 +653,11 @@ proto.file_service.ComputeSizeResponse.prototype.setCompressedSize = function(va
  * @constructor
  */
 proto.file_service.Folder = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.Folder, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.Folder, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.Folder.displayName = 'proto.file_service.Folder'
+  proto.file_service.Folder.displayName = 'proto.file_service.Folder';
 }
 
 
@@ -675,12 +672,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.Folder.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.Folder.toObject(opt_includeInstance, this)
-  }
+proto.file_service.Folder.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.Folder.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -689,19 +686,19 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.Folder.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      parentIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      name: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      identifier: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      creationDate: jspb.Message.getFieldWithDefault(msg, 4, '')
-    }
+proto.file_service.Folder.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    parentIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    identifier: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    creationDate: jspb.Message.getFieldWithDefault(msg, 4, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -711,10 +708,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.Folder}
  */
 proto.file_service.Folder.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.Folder
-  return proto.file_service.Folder.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.Folder;
+  return proto.file_service.Folder.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -727,33 +724,33 @@ proto.file_service.Folder.deserializeBinary = function(bytes) {
 proto.file_service.Folder.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setParentIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParentIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setName(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 4:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setCreationDate(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCreationDate(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -761,10 +758,10 @@ proto.file_service.Folder.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.file_service.Folder.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.Folder.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.Folder.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -775,36 +772,36 @@ proto.file_service.Folder.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.Folder.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getParentIdentifier()
+  var f = undefined;
+  f = message.getParentIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getName()
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getIdentifier()
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getCreationDate()
+  f = message.getCreationDate();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -812,14 +809,14 @@ proto.file_service.Folder.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.file_service.Folder.prototype.getParentIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.Folder.prototype.setParentIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -827,14 +824,14 @@ proto.file_service.Folder.prototype.setParentIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.Folder.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.Folder.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -842,14 +839,14 @@ proto.file_service.Folder.prototype.setName = function(value) {
  * @return {string}
  */
 proto.file_service.Folder.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.Folder.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -857,14 +854,14 @@ proto.file_service.Folder.prototype.setIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.Folder.prototype.getCreationDate = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.Folder.prototype.setCreationDate = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value)
-}
+  jspb.Message.setProto3StringField(this, 4, value);
+};
 
 
 
@@ -879,18 +876,18 @@ proto.file_service.Folder.prototype.setCreationDate = function(value) {
  * @constructor
  */
 proto.file_service.FSLevel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.FSLevel.repeatedFields_, null)
-}
-goog.inherits(proto.file_service.FSLevel, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.FSLevel.repeatedFields_, null);
+};
+goog.inherits(proto.file_service.FSLevel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.FSLevel.displayName = 'proto.file_service.FSLevel'
+  proto.file_service.FSLevel.displayName = 'proto.file_service.FSLevel';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.file_service.FSLevel.repeatedFields_ = [2,3]
+proto.file_service.FSLevel.repeatedFields_ = [2,3];
 
 
 
@@ -905,12 +902,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.FSLevel.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.FSLevel.toObject(opt_includeInstance, this)
-  }
+proto.file_service.FSLevel.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.FSLevel.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -919,20 +916,20 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.FSLevel.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
-      foldersList: jspb.Message.toObjectList(msg.getFoldersList(),
-        proto.file_service.Folder.toObject, includeInstance),
-      filesList: jspb.Message.toObjectList(msg.getFilesList(),
-        proto.file_service.File.toObject, includeInstance)
-    }
+proto.file_service.FSLevel.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
+    foldersList: jspb.Message.toObjectList(msg.getFoldersList(),
+    proto.file_service.Folder.toObject, includeInstance),
+    filesList: jspb.Message.toObjectList(msg.getFilesList(),
+    proto.file_service.File.toObject, includeInstance)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -942,10 +939,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.FSLevel}
  */
 proto.file_service.FSLevel.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.FSLevel
-  return proto.file_service.FSLevel.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.FSLevel;
+  return proto.file_service.FSLevel.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -958,32 +955,32 @@ proto.file_service.FSLevel.deserializeBinary = function(bytes) {
 proto.file_service.FSLevel.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.file_service.Folder
-      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader)
-      msg.setFolder(value)
-      break
+      var value = new proto.file_service.Folder;
+      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader);
+      msg.setFolder(value);
+      break;
     case 2:
-      var value = new proto.file_service.Folder
-      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader)
-      msg.addFolders(value)
-      break
+      var value = new proto.file_service.Folder;
+      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader);
+      msg.addFolders(value);
+      break;
     case 3:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.addFiles(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.addFiles(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -991,10 +988,10 @@ proto.file_service.FSLevel.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.file_service.FSLevel.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.FSLevel.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.FSLevel.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -1005,32 +1002,32 @@ proto.file_service.FSLevel.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.FSLevel.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getFolder()
+  var f = undefined;
+  f = message.getFolder();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
       proto.file_service.Folder.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getFoldersList()
+  f = message.getFoldersList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       2,
       f,
       proto.file_service.Folder.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getFilesList()
+  f = message.getFilesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -1039,19 +1036,19 @@ proto.file_service.FSLevel.serializeBinaryToWriter = function(message, writer) {
  */
 proto.file_service.FSLevel.prototype.getFolder = function() {
   return /** @type{?proto.file_service.Folder} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1));
+};
 
 
 /** @param {?proto.file_service.Folder|undefined} value */
 proto.file_service.FSLevel.prototype.setFolder = function(value) {
-  jspb.Message.setWrapperField(this, 1, value)
-}
+  jspb.Message.setWrapperField(this, 1, value);
+};
 
 
 proto.file_service.FSLevel.prototype.clearFolder = function() {
-  this.setFolder(undefined)
-}
+  this.setFolder(undefined);
+};
 
 
 /**
@@ -1059,8 +1056,8 @@ proto.file_service.FSLevel.prototype.clearFolder = function() {
  * @return {!boolean}
  */
 proto.file_service.FSLevel.prototype.hasFolder = function() {
-  return jspb.Message.getField(this, 1) != null
-}
+  return jspb.Message.getField(this, 1) != null;
+};
 
 
 /**
@@ -1069,14 +1066,14 @@ proto.file_service.FSLevel.prototype.hasFolder = function() {
  */
 proto.file_service.FSLevel.prototype.getFoldersList = function() {
   return /** @type{!Array<!proto.file_service.Folder>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.file_service.Folder, 2))
-}
+    jspb.Message.getRepeatedWrapperField(this, proto.file_service.Folder, 2));
+};
 
 
 /** @param {!Array<!proto.file_service.Folder>} value */
 proto.file_service.FSLevel.prototype.setFoldersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 2, value)
-}
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
 
 
 /**
@@ -1085,13 +1082,13 @@ proto.file_service.FSLevel.prototype.setFoldersList = function(value) {
  * @return {!proto.file_service.Folder}
  */
 proto.file_service.FSLevel.prototype.addFolders = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.file_service.Folder, opt_index)
-}
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.file_service.Folder, opt_index);
+};
 
 
 proto.file_service.FSLevel.prototype.clearFoldersList = function() {
-  this.setFoldersList([])
-}
+  this.setFoldersList([]);
+};
 
 
 /**
@@ -1100,14 +1097,14 @@ proto.file_service.FSLevel.prototype.clearFoldersList = function() {
  */
 proto.file_service.FSLevel.prototype.getFilesList = function() {
   return /** @type{!Array<!proto.file_service.File>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.file_service.File, 3))
-}
+    jspb.Message.getRepeatedWrapperField(this, proto.file_service.File, 3));
+};
 
 
 /** @param {!Array<!proto.file_service.File>} value */
 proto.file_service.FSLevel.prototype.setFilesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 3, value)
-}
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
 
 
 /**
@@ -1116,13 +1113,13 @@ proto.file_service.FSLevel.prototype.setFilesList = function(value) {
  * @return {!proto.file_service.File}
  */
 proto.file_service.FSLevel.prototype.addFiles = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.file_service.File, opt_index)
-}
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.file_service.File, opt_index);
+};
 
 
 proto.file_service.FSLevel.prototype.clearFilesList = function() {
-  this.setFilesList([])
-}
+  this.setFilesList([]);
+};
 
 
 
@@ -1137,18 +1134,18 @@ proto.file_service.FSLevel.prototype.clearFilesList = function() {
  * @constructor
  */
 proto.file_service.FSTree = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.FSTree.repeatedFields_, null)
-}
-goog.inherits(proto.file_service.FSTree, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.FSTree.repeatedFields_, null);
+};
+goog.inherits(proto.file_service.FSTree, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.FSTree.displayName = 'proto.file_service.FSTree'
+  proto.file_service.FSTree.displayName = 'proto.file_service.FSTree';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.file_service.FSTree.repeatedFields_ = [2,3]
+proto.file_service.FSTree.repeatedFields_ = [2,3];
 
 
 
@@ -1163,12 +1160,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.FSTree.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.FSTree.toObject(opt_includeInstance, this)
-  }
+proto.file_service.FSTree.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.FSTree.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1177,20 +1174,20 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.FSTree.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
-      childrenList: jspb.Message.toObjectList(msg.getChildrenList(),
-        proto.file_service.FSLevel.toObject, includeInstance),
-      filesList: jspb.Message.toObjectList(msg.getFilesList(),
-        proto.file_service.File.toObject, includeInstance)
-    }
+proto.file_service.FSTree.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
+    childrenList: jspb.Message.toObjectList(msg.getChildrenList(),
+    proto.file_service.FSLevel.toObject, includeInstance),
+    filesList: jspb.Message.toObjectList(msg.getFilesList(),
+    proto.file_service.File.toObject, includeInstance)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -1200,10 +1197,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.FSTree}
  */
 proto.file_service.FSTree.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.FSTree
-  return proto.file_service.FSTree.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.FSTree;
+  return proto.file_service.FSTree.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -1216,32 +1213,32 @@ proto.file_service.FSTree.deserializeBinary = function(bytes) {
 proto.file_service.FSTree.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.file_service.Folder
-      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader)
-      msg.setFolder(value)
-      break
+      var value = new proto.file_service.Folder;
+      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader);
+      msg.setFolder(value);
+      break;
     case 2:
-      var value = new proto.file_service.FSLevel
-      reader.readMessage(value,proto.file_service.FSLevel.deserializeBinaryFromReader)
-      msg.addChildren(value)
-      break
+      var value = new proto.file_service.FSLevel;
+      reader.readMessage(value,proto.file_service.FSLevel.deserializeBinaryFromReader);
+      msg.addChildren(value);
+      break;
     case 3:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.addFiles(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.addFiles(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -1249,10 +1246,10 @@ proto.file_service.FSTree.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.file_service.FSTree.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.FSTree.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.FSTree.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -1263,32 +1260,32 @@ proto.file_service.FSTree.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.FSTree.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getFolder()
+  var f = undefined;
+  f = message.getFolder();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
       proto.file_service.Folder.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getChildrenList()
+  f = message.getChildrenList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       2,
       f,
       proto.file_service.FSLevel.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getFilesList()
+  f = message.getFilesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -1297,19 +1294,19 @@ proto.file_service.FSTree.serializeBinaryToWriter = function(message, writer) {
  */
 proto.file_service.FSTree.prototype.getFolder = function() {
   return /** @type{?proto.file_service.Folder} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1));
+};
 
 
 /** @param {?proto.file_service.Folder|undefined} value */
 proto.file_service.FSTree.prototype.setFolder = function(value) {
-  jspb.Message.setWrapperField(this, 1, value)
-}
+  jspb.Message.setWrapperField(this, 1, value);
+};
 
 
 proto.file_service.FSTree.prototype.clearFolder = function() {
-  this.setFolder(undefined)
-}
+  this.setFolder(undefined);
+};
 
 
 /**
@@ -1317,8 +1314,8 @@ proto.file_service.FSTree.prototype.clearFolder = function() {
  * @return {!boolean}
  */
 proto.file_service.FSTree.prototype.hasFolder = function() {
-  return jspb.Message.getField(this, 1) != null
-}
+  return jspb.Message.getField(this, 1) != null;
+};
 
 
 /**
@@ -1327,14 +1324,14 @@ proto.file_service.FSTree.prototype.hasFolder = function() {
  */
 proto.file_service.FSTree.prototype.getChildrenList = function() {
   return /** @type{!Array<!proto.file_service.FSLevel>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.file_service.FSLevel, 2))
-}
+    jspb.Message.getRepeatedWrapperField(this, proto.file_service.FSLevel, 2));
+};
 
 
 /** @param {!Array<!proto.file_service.FSLevel>} value */
 proto.file_service.FSTree.prototype.setChildrenList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 2, value)
-}
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
 
 
 /**
@@ -1343,13 +1340,13 @@ proto.file_service.FSTree.prototype.setChildrenList = function(value) {
  * @return {!proto.file_service.FSLevel}
  */
 proto.file_service.FSTree.prototype.addChildren = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.file_service.FSLevel, opt_index)
-}
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.file_service.FSLevel, opt_index);
+};
 
 
 proto.file_service.FSTree.prototype.clearChildrenList = function() {
-  this.setChildrenList([])
-}
+  this.setChildrenList([]);
+};
 
 
 /**
@@ -1358,14 +1355,14 @@ proto.file_service.FSTree.prototype.clearChildrenList = function() {
  */
 proto.file_service.FSTree.prototype.getFilesList = function() {
   return /** @type{!Array<!proto.file_service.File>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.file_service.File, 3))
-}
+    jspb.Message.getRepeatedWrapperField(this, proto.file_service.File, 3));
+};
 
 
 /** @param {!Array<!proto.file_service.File>} value */
 proto.file_service.FSTree.prototype.setFilesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 3, value)
-}
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
 
 
 /**
@@ -1374,13 +1371,13 @@ proto.file_service.FSTree.prototype.setFilesList = function(value) {
  * @return {!proto.file_service.File}
  */
 proto.file_service.FSTree.prototype.addFiles = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.file_service.File, opt_index)
-}
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.file_service.File, opt_index);
+};
 
 
 proto.file_service.FSTree.prototype.clearFilesList = function() {
-  this.setFilesList([])
-}
+  this.setFilesList([]);
+};
 
 
 
@@ -1395,11 +1392,11 @@ proto.file_service.FSTree.prototype.clearFilesList = function() {
  * @constructor
  */
 proto.file_service.File = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.File, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.File, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.File.displayName = 'proto.file_service.File'
+  proto.file_service.File.displayName = 'proto.file_service.File';
 }
 
 
@@ -1414,12 +1411,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.File.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.File.toObject(opt_includeInstance, this)
-  }
+proto.file_service.File.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.File.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1428,25 +1425,25 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.File.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      parentIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      name: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      identifier: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      creationDate: jspb.Message.getFieldWithDefault(msg, 4, ''),
-      fileType: jspb.Message.getFieldWithDefault(msg, 6, 0),
-      writable: jspb.Message.getFieldWithDefault(msg, 7, false),
-      pb_private: jspb.Message.getFieldWithDefault(msg, 8, false),
-      content: msg.getContent_asB64(),
-      initSize: jspb.Message.getFieldWithDefault(msg, 10, 0),
-      compressedSize: jspb.Message.getFieldWithDefault(msg, 11, 0)
-    }
+proto.file_service.File.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    parentIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    identifier: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    creationDate: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    fileType: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    writable: jspb.Message.getFieldWithDefault(msg, 7, false),
+    pb_private: jspb.Message.getFieldWithDefault(msg, 8, false),
+    content: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    initSize: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    compressedSize: jspb.Message.getFieldWithDefault(msg, 11, 0)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -1456,10 +1453,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.File}
  */
 proto.file_service.File.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.File
-  return proto.file_service.File.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.File;
+  return proto.file_service.File.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -1472,57 +1469,57 @@ proto.file_service.File.deserializeBinary = function(bytes) {
 proto.file_service.File.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setParentIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParentIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setName(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 4:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setCreationDate(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCreationDate(value);
+      break;
     case 6:
-      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum())
-      msg.setFileType(value)
-      break
+      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum());
+      msg.setFileType(value);
+      break;
     case 7:
-      var value = /** @type {boolean} */ (reader.readBool())
-      msg.setWritable(value)
-      break
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setWritable(value);
+      break;
     case 8:
-      var value = /** @type {boolean} */ (reader.readBool())
-      msg.setPrivate(value)
-      break
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPrivate(value);
+      break;
     case 9:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setContent(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setContent(value);
+      break;
     case 10:
-      var value = /** @type {number} */ (reader.readInt64())
-      msg.setInitSize(value)
-      break
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setInitSize(value);
+      break;
     case 11:
-      var value = /** @type {number} */ (reader.readInt64())
-      msg.setCompressedSize(value)
-      break
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCompressedSize(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -1530,10 +1527,10 @@ proto.file_service.File.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.file_service.File.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.File.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.File.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -1544,78 +1541,78 @@ proto.file_service.File.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.File.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getParentIdentifier()
+  var f = undefined;
+  f = message.getParentIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getName()
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getIdentifier()
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getCreationDate()
+  f = message.getCreationDate();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
-    )
+    );
   }
-  f = message.getFileType()
+  f = message.getFileType();
   if (f !== 0.0) {
     writer.writeEnum(
       6,
       f
-    )
+    );
   }
-  f = message.getWritable()
+  f = message.getWritable();
   if (f) {
     writer.writeBool(
       7,
       f
-    )
+    );
   }
-  f = message.getPrivate()
+  f = message.getPrivate();
   if (f) {
     writer.writeBool(
       8,
       f
-    )
+    );
   }
-  f = message.getContent_asU8()
+  f = message.getContent();
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       9,
       f
-    )
+    );
   }
-  f = message.getInitSize()
+  f = message.getInitSize();
   if (f !== 0) {
     writer.writeInt64(
       10,
       f
-    )
+    );
   }
-  f = message.getCompressedSize()
+  f = message.getCompressedSize();
   if (f !== 0) {
     writer.writeInt64(
       11,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -1623,14 +1620,14 @@ proto.file_service.File.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.file_service.File.prototype.getParentIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.File.prototype.setParentIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -1638,14 +1635,14 @@ proto.file_service.File.prototype.setParentIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.File.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.File.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -1653,14 +1650,14 @@ proto.file_service.File.prototype.setName = function(value) {
  * @return {string}
  */
 proto.file_service.File.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.File.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -1668,14 +1665,14 @@ proto.file_service.File.prototype.setIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.File.prototype.getCreationDate = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.File.prototype.setCreationDate = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value)
-}
+  jspb.Message.setProto3StringField(this, 4, value);
+};
 
 
 /**
@@ -1683,14 +1680,14 @@ proto.file_service.File.prototype.setCreationDate = function(value) {
  * @return {!proto.file_service.Type}
  */
 proto.file_service.File.prototype.getFileType = function() {
-  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 6, 0))
-}
+  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
 
 
 /** @param {!proto.file_service.Type} value */
 proto.file_service.File.prototype.setFileType = function(value) {
-  jspb.Message.setProto3EnumField(this, 6, value)
-}
+  jspb.Message.setProto3EnumField(this, 6, value);
+};
 
 
 /**
@@ -1700,14 +1697,14 @@ proto.file_service.File.prototype.setFileType = function(value) {
  * @return {boolean}
  */
 proto.file_service.File.prototype.getWritable = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 7, false))
-}
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 7, false));
+};
 
 
 /** @param {boolean} value */
 proto.file_service.File.prototype.setWritable = function(value) {
-  jspb.Message.setProto3BooleanField(this, 7, value)
-}
+  jspb.Message.setProto3BooleanField(this, 7, value);
+};
 
 
 /**
@@ -1717,53 +1714,29 @@ proto.file_service.File.prototype.setWritable = function(value) {
  * @return {boolean}
  */
 proto.file_service.File.prototype.getPrivate = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 8, false))
-}
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 8, false));
+};
 
 
 /** @param {boolean} value */
 proto.file_service.File.prototype.setPrivate = function(value) {
-  jspb.Message.setProto3BooleanField(this, 8, value)
-}
+  jspb.Message.setProto3BooleanField(this, 8, value);
+};
 
 
 /**
- * optional bytes content = 9;
- * @return {!(string|Uint8Array)}
- */
-proto.file_service.File.prototype.getContent = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 9, ''))
-}
-
-
-/**
- * optional bytes content = 9;
- * This is a type-conversion wrapper around `getContent()`
+ * optional string content = 9;
  * @return {string}
  */
-proto.file_service.File.prototype.getContent_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getContent()))
-}
+proto.file_service.File.prototype.getContent = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
 
 
-/**
- * optional bytes content = 9;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getContent()`
- * @return {!Uint8Array}
- */
-proto.file_service.File.prototype.getContent_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getContent()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.file_service.File.prototype.setContent = function(value) {
-  jspb.Message.setProto3BytesField(this, 9, value)
-}
+  jspb.Message.setProto3StringField(this, 9, value);
+};
 
 
 /**
@@ -1771,14 +1744,14 @@ proto.file_service.File.prototype.setContent = function(value) {
  * @return {number}
  */
 proto.file_service.File.prototype.getInitSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0))
-}
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
 
 
 /** @param {number} value */
 proto.file_service.File.prototype.setInitSize = function(value) {
-  jspb.Message.setProto3IntField(this, 10, value)
-}
+  jspb.Message.setProto3IntField(this, 10, value);
+};
 
 
 /**
@@ -1786,14 +1759,14 @@ proto.file_service.File.prototype.setInitSize = function(value) {
  * @return {number}
  */
 proto.file_service.File.prototype.getCompressedSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0))
-}
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
 
 
 /** @param {number} value */
 proto.file_service.File.prototype.setCompressedSize = function(value) {
-  jspb.Message.setProto3IntField(this, 11, value)
-}
+  jspb.Message.setProto3IntField(this, 11, value);
+};
 
 
 
@@ -1808,11 +1781,11 @@ proto.file_service.File.prototype.setCompressedSize = function(value) {
  * @constructor
  */
 proto.file_service.CreateDriveRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateDriveRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateDriveRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateDriveRequest.displayName = 'proto.file_service.CreateDriveRequest'
+  proto.file_service.CreateDriveRequest.displayName = 'proto.file_service.CreateDriveRequest';
 }
 
 
@@ -1827,12 +1800,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateDriveRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateDriveRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateDriveRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateDriveRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1841,16 +1814,16 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateDriveRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      userId: jspb.Message.getFieldWithDefault(msg, 1, '')
-    }
+proto.file_service.CreateDriveRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    userId: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -1860,10 +1833,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateDriveRequest}
  */
 proto.file_service.CreateDriveRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateDriveRequest
-  return proto.file_service.CreateDriveRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateDriveRequest;
+  return proto.file_service.CreateDriveRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -1876,21 +1849,21 @@ proto.file_service.CreateDriveRequest.deserializeBinary = function(bytes) {
 proto.file_service.CreateDriveRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -1898,10 +1871,10 @@ proto.file_service.CreateDriveRequest.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.CreateDriveRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateDriveRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateDriveRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -1912,15 +1885,15 @@ proto.file_service.CreateDriveRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateDriveRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getUserId()
+  var f = undefined;
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -1928,14 +1901,14 @@ proto.file_service.CreateDriveRequest.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.CreateDriveRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateDriveRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 
@@ -1950,11 +1923,11 @@ proto.file_service.CreateDriveRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.CreateDriveResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateDriveResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateDriveResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateDriveResponse.displayName = 'proto.file_service.CreateDriveResponse'
+  proto.file_service.CreateDriveResponse.displayName = 'proto.file_service.CreateDriveResponse';
 }
 
 
@@ -1969,12 +1942,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateDriveResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateDriveResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateDriveResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateDriveResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1983,18 +1956,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateDriveResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      driveId: jspb.Message.getFieldWithDefault(msg, 3, '')
-    }
+proto.file_service.CreateDriveResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    driveId: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -2004,10 +1977,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateDriveResponse}
  */
 proto.file_service.CreateDriveResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateDriveResponse
-  return proto.file_service.CreateDriveResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateDriveResponse;
+  return proto.file_service.CreateDriveResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -2020,29 +1993,29 @@ proto.file_service.CreateDriveResponse.deserializeBinary = function(bytes) {
 proto.file_service.CreateDriveResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setDriveId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDriveId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -2050,10 +2023,10 @@ proto.file_service.CreateDriveResponse.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.file_service.CreateDriveResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateDriveResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateDriveResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -2064,29 +2037,29 @@ proto.file_service.CreateDriveResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateDriveResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getDriveId()
+  f = message.getDriveId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -2094,14 +2067,14 @@ proto.file_service.CreateDriveResponse.serializeBinaryToWriter = function(messag
  * @return {string}
  */
 proto.file_service.CreateDriveResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateDriveResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -2109,14 +2082,14 @@ proto.file_service.CreateDriveResponse.prototype.setResponseCode = function(valu
  * @return {string}
  */
 proto.file_service.CreateDriveResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateDriveResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -2124,14 +2097,14 @@ proto.file_service.CreateDriveResponse.prototype.setResponseMessage = function(v
  * @return {string}
  */
 proto.file_service.CreateDriveResponse.prototype.getDriveId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateDriveResponse.prototype.setDriveId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -2146,11 +2119,11 @@ proto.file_service.CreateDriveResponse.prototype.setDriveId = function(value) {
  * @constructor
  */
 proto.file_service.UploadFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.UploadFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.UploadFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.UploadFileRequest.displayName = 'proto.file_service.UploadFileRequest'
+  proto.file_service.UploadFileRequest.displayName = 'proto.file_service.UploadFileRequest';
 }
 
 
@@ -2165,12 +2138,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.UploadFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.UploadFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.UploadFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.UploadFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2179,19 +2152,19 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.UploadFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
-      userId: jspb.Message.getFieldWithDefault(msg, 4, ''),
-      secretPhrase: msg.getSecretPhrase_asB64(),
-      encodedPhrase: msg.getEncodedPhrase_asB64()
-    }
+proto.file_service.UploadFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
+    userId: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    secretPhrase: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    encodedPhrase: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -2201,10 +2174,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.UploadFileRequest}
  */
 proto.file_service.UploadFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.UploadFileRequest
-  return proto.file_service.UploadFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.UploadFileRequest;
+  return proto.file_service.UploadFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -2217,34 +2190,34 @@ proto.file_service.UploadFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.UploadFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.setFile(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.setFile(value);
+      break;
     case 4:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSecretPhrase(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSecretPhrase(value);
+      break;
     case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setEncodedPhrase(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEncodedPhrase(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -2252,10 +2225,10 @@ proto.file_service.UploadFileRequest.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.file_service.UploadFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.UploadFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.UploadFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -2266,37 +2239,37 @@ proto.file_service.UploadFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.UploadFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getFile()
+  var f = undefined;
+  f = message.getFile();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
-    )
+    );
   }
-  f = message.getSecretPhrase_asU8()
+  f = message.getSecretPhrase();
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getEncodedPhrase_asU8()
+  f = message.getEncodedPhrase();
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -2305,19 +2278,19 @@ proto.file_service.UploadFileRequest.serializeBinaryToWriter = function(message,
  */
 proto.file_service.UploadFileRequest.prototype.getFile = function() {
   return /** @type{?proto.file_service.File} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.File, 1))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.File, 1));
+};
 
 
 /** @param {?proto.file_service.File|undefined} value */
 proto.file_service.UploadFileRequest.prototype.setFile = function(value) {
-  jspb.Message.setWrapperField(this, 1, value)
-}
+  jspb.Message.setWrapperField(this, 1, value);
+};
 
 
 proto.file_service.UploadFileRequest.prototype.clearFile = function() {
-  this.setFile(undefined)
-}
+  this.setFile(undefined);
+};
 
 
 /**
@@ -2325,8 +2298,8 @@ proto.file_service.UploadFileRequest.prototype.clearFile = function() {
  * @return {!boolean}
  */
 proto.file_service.UploadFileRequest.prototype.hasFile = function() {
-  return jspb.Message.getField(this, 1) != null
-}
+  return jspb.Message.getField(this, 1) != null;
+};
 
 
 /**
@@ -2334,92 +2307,44 @@ proto.file_service.UploadFileRequest.prototype.hasFile = function() {
  * @return {string}
  */
 proto.file_service.UploadFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UploadFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value)
-}
+  jspb.Message.setProto3StringField(this, 4, value);
+};
 
 
 /**
- * optional bytes secret_phrase = 2;
- * @return {!(string|Uint8Array)}
+ * optional string secret_phrase = 2;
+ * @return {string}
  */
 proto.file_service.UploadFileRequest.prototype.getSecretPhrase = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
-/**
- * optional bytes secret_phrase = 2;
- * This is a type-conversion wrapper around `getSecretPhrase()`
- * @return {string}
- */
-proto.file_service.UploadFileRequest.prototype.getSecretPhrase_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecretPhrase()))
-}
-
-
-/**
- * optional bytes secret_phrase = 2;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSecretPhrase()`
- * @return {!Uint8Array}
- */
-proto.file_service.UploadFileRequest.prototype.getSecretPhrase_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecretPhrase()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.file_service.UploadFileRequest.prototype.setSecretPhrase = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
- * optional bytes encoded_phrase = 3;
- * @return {!(string|Uint8Array)}
+ * optional string encoded_phrase = 3;
+ * @return {string}
  */
 proto.file_service.UploadFileRequest.prototype.getEncodedPhrase = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
-/**
- * optional bytes encoded_phrase = 3;
- * This is a type-conversion wrapper around `getEncodedPhrase()`
- * @return {string}
- */
-proto.file_service.UploadFileRequest.prototype.getEncodedPhrase_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getEncodedPhrase()))
-}
-
-
-/**
- * optional bytes encoded_phrase = 3;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getEncodedPhrase()`
- * @return {!Uint8Array}
- */
-proto.file_service.UploadFileRequest.prototype.getEncodedPhrase_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getEncodedPhrase()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.file_service.UploadFileRequest.prototype.setEncodedPhrase = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -2434,11 +2359,11 @@ proto.file_service.UploadFileRequest.prototype.setEncodedPhrase = function(value
  * @constructor
  */
 proto.file_service.UploadFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.UploadFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.UploadFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.UploadFileResponse.displayName = 'proto.file_service.UploadFileResponse'
+  proto.file_service.UploadFileResponse.displayName = 'proto.file_service.UploadFileResponse';
 }
 
 
@@ -2453,12 +2378,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.UploadFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.UploadFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.UploadFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.UploadFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2467,19 +2392,19 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.UploadFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      fileId: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      watermarkMessage: msg.getWatermarkMessage_asB64()
-    }
+proto.file_service.UploadFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    fileId: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    watermarkMessage: msg.getWatermarkMessage_asB64()
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -2489,10 +2414,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.UploadFileResponse}
  */
 proto.file_service.UploadFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.UploadFileResponse
-  return proto.file_service.UploadFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.UploadFileResponse;
+  return proto.file_service.UploadFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -2505,33 +2430,33 @@ proto.file_service.UploadFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.UploadFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setFileId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFileId(value);
+      break;
     case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setWatermarkMessage(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setWatermarkMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -2539,10 +2464,10 @@ proto.file_service.UploadFileResponse.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.UploadFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.UploadFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.UploadFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -2553,36 +2478,36 @@ proto.file_service.UploadFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.UploadFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getFileId()
+  f = message.getFileId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getWatermarkMessage_asU8()
+  f = message.getWatermarkMessage_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -2590,14 +2515,14 @@ proto.file_service.UploadFileResponse.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.UploadFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UploadFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -2605,14 +2530,14 @@ proto.file_service.UploadFileResponse.prototype.setResponseCode = function(value
  * @return {string}
  */
 proto.file_service.UploadFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UploadFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -2620,14 +2545,14 @@ proto.file_service.UploadFileResponse.prototype.setResponseMessage = function(va
  * @return {string}
  */
 proto.file_service.UploadFileResponse.prototype.getFileId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UploadFileResponse.prototype.setFileId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -2635,8 +2560,8 @@ proto.file_service.UploadFileResponse.prototype.setFileId = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.UploadFileResponse.prototype.getWatermarkMessage = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /**
@@ -2646,8 +2571,8 @@ proto.file_service.UploadFileResponse.prototype.getWatermarkMessage = function()
  */
 proto.file_service.UploadFileResponse.prototype.getWatermarkMessage_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getWatermarkMessage()))
-}
+      this.getWatermarkMessage()));
+};
 
 
 /**
@@ -2659,14 +2584,14 @@ proto.file_service.UploadFileResponse.prototype.getWatermarkMessage_asB64 = func
  */
 proto.file_service.UploadFileResponse.prototype.getWatermarkMessage_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getWatermarkMessage()))
-}
+      this.getWatermarkMessage()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.UploadFileResponse.prototype.setWatermarkMessage = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value)
-}
+  jspb.Message.setProto3BytesField(this, 4, value);
+};
 
 
 
@@ -2681,11 +2606,11 @@ proto.file_service.UploadFileResponse.prototype.setWatermarkMessage = function(v
  * @constructor
  */
 proto.file_service.CreateNewFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateNewFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateNewFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateNewFileRequest.displayName = 'proto.file_service.CreateNewFileRequest'
+  proto.file_service.CreateNewFileRequest.displayName = 'proto.file_service.CreateNewFileRequest';
 }
 
 
@@ -2700,12 +2625,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateNewFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateNewFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateNewFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateNewFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2714,18 +2639,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateNewFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
-      secretPhrase: msg.getSecretPhrase_asB64(),
-      userId: jspb.Message.getFieldWithDefault(msg, 3, '')
-    }
+proto.file_service.CreateNewFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
+    secretPhrase: msg.getSecretPhrase_asB64(),
+    userId: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -2735,10 +2660,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateNewFileRequest}
  */
 proto.file_service.CreateNewFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateNewFileRequest
-  return proto.file_service.CreateNewFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateNewFileRequest;
+  return proto.file_service.CreateNewFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -2751,30 +2676,30 @@ proto.file_service.CreateNewFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.CreateNewFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.setFile(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.setFile(value);
+      break;
     case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSecretPhrase(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecretPhrase(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -2782,10 +2707,10 @@ proto.file_service.CreateNewFileRequest.deserializeBinaryFromReader = function(m
  * @return {!Uint8Array}
  */
 proto.file_service.CreateNewFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateNewFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateNewFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -2796,30 +2721,30 @@ proto.file_service.CreateNewFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateNewFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getFile()
+  var f = undefined;
+  f = message.getFile();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getSecretPhrase_asU8()
+  f = message.getSecretPhrase_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -2828,19 +2753,19 @@ proto.file_service.CreateNewFileRequest.serializeBinaryToWriter = function(messa
  */
 proto.file_service.CreateNewFileRequest.prototype.getFile = function() {
   return /** @type{?proto.file_service.File} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.File, 1))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.File, 1));
+};
 
 
 /** @param {?proto.file_service.File|undefined} value */
 proto.file_service.CreateNewFileRequest.prototype.setFile = function(value) {
-  jspb.Message.setWrapperField(this, 1, value)
-}
+  jspb.Message.setWrapperField(this, 1, value);
+};
 
 
 proto.file_service.CreateNewFileRequest.prototype.clearFile = function() {
-  this.setFile(undefined)
-}
+  this.setFile(undefined);
+};
 
 
 /**
@@ -2848,8 +2773,8 @@ proto.file_service.CreateNewFileRequest.prototype.clearFile = function() {
  * @return {!boolean}
  */
 proto.file_service.CreateNewFileRequest.prototype.hasFile = function() {
-  return jspb.Message.getField(this, 1) != null
-}
+  return jspb.Message.getField(this, 1) != null;
+};
 
 
 /**
@@ -2857,8 +2782,8 @@ proto.file_service.CreateNewFileRequest.prototype.hasFile = function() {
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.CreateNewFileRequest.prototype.getSecretPhrase = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /**
@@ -2868,8 +2793,8 @@ proto.file_service.CreateNewFileRequest.prototype.getSecretPhrase = function() {
  */
 proto.file_service.CreateNewFileRequest.prototype.getSecretPhrase_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecretPhrase()))
-}
+      this.getSecretPhrase()));
+};
 
 
 /**
@@ -2881,14 +2806,14 @@ proto.file_service.CreateNewFileRequest.prototype.getSecretPhrase_asB64 = functi
  */
 proto.file_service.CreateNewFileRequest.prototype.getSecretPhrase_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecretPhrase()))
-}
+      this.getSecretPhrase()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.CreateNewFileRequest.prototype.setSecretPhrase = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value)
-}
+  jspb.Message.setProto3BytesField(this, 2, value);
+};
 
 
 /**
@@ -2896,14 +2821,14 @@ proto.file_service.CreateNewFileRequest.prototype.setSecretPhrase = function(val
  * @return {string}
  */
 proto.file_service.CreateNewFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -2918,11 +2843,11 @@ proto.file_service.CreateNewFileRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.CreateNewFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateNewFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateNewFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateNewFileResponse.displayName = 'proto.file_service.CreateNewFileResponse'
+  proto.file_service.CreateNewFileResponse.displayName = 'proto.file_service.CreateNewFileResponse';
 }
 
 
@@ -2937,12 +2862,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateNewFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateNewFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateNewFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateNewFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2951,18 +2876,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateNewFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      fileId: jspb.Message.getFieldWithDefault(msg, 3, '')
-    }
+proto.file_service.CreateNewFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    fileId: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -2972,10 +2897,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateNewFileResponse}
  */
 proto.file_service.CreateNewFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateNewFileResponse
-  return proto.file_service.CreateNewFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateNewFileResponse;
+  return proto.file_service.CreateNewFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -2988,29 +2913,29 @@ proto.file_service.CreateNewFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.CreateNewFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setFileId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFileId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3018,10 +2943,10 @@ proto.file_service.CreateNewFileResponse.deserializeBinaryFromReader = function(
  * @return {!Uint8Array}
  */
 proto.file_service.CreateNewFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateNewFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateNewFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3032,29 +2957,29 @@ proto.file_service.CreateNewFileResponse.prototype.serializeBinary = function() 
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateNewFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getFileId()
+  f = message.getFileId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3062,14 +2987,14 @@ proto.file_service.CreateNewFileResponse.serializeBinaryToWriter = function(mess
  * @return {string}
  */
 proto.file_service.CreateNewFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -3077,14 +3002,14 @@ proto.file_service.CreateNewFileResponse.prototype.setResponseCode = function(va
  * @return {string}
  */
 proto.file_service.CreateNewFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -3092,14 +3017,14 @@ proto.file_service.CreateNewFileResponse.prototype.setResponseMessage = function
  * @return {string}
  */
 proto.file_service.CreateNewFileResponse.prototype.getFileId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFileResponse.prototype.setFileId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -3114,11 +3039,11 @@ proto.file_service.CreateNewFileResponse.prototype.setFileId = function(value) {
  * @constructor
  */
 proto.file_service.CreateNewFolderRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateNewFolderRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateNewFolderRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateNewFolderRequest.displayName = 'proto.file_service.CreateNewFolderRequest'
+  proto.file_service.CreateNewFolderRequest.displayName = 'proto.file_service.CreateNewFolderRequest';
 }
 
 
@@ -3133,12 +3058,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateNewFolderRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateNewFolderRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateNewFolderRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateNewFolderRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3147,17 +3072,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateNewFolderRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.CreateNewFolderRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    folder: (f = msg.getFolder()) && proto.file_service.Folder.toObject(includeInstance, f),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -3167,10 +3092,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateNewFolderRequest}
  */
 proto.file_service.CreateNewFolderRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateNewFolderRequest
-  return proto.file_service.CreateNewFolderRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateNewFolderRequest;
+  return proto.file_service.CreateNewFolderRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -3183,26 +3108,26 @@ proto.file_service.CreateNewFolderRequest.deserializeBinary = function(bytes) {
 proto.file_service.CreateNewFolderRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.file_service.Folder
-      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader)
-      msg.setFolder(value)
-      break
+      var value = new proto.file_service.Folder;
+      reader.readMessage(value,proto.file_service.Folder.deserializeBinaryFromReader);
+      msg.setFolder(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3210,10 +3135,10 @@ proto.file_service.CreateNewFolderRequest.deserializeBinaryFromReader = function
  * @return {!Uint8Array}
  */
 proto.file_service.CreateNewFolderRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateNewFolderRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateNewFolderRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3224,23 +3149,23 @@ proto.file_service.CreateNewFolderRequest.prototype.serializeBinary = function()
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateNewFolderRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getFolder()
+  var f = undefined;
+  f = message.getFolder();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
       proto.file_service.Folder.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3249,19 +3174,19 @@ proto.file_service.CreateNewFolderRequest.serializeBinaryToWriter = function(mes
  */
 proto.file_service.CreateNewFolderRequest.prototype.getFolder = function() {
   return /** @type{?proto.file_service.Folder} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.Folder, 1));
+};
 
 
 /** @param {?proto.file_service.Folder|undefined} value */
 proto.file_service.CreateNewFolderRequest.prototype.setFolder = function(value) {
-  jspb.Message.setWrapperField(this, 1, value)
-}
+  jspb.Message.setWrapperField(this, 1, value);
+};
 
 
 proto.file_service.CreateNewFolderRequest.prototype.clearFolder = function() {
-  this.setFolder(undefined)
-}
+  this.setFolder(undefined);
+};
 
 
 /**
@@ -3269,8 +3194,8 @@ proto.file_service.CreateNewFolderRequest.prototype.clearFolder = function() {
  * @return {!boolean}
  */
 proto.file_service.CreateNewFolderRequest.prototype.hasFolder = function() {
-  return jspb.Message.getField(this, 1) != null
-}
+  return jspb.Message.getField(this, 1) != null;
+};
 
 
 /**
@@ -3278,14 +3203,14 @@ proto.file_service.CreateNewFolderRequest.prototype.hasFolder = function() {
  * @return {string}
  */
 proto.file_service.CreateNewFolderRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFolderRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -3300,11 +3225,11 @@ proto.file_service.CreateNewFolderRequest.prototype.setUserId = function(value) 
  * @constructor
  */
 proto.file_service.CreateNewFolderResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.CreateNewFolderResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.CreateNewFolderResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.CreateNewFolderResponse.displayName = 'proto.file_service.CreateNewFolderResponse'
+  proto.file_service.CreateNewFolderResponse.displayName = 'proto.file_service.CreateNewFolderResponse';
 }
 
 
@@ -3319,12 +3244,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.CreateNewFolderResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.CreateNewFolderResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.CreateNewFolderResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.CreateNewFolderResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3333,18 +3258,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.CreateNewFolderResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      folderId: jspb.Message.getFieldWithDefault(msg, 3, '')
-    }
+proto.file_service.CreateNewFolderResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    folderId: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -3354,10 +3279,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.CreateNewFolderResponse}
  */
 proto.file_service.CreateNewFolderResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.CreateNewFolderResponse
-  return proto.file_service.CreateNewFolderResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.CreateNewFolderResponse;
+  return proto.file_service.CreateNewFolderResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -3370,29 +3295,29 @@ proto.file_service.CreateNewFolderResponse.deserializeBinary = function(bytes) {
 proto.file_service.CreateNewFolderResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setFolderId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFolderId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3400,10 +3325,10 @@ proto.file_service.CreateNewFolderResponse.deserializeBinaryFromReader = functio
  * @return {!Uint8Array}
  */
 proto.file_service.CreateNewFolderResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.CreateNewFolderResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.CreateNewFolderResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3414,29 +3339,29 @@ proto.file_service.CreateNewFolderResponse.prototype.serializeBinary = function(
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.CreateNewFolderResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getFolderId()
+  f = message.getFolderId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3444,14 +3369,14 @@ proto.file_service.CreateNewFolderResponse.serializeBinaryToWriter = function(me
  * @return {string}
  */
 proto.file_service.CreateNewFolderResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFolderResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -3459,14 +3384,14 @@ proto.file_service.CreateNewFolderResponse.prototype.setResponseCode = function(
  * @return {string}
  */
 proto.file_service.CreateNewFolderResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFolderResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -3474,14 +3399,14 @@ proto.file_service.CreateNewFolderResponse.prototype.setResponseMessage = functi
  * @return {string}
  */
 proto.file_service.CreateNewFolderResponse.prototype.getFolderId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.CreateNewFolderResponse.prototype.setFolderId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -3496,11 +3421,11 @@ proto.file_service.CreateNewFolderResponse.prototype.setFolderId = function(valu
  * @constructor
  */
 proto.file_service.DeleteFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.DeleteFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.DeleteFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.DeleteFileRequest.displayName = 'proto.file_service.DeleteFileRequest'
+  proto.file_service.DeleteFileRequest.displayName = 'proto.file_service.DeleteFileRequest';
 }
 
 
@@ -3515,12 +3440,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.DeleteFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.DeleteFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.DeleteFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.DeleteFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3529,17 +3454,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.DeleteFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.DeleteFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -3549,10 +3474,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.DeleteFileRequest}
  */
 proto.file_service.DeleteFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.DeleteFileRequest
-  return proto.file_service.DeleteFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.DeleteFileRequest;
+  return proto.file_service.DeleteFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -3565,25 +3490,25 @@ proto.file_service.DeleteFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.DeleteFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3591,10 +3516,10 @@ proto.file_service.DeleteFileRequest.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.file_service.DeleteFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.DeleteFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.DeleteFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3605,22 +3530,22 @@ proto.file_service.DeleteFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.DeleteFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3628,14 +3553,14 @@ proto.file_service.DeleteFileRequest.serializeBinaryToWriter = function(message,
  * @return {string}
  */
 proto.file_service.DeleteFileRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DeleteFileRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -3643,14 +3568,14 @@ proto.file_service.DeleteFileRequest.prototype.setIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.DeleteFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DeleteFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -3665,11 +3590,11 @@ proto.file_service.DeleteFileRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.DeleteFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.DeleteFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.DeleteFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.DeleteFileResponse.displayName = 'proto.file_service.DeleteFileResponse'
+  proto.file_service.DeleteFileResponse.displayName = 'proto.file_service.DeleteFileResponse';
 }
 
 
@@ -3684,12 +3609,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.DeleteFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.DeleteFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.DeleteFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.DeleteFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3698,17 +3623,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.DeleteFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.DeleteFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -3718,10 +3643,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.DeleteFileResponse}
  */
 proto.file_service.DeleteFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.DeleteFileResponse
-  return proto.file_service.DeleteFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.DeleteFileResponse;
+  return proto.file_service.DeleteFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -3734,25 +3659,25 @@ proto.file_service.DeleteFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.DeleteFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3760,10 +3685,10 @@ proto.file_service.DeleteFileResponse.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.DeleteFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.DeleteFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.DeleteFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3774,22 +3699,22 @@ proto.file_service.DeleteFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.DeleteFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3797,14 +3722,14 @@ proto.file_service.DeleteFileResponse.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.DeleteFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DeleteFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -3812,14 +3737,14 @@ proto.file_service.DeleteFileResponse.prototype.setResponseCode = function(value
  * @return {string}
  */
 proto.file_service.DeleteFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DeleteFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -3834,11 +3759,11 @@ proto.file_service.DeleteFileResponse.prototype.setResponseMessage = function(va
  * @constructor
  */
 proto.file_service.RenameFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.RenameFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.RenameFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.RenameFileRequest.displayName = 'proto.file_service.RenameFileRequest'
+  proto.file_service.RenameFileRequest.displayName = 'proto.file_service.RenameFileRequest';
 }
 
 
@@ -3853,12 +3778,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.RenameFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.RenameFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.RenameFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.RenameFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3867,18 +3792,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.RenameFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      name: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 3, '')
-    }
+proto.file_service.RenameFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -3888,10 +3813,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.RenameFileRequest}
  */
 proto.file_service.RenameFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.RenameFileRequest
-  return proto.file_service.RenameFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.RenameFileRequest;
+  return proto.file_service.RenameFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -3904,29 +3829,29 @@ proto.file_service.RenameFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.RenameFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setName(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -3934,10 +3859,10 @@ proto.file_service.RenameFileRequest.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.file_service.RenameFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.RenameFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.RenameFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -3948,29 +3873,29 @@ proto.file_service.RenameFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.RenameFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getName()
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -3978,14 +3903,14 @@ proto.file_service.RenameFileRequest.serializeBinaryToWriter = function(message,
  * @return {string}
  */
 proto.file_service.RenameFileRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.RenameFileRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -3993,14 +3918,14 @@ proto.file_service.RenameFileRequest.prototype.setIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.RenameFileRequest.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.RenameFileRequest.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -4008,14 +3933,14 @@ proto.file_service.RenameFileRequest.prototype.setName = function(value) {
  * @return {string}
  */
 proto.file_service.RenameFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.RenameFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 
@@ -4030,11 +3955,11 @@ proto.file_service.RenameFileRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.RenameFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.RenameFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.RenameFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.RenameFileResponse.displayName = 'proto.file_service.RenameFileResponse'
+  proto.file_service.RenameFileResponse.displayName = 'proto.file_service.RenameFileResponse';
 }
 
 
@@ -4049,12 +3974,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.RenameFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.RenameFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.RenameFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.RenameFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4063,17 +3988,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.RenameFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.RenameFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -4083,10 +4008,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.RenameFileResponse}
  */
 proto.file_service.RenameFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.RenameFileResponse
-  return proto.file_service.RenameFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.RenameFileResponse;
+  return proto.file_service.RenameFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -4099,25 +4024,25 @@ proto.file_service.RenameFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.RenameFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -4125,10 +4050,10 @@ proto.file_service.RenameFileResponse.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.RenameFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.RenameFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.RenameFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -4139,22 +4064,22 @@ proto.file_service.RenameFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.RenameFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -4162,14 +4087,14 @@ proto.file_service.RenameFileResponse.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.RenameFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.RenameFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -4177,14 +4102,14 @@ proto.file_service.RenameFileResponse.prototype.setResponseCode = function(value
  * @return {string}
  */
 proto.file_service.RenameFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.RenameFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -4199,11 +4124,11 @@ proto.file_service.RenameFileResponse.prototype.setResponseMessage = function(va
  * @constructor
  */
 proto.file_service.MoveFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.MoveFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.MoveFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.MoveFileRequest.displayName = 'proto.file_service.MoveFileRequest'
+  proto.file_service.MoveFileRequest.displayName = 'proto.file_service.MoveFileRequest';
 }
 
 
@@ -4218,12 +4143,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.MoveFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.MoveFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.MoveFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.MoveFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4232,20 +4157,20 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.MoveFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      destination: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      source: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 4, ''),
-      copy: jspb.Message.getFieldWithDefault(msg, 5, false)
-    }
+proto.file_service.MoveFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    destination: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    source: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    copy: jspb.Message.getFieldWithDefault(msg, 5, false)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -4255,10 +4180,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.MoveFileRequest}
  */
 proto.file_service.MoveFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.MoveFileRequest
-  return proto.file_service.MoveFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.MoveFileRequest;
+  return proto.file_service.MoveFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -4271,37 +4196,37 @@ proto.file_service.MoveFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.MoveFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setDestination(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDestination(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setSource(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSource(value);
+      break;
     case 4:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     case 5:
-      var value = /** @type {boolean} */ (reader.readBool())
-      msg.setCopy(value)
-      break
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setCopy(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -4309,10 +4234,10 @@ proto.file_service.MoveFileRequest.deserializeBinaryFromReader = function(msg, r
  * @return {!Uint8Array}
  */
 proto.file_service.MoveFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.MoveFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.MoveFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -4323,43 +4248,43 @@ proto.file_service.MoveFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.MoveFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getDestination()
+  f = message.getDestination();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getSource()
+  f = message.getSource();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
-    )
+    );
   }
-  f = message.getCopy()
+  f = message.getCopy();
   if (f) {
     writer.writeBool(
       5,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -4367,14 +4292,14 @@ proto.file_service.MoveFileRequest.serializeBinaryToWriter = function(message, w
  * @return {string}
  */
 proto.file_service.MoveFileRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -4382,14 +4307,14 @@ proto.file_service.MoveFileRequest.prototype.setIdentifier = function(value) {
  * @return {string}
  */
 proto.file_service.MoveFileRequest.prototype.getDestination = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileRequest.prototype.setDestination = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -4397,14 +4322,14 @@ proto.file_service.MoveFileRequest.prototype.setDestination = function(value) {
  * @return {string}
  */
 proto.file_service.MoveFileRequest.prototype.getSource = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileRequest.prototype.setSource = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -4412,14 +4337,14 @@ proto.file_service.MoveFileRequest.prototype.setSource = function(value) {
  * @return {string}
  */
 proto.file_service.MoveFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value)
-}
+  jspb.Message.setProto3StringField(this, 4, value);
+};
 
 
 /**
@@ -4429,14 +4354,14 @@ proto.file_service.MoveFileRequest.prototype.setUserId = function(value) {
  * @return {boolean}
  */
 proto.file_service.MoveFileRequest.prototype.getCopy = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false))
-}
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
+};
 
 
 /** @param {boolean} value */
 proto.file_service.MoveFileRequest.prototype.setCopy = function(value) {
-  jspb.Message.setProto3BooleanField(this, 5, value)
-}
+  jspb.Message.setProto3BooleanField(this, 5, value);
+};
 
 
 
@@ -4451,11 +4376,11 @@ proto.file_service.MoveFileRequest.prototype.setCopy = function(value) {
  * @constructor
  */
 proto.file_service.MoveFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.MoveFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.MoveFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.MoveFileResponse.displayName = 'proto.file_service.MoveFileResponse'
+  proto.file_service.MoveFileResponse.displayName = 'proto.file_service.MoveFileResponse';
 }
 
 
@@ -4470,12 +4395,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.MoveFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.MoveFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.MoveFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.MoveFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4484,17 +4409,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.MoveFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.MoveFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -4504,10 +4429,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.MoveFileResponse}
  */
 proto.file_service.MoveFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.MoveFileResponse
-  return proto.file_service.MoveFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.MoveFileResponse;
+  return proto.file_service.MoveFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -4520,25 +4445,25 @@ proto.file_service.MoveFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.MoveFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -4546,10 +4471,10 @@ proto.file_service.MoveFileResponse.deserializeBinaryFromReader = function(msg, 
  * @return {!Uint8Array}
  */
 proto.file_service.MoveFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.MoveFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.MoveFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -4560,22 +4485,22 @@ proto.file_service.MoveFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.MoveFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -4583,14 +4508,14 @@ proto.file_service.MoveFileResponse.serializeBinaryToWriter = function(message, 
  * @return {string}
  */
 proto.file_service.MoveFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -4598,14 +4523,14 @@ proto.file_service.MoveFileResponse.prototype.setResponseCode = function(value) 
  * @return {string}
  */
 proto.file_service.MoveFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.MoveFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -4620,11 +4545,11 @@ proto.file_service.MoveFileResponse.prototype.setResponseMessage = function(valu
  * @constructor
  */
 proto.file_service.GetFolderContentRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFolderContentRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFolderContentRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFolderContentRequest.displayName = 'proto.file_service.GetFolderContentRequest'
+  proto.file_service.GetFolderContentRequest.displayName = 'proto.file_service.GetFolderContentRequest';
 }
 
 
@@ -4639,12 +4564,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFolderContentRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFolderContentRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFolderContentRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFolderContentRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4653,17 +4578,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFolderContentRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.GetFolderContentRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -4673,10 +4598,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFolderContentRequest}
  */
 proto.file_service.GetFolderContentRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFolderContentRequest
-  return proto.file_service.GetFolderContentRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFolderContentRequest;
+  return proto.file_service.GetFolderContentRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -4689,25 +4614,25 @@ proto.file_service.GetFolderContentRequest.deserializeBinary = function(bytes) {
 proto.file_service.GetFolderContentRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -4715,10 +4640,10 @@ proto.file_service.GetFolderContentRequest.deserializeBinaryFromReader = functio
  * @return {!Uint8Array}
  */
 proto.file_service.GetFolderContentRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFolderContentRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFolderContentRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -4729,22 +4654,22 @@ proto.file_service.GetFolderContentRequest.prototype.serializeBinary = function(
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFolderContentRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -4752,14 +4677,14 @@ proto.file_service.GetFolderContentRequest.serializeBinaryToWriter = function(me
  * @return {string}
  */
 proto.file_service.GetFolderContentRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFolderContentRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -4767,14 +4692,14 @@ proto.file_service.GetFolderContentRequest.prototype.setIdentifier = function(va
  * @return {string}
  */
 proto.file_service.GetFolderContentRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFolderContentRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -4789,11 +4714,11 @@ proto.file_service.GetFolderContentRequest.prototype.setUserId = function(value)
  * @constructor
  */
 proto.file_service.GetFolderContentResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFolderContentResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFolderContentResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFolderContentResponse.displayName = 'proto.file_service.GetFolderContentResponse'
+  proto.file_service.GetFolderContentResponse.displayName = 'proto.file_service.GetFolderContentResponse';
 }
 
 
@@ -4808,12 +4733,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFolderContentResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFolderContentResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFolderContentResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFolderContentResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4822,18 +4747,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFolderContentResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      content: (f = msg.getContent()) && proto.file_service.FSLevel.toObject(includeInstance, f)
-    }
+proto.file_service.GetFolderContentResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    content: (f = msg.getContent()) && proto.file_service.FSLevel.toObject(includeInstance, f)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -4843,10 +4768,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFolderContentResponse}
  */
 proto.file_service.GetFolderContentResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFolderContentResponse
-  return proto.file_service.GetFolderContentResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFolderContentResponse;
+  return proto.file_service.GetFolderContentResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -4859,30 +4784,30 @@ proto.file_service.GetFolderContentResponse.deserializeBinary = function(bytes) 
 proto.file_service.GetFolderContentResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = new proto.file_service.FSLevel
-      reader.readMessage(value,proto.file_service.FSLevel.deserializeBinaryFromReader)
-      msg.setContent(value)
-      break
+      var value = new proto.file_service.FSLevel;
+      reader.readMessage(value,proto.file_service.FSLevel.deserializeBinaryFromReader);
+      msg.setContent(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -4890,10 +4815,10 @@ proto.file_service.GetFolderContentResponse.deserializeBinaryFromReader = functi
  * @return {!Uint8Array}
  */
 proto.file_service.GetFolderContentResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFolderContentResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFolderContentResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -4904,30 +4829,30 @@ proto.file_service.GetFolderContentResponse.prototype.serializeBinary = function
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFolderContentResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getContent()
+  f = message.getContent();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
       proto.file_service.FSLevel.serializeBinaryToWriter
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -4935,14 +4860,14 @@ proto.file_service.GetFolderContentResponse.serializeBinaryToWriter = function(m
  * @return {string}
  */
 proto.file_service.GetFolderContentResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFolderContentResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -4950,14 +4875,14 @@ proto.file_service.GetFolderContentResponse.prototype.setResponseCode = function
  * @return {string}
  */
 proto.file_service.GetFolderContentResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFolderContentResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -4966,19 +4891,19 @@ proto.file_service.GetFolderContentResponse.prototype.setResponseMessage = funct
  */
 proto.file_service.GetFolderContentResponse.prototype.getContent = function() {
   return /** @type{?proto.file_service.FSLevel} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.FSLevel, 3))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.FSLevel, 3));
+};
 
 
 /** @param {?proto.file_service.FSLevel|undefined} value */
 proto.file_service.GetFolderContentResponse.prototype.setContent = function(value) {
-  jspb.Message.setWrapperField(this, 3, value)
-}
+  jspb.Message.setWrapperField(this, 3, value);
+};
 
 
 proto.file_service.GetFolderContentResponse.prototype.clearContent = function() {
-  this.setContent(undefined)
-}
+  this.setContent(undefined);
+};
 
 
 /**
@@ -4986,8 +4911,8 @@ proto.file_service.GetFolderContentResponse.prototype.clearContent = function() 
  * @return {!boolean}
  */
 proto.file_service.GetFolderContentResponse.prototype.hasContent = function() {
-  return jspb.Message.getField(this, 3) != null
-}
+  return jspb.Message.getField(this, 3) != null;
+};
 
 
 
@@ -5002,11 +4927,11 @@ proto.file_service.GetFolderContentResponse.prototype.hasContent = function() {
  * @constructor
  */
 proto.file_service.GetFileContentRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFileContentRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFileContentRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFileContentRequest.displayName = 'proto.file_service.GetFileContentRequest'
+  proto.file_service.GetFileContentRequest.displayName = 'proto.file_service.GetFileContentRequest';
 }
 
 
@@ -5021,12 +4946,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFileContentRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFileContentRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFileContentRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFileContentRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5035,19 +4960,19 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFileContentRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      secretKey: msg.getSecretKey_asB64(),
-      type: jspb.Message.getFieldWithDefault(msg, 4, 0)
-    }
+proto.file_service.GetFileContentRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    secretKey: msg.getSecretKey_asB64(),
+    type: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -5057,10 +4982,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFileContentRequest}
  */
 proto.file_service.GetFileContentRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFileContentRequest
-  return proto.file_service.GetFileContentRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFileContentRequest;
+  return proto.file_service.GetFileContentRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -5073,33 +4998,33 @@ proto.file_service.GetFileContentRequest.deserializeBinary = function(bytes) {
 proto.file_service.GetFileContentRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSecretKey(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecretKey(value);
+      break;
     case 4:
-      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum())
-      msg.setType(value)
-      break
+      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum());
+      msg.setType(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -5107,10 +5032,10 @@ proto.file_service.GetFileContentRequest.deserializeBinaryFromReader = function(
  * @return {!Uint8Array}
  */
 proto.file_service.GetFileContentRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFileContentRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFileContentRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -5121,36 +5046,36 @@ proto.file_service.GetFileContentRequest.prototype.serializeBinary = function() 
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFileContentRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getSecretKey_asU8()
+  f = message.getSecretKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
       f
-    )
+    );
   }
-  f = message.getType()
+  f = message.getType();
   if (f !== 0.0) {
     writer.writeEnum(
       4,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -5158,14 +5083,14 @@ proto.file_service.GetFileContentRequest.serializeBinaryToWriter = function(mess
  * @return {string}
  */
 proto.file_service.GetFileContentRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileContentRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -5173,14 +5098,14 @@ proto.file_service.GetFileContentRequest.prototype.setIdentifier = function(valu
  * @return {string}
  */
 proto.file_service.GetFileContentRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileContentRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -5188,8 +5113,8 @@ proto.file_service.GetFileContentRequest.prototype.setUserId = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.GetFileContentRequest.prototype.getSecretKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /**
@@ -5199,8 +5124,8 @@ proto.file_service.GetFileContentRequest.prototype.getSecretKey = function() {
  */
 proto.file_service.GetFileContentRequest.prototype.getSecretKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecretKey()))
-}
+      this.getSecretKey()));
+};
 
 
 /**
@@ -5212,14 +5137,14 @@ proto.file_service.GetFileContentRequest.prototype.getSecretKey_asB64 = function
  */
 proto.file_service.GetFileContentRequest.prototype.getSecretKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecretKey()))
-}
+      this.getSecretKey()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.GetFileContentRequest.prototype.setSecretKey = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value)
-}
+  jspb.Message.setProto3BytesField(this, 3, value);
+};
 
 
 /**
@@ -5227,14 +5152,14 @@ proto.file_service.GetFileContentRequest.prototype.setSecretKey = function(value
  * @return {!proto.file_service.Type}
  */
 proto.file_service.GetFileContentRequest.prototype.getType = function() {
-  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 4, 0))
-}
+  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
 
 
 /** @param {!proto.file_service.Type} value */
 proto.file_service.GetFileContentRequest.prototype.setType = function(value) {
-  jspb.Message.setProto3EnumField(this, 4, value)
-}
+  jspb.Message.setProto3EnumField(this, 4, value);
+};
 
 
 
@@ -5249,11 +5174,11 @@ proto.file_service.GetFileContentRequest.prototype.setType = function(value) {
  * @constructor
  */
 proto.file_service.GetFileContentResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFileContentResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFileContentResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFileContentResponse.displayName = 'proto.file_service.GetFileContentResponse'
+  proto.file_service.GetFileContentResponse.displayName = 'proto.file_service.GetFileContentResponse';
 }
 
 
@@ -5268,12 +5193,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFileContentResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFileContentResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFileContentResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFileContentResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5282,18 +5207,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFileContentResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f)
-    }
+proto.file_service.GetFileContentResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -5303,10 +5228,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFileContentResponse}
  */
 proto.file_service.GetFileContentResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFileContentResponse
-  return proto.file_service.GetFileContentResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFileContentResponse;
+  return proto.file_service.GetFileContentResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -5319,30 +5244,30 @@ proto.file_service.GetFileContentResponse.deserializeBinary = function(bytes) {
 proto.file_service.GetFileContentResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.setFile(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.setFile(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -5350,10 +5275,10 @@ proto.file_service.GetFileContentResponse.deserializeBinaryFromReader = function
  * @return {!Uint8Array}
  */
 proto.file_service.GetFileContentResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFileContentResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFileContentResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -5364,30 +5289,30 @@ proto.file_service.GetFileContentResponse.prototype.serializeBinary = function()
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFileContentResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getFile()
+  f = message.getFile();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -5395,14 +5320,14 @@ proto.file_service.GetFileContentResponse.serializeBinaryToWriter = function(mes
  * @return {string}
  */
 proto.file_service.GetFileContentResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileContentResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -5410,14 +5335,14 @@ proto.file_service.GetFileContentResponse.prototype.setResponseCode = function(v
  * @return {string}
  */
 proto.file_service.GetFileContentResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileContentResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -5426,19 +5351,19 @@ proto.file_service.GetFileContentResponse.prototype.setResponseMessage = functio
  */
 proto.file_service.GetFileContentResponse.prototype.getFile = function() {
   return /** @type{?proto.file_service.File} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.File, 3))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.File, 3));
+};
 
 
 /** @param {?proto.file_service.File|undefined} value */
 proto.file_service.GetFileContentResponse.prototype.setFile = function(value) {
-  jspb.Message.setWrapperField(this, 3, value)
-}
+  jspb.Message.setWrapperField(this, 3, value);
+};
 
 
 proto.file_service.GetFileContentResponse.prototype.clearFile = function() {
-  this.setFile(undefined)
-}
+  this.setFile(undefined);
+};
 
 
 /**
@@ -5446,8 +5371,8 @@ proto.file_service.GetFileContentResponse.prototype.clearFile = function() {
  * @return {!boolean}
  */
 proto.file_service.GetFileContentResponse.prototype.hasFile = function() {
-  return jspb.Message.getField(this, 3) != null
-}
+  return jspb.Message.getField(this, 3) != null;
+};
 
 
 
@@ -5462,11 +5387,11 @@ proto.file_service.GetFileContentResponse.prototype.hasFile = function() {
  * @constructor
  */
 proto.file_service.GetFileTreeRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFileTreeRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFileTreeRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFileTreeRequest.displayName = 'proto.file_service.GetFileTreeRequest'
+  proto.file_service.GetFileTreeRequest.displayName = 'proto.file_service.GetFileTreeRequest';
 }
 
 
@@ -5481,12 +5406,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFileTreeRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFileTreeRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFileTreeRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFileTreeRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5495,17 +5420,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFileTreeRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      rootIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.GetFileTreeRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    rootIdentifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -5515,10 +5440,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFileTreeRequest}
  */
 proto.file_service.GetFileTreeRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFileTreeRequest
-  return proto.file_service.GetFileTreeRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFileTreeRequest;
+  return proto.file_service.GetFileTreeRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -5531,25 +5456,25 @@ proto.file_service.GetFileTreeRequest.deserializeBinary = function(bytes) {
 proto.file_service.GetFileTreeRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setRootIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRootIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -5557,10 +5482,10 @@ proto.file_service.GetFileTreeRequest.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.file_service.GetFileTreeRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFileTreeRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFileTreeRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -5571,22 +5496,22 @@ proto.file_service.GetFileTreeRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFileTreeRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getRootIdentifier()
+  var f = undefined;
+  f = message.getRootIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -5594,14 +5519,14 @@ proto.file_service.GetFileTreeRequest.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.file_service.GetFileTreeRequest.prototype.getRootIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileTreeRequest.prototype.setRootIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -5609,14 +5534,14 @@ proto.file_service.GetFileTreeRequest.prototype.setRootIdentifier = function(val
  * @return {string}
  */
 proto.file_service.GetFileTreeRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileTreeRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -5631,11 +5556,11 @@ proto.file_service.GetFileTreeRequest.prototype.setUserId = function(value) {
  * @constructor
  */
 proto.file_service.GetFileTreeResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.GetFileTreeResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.GetFileTreeResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.GetFileTreeResponse.displayName = 'proto.file_service.GetFileTreeResponse'
+  proto.file_service.GetFileTreeResponse.displayName = 'proto.file_service.GetFileTreeResponse';
 }
 
 
@@ -5650,12 +5575,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.GetFileTreeResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.GetFileTreeResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.GetFileTreeResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.GetFileTreeResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5664,18 +5589,18 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.GetFileTreeResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      tree: (f = msg.getTree()) && proto.file_service.FSTree.toObject(includeInstance, f)
-    }
+proto.file_service.GetFileTreeResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    tree: (f = msg.getTree()) && proto.file_service.FSTree.toObject(includeInstance, f)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -5685,10 +5610,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.GetFileTreeResponse}
  */
 proto.file_service.GetFileTreeResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.GetFileTreeResponse
-  return proto.file_service.GetFileTreeResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.GetFileTreeResponse;
+  return proto.file_service.GetFileTreeResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -5701,30 +5626,30 @@ proto.file_service.GetFileTreeResponse.deserializeBinary = function(bytes) {
 proto.file_service.GetFileTreeResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = new proto.file_service.FSTree
-      reader.readMessage(value,proto.file_service.FSTree.deserializeBinaryFromReader)
-      msg.setTree(value)
-      break
+      var value = new proto.file_service.FSTree;
+      reader.readMessage(value,proto.file_service.FSTree.deserializeBinaryFromReader);
+      msg.setTree(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -5732,10 +5657,10 @@ proto.file_service.GetFileTreeResponse.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.file_service.GetFileTreeResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.GetFileTreeResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.GetFileTreeResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -5746,30 +5671,30 @@ proto.file_service.GetFileTreeResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.GetFileTreeResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getTree()
+  f = message.getTree();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
       proto.file_service.FSTree.serializeBinaryToWriter
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -5777,14 +5702,14 @@ proto.file_service.GetFileTreeResponse.serializeBinaryToWriter = function(messag
  * @return {string}
  */
 proto.file_service.GetFileTreeResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileTreeResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -5792,14 +5717,14 @@ proto.file_service.GetFileTreeResponse.prototype.setResponseCode = function(valu
  * @return {string}
  */
 proto.file_service.GetFileTreeResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.GetFileTreeResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -5808,19 +5733,19 @@ proto.file_service.GetFileTreeResponse.prototype.setResponseMessage = function(v
  */
 proto.file_service.GetFileTreeResponse.prototype.getTree = function() {
   return /** @type{?proto.file_service.FSTree} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.FSTree, 3))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.FSTree, 3));
+};
 
 
 /** @param {?proto.file_service.FSTree|undefined} value */
 proto.file_service.GetFileTreeResponse.prototype.setTree = function(value) {
-  jspb.Message.setWrapperField(this, 3, value)
-}
+  jspb.Message.setWrapperField(this, 3, value);
+};
 
 
 proto.file_service.GetFileTreeResponse.prototype.clearTree = function() {
-  this.setTree(undefined)
-}
+  this.setTree(undefined);
+};
 
 
 /**
@@ -5828,8 +5753,8 @@ proto.file_service.GetFileTreeResponse.prototype.clearTree = function() {
  * @return {!boolean}
  */
 proto.file_service.GetFileTreeResponse.prototype.hasTree = function() {
-  return jspb.Message.getField(this, 3) != null
-}
+  return jspb.Message.getField(this, 3) != null;
+};
 
 
 
@@ -5844,11 +5769,11 @@ proto.file_service.GetFileTreeResponse.prototype.hasTree = function() {
  * @constructor
  */
 proto.file_service.UpdateFileContentRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.UpdateFileContentRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.UpdateFileContentRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.UpdateFileContentRequest.displayName = 'proto.file_service.UpdateFileContentRequest'
+  proto.file_service.UpdateFileContentRequest.displayName = 'proto.file_service.UpdateFileContentRequest';
 }
 
 
@@ -5863,12 +5788,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.UpdateFileContentRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.UpdateFileContentRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.UpdateFileContentRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.UpdateFileContentRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5877,20 +5802,20 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.UpdateFileContentRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      newContent: msg.getNewContent_asB64(),
-      userId: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      fileType: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      secretKey: msg.getSecretKey_asB64()
-    }
+proto.file_service.UpdateFileContentRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    newContent: msg.getNewContent_asB64(),
+    userId: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    fileType: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    secretKey: msg.getSecretKey_asB64()
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -5900,10 +5825,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.UpdateFileContentRequest}
  */
 proto.file_service.UpdateFileContentRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.UpdateFileContentRequest
-  return proto.file_service.UpdateFileContentRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.UpdateFileContentRequest;
+  return proto.file_service.UpdateFileContentRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -5916,37 +5841,37 @@ proto.file_service.UpdateFileContentRequest.deserializeBinary = function(bytes) 
 proto.file_service.UpdateFileContentRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setNewContent(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setNewContent(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     case 4:
-      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum())
-      msg.setFileType(value)
-      break
+      var value = /** @type {!proto.file_service.Type} */ (reader.readEnum());
+      msg.setFileType(value);
+      break;
     case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSecretKey(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecretKey(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -5954,10 +5879,10 @@ proto.file_service.UpdateFileContentRequest.deserializeBinaryFromReader = functi
  * @return {!Uint8Array}
  */
 proto.file_service.UpdateFileContentRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.UpdateFileContentRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.UpdateFileContentRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -5968,43 +5893,43 @@ proto.file_service.UpdateFileContentRequest.prototype.serializeBinary = function
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.UpdateFileContentRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getNewContent_asU8()
+  f = message.getNewContent_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getFileType()
+  f = message.getFileType();
   if (f !== 0.0) {
     writer.writeEnum(
       4,
       f
-    )
+    );
   }
-  f = message.getSecretKey_asU8()
+  f = message.getSecretKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -6012,14 +5937,14 @@ proto.file_service.UpdateFileContentRequest.serializeBinaryToWriter = function(m
  * @return {string}
  */
 proto.file_service.UpdateFileContentRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UpdateFileContentRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -6027,8 +5952,8 @@ proto.file_service.UpdateFileContentRequest.prototype.setIdentifier = function(v
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.UpdateFileContentRequest.prototype.getNewContent = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /**
@@ -6038,8 +5963,8 @@ proto.file_service.UpdateFileContentRequest.prototype.getNewContent = function()
  */
 proto.file_service.UpdateFileContentRequest.prototype.getNewContent_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getNewContent()))
-}
+      this.getNewContent()));
+};
 
 
 /**
@@ -6051,14 +5976,14 @@ proto.file_service.UpdateFileContentRequest.prototype.getNewContent_asB64 = func
  */
 proto.file_service.UpdateFileContentRequest.prototype.getNewContent_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getNewContent()))
-}
+      this.getNewContent()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.UpdateFileContentRequest.prototype.setNewContent = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value)
-}
+  jspb.Message.setProto3BytesField(this, 2, value);
+};
 
 
 /**
@@ -6066,14 +5991,14 @@ proto.file_service.UpdateFileContentRequest.prototype.setNewContent = function(v
  * @return {string}
  */
 proto.file_service.UpdateFileContentRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UpdateFileContentRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -6081,14 +6006,14 @@ proto.file_service.UpdateFileContentRequest.prototype.setUserId = function(value
  * @return {!proto.file_service.Type}
  */
 proto.file_service.UpdateFileContentRequest.prototype.getFileType = function() {
-  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 4, 0))
-}
+  return /** @type {!proto.file_service.Type} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
 
 
 /** @param {!proto.file_service.Type} value */
 proto.file_service.UpdateFileContentRequest.prototype.setFileType = function(value) {
-  jspb.Message.setProto3EnumField(this, 4, value)
-}
+  jspb.Message.setProto3EnumField(this, 4, value);
+};
 
 
 /**
@@ -6096,8 +6021,8 @@ proto.file_service.UpdateFileContentRequest.prototype.setFileType = function(val
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.UpdateFileContentRequest.prototype.getSecretKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
 
 
 /**
@@ -6107,8 +6032,8 @@ proto.file_service.UpdateFileContentRequest.prototype.getSecretKey = function() 
  */
 proto.file_service.UpdateFileContentRequest.prototype.getSecretKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecretKey()))
-}
+      this.getSecretKey()));
+};
 
 
 /**
@@ -6120,14 +6045,14 @@ proto.file_service.UpdateFileContentRequest.prototype.getSecretKey_asB64 = funct
  */
 proto.file_service.UpdateFileContentRequest.prototype.getSecretKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecretKey()))
-}
+      this.getSecretKey()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.UpdateFileContentRequest.prototype.setSecretKey = function(value) {
-  jspb.Message.setProto3BytesField(this, 5, value)
-}
+  jspb.Message.setProto3BytesField(this, 5, value);
+};
 
 
 
@@ -6142,11 +6067,11 @@ proto.file_service.UpdateFileContentRequest.prototype.setSecretKey = function(va
  * @constructor
  */
 proto.file_service.UpdateFileContentResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.UpdateFileContentResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.UpdateFileContentResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.UpdateFileContentResponse.displayName = 'proto.file_service.UpdateFileContentResponse'
+  proto.file_service.UpdateFileContentResponse.displayName = 'proto.file_service.UpdateFileContentResponse';
 }
 
 
@@ -6161,12 +6086,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.UpdateFileContentResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.UpdateFileContentResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.UpdateFileContentResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.UpdateFileContentResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6175,17 +6100,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.UpdateFileContentResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.UpdateFileContentResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -6195,10 +6120,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.UpdateFileContentResponse}
  */
 proto.file_service.UpdateFileContentResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.UpdateFileContentResponse
-  return proto.file_service.UpdateFileContentResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.UpdateFileContentResponse;
+  return proto.file_service.UpdateFileContentResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -6211,25 +6136,25 @@ proto.file_service.UpdateFileContentResponse.deserializeBinary = function(bytes)
 proto.file_service.UpdateFileContentResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -6237,10 +6162,10 @@ proto.file_service.UpdateFileContentResponse.deserializeBinaryFromReader = funct
  * @return {!Uint8Array}
  */
 proto.file_service.UpdateFileContentResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.UpdateFileContentResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.UpdateFileContentResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -6251,22 +6176,22 @@ proto.file_service.UpdateFileContentResponse.prototype.serializeBinary = functio
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.UpdateFileContentResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -6274,14 +6199,14 @@ proto.file_service.UpdateFileContentResponse.serializeBinaryToWriter = function(
  * @return {string}
  */
 proto.file_service.UpdateFileContentResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UpdateFileContentResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -6289,14 +6214,14 @@ proto.file_service.UpdateFileContentResponse.prototype.setResponseCode = functio
  * @return {string}
  */
 proto.file_service.UpdateFileContentResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.UpdateFileContentResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -6311,18 +6236,18 @@ proto.file_service.UpdateFileContentResponse.prototype.setResponseMessage = func
  * @constructor
  */
 proto.file_service.ShareFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.ShareFileRequest.repeatedFields_, null)
-}
-goog.inherits(proto.file_service.ShareFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.file_service.ShareFileRequest.repeatedFields_, null);
+};
+goog.inherits(proto.file_service.ShareFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.ShareFileRequest.displayName = 'proto.file_service.ShareFileRequest'
+  proto.file_service.ShareFileRequest.displayName = 'proto.file_service.ShareFileRequest';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.file_service.ShareFileRequest.repeatedFields_ = [2]
+proto.file_service.ShareFileRequest.repeatedFields_ = [2];
 
 
 
@@ -6337,12 +6262,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.ShareFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.ShareFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.ShareFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.ShareFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6351,17 +6276,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.ShareFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userIdentifiersList: jspb.Message.getRepeatedField(msg, 2)
-    }
+proto.file_service.ShareFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userIdentifiersList: jspb.Message.getRepeatedField(msg, 2)
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -6371,10 +6296,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.ShareFileRequest}
  */
 proto.file_service.ShareFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.ShareFileRequest
-  return proto.file_service.ShareFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.ShareFileRequest;
+  return proto.file_service.ShareFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -6387,25 +6312,25 @@ proto.file_service.ShareFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.ShareFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.addUserIdentifiers(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.addUserIdentifiers(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -6413,10 +6338,10 @@ proto.file_service.ShareFileRequest.deserializeBinaryFromReader = function(msg, 
  * @return {!Uint8Array}
  */
 proto.file_service.ShareFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.ShareFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.ShareFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -6427,22 +6352,22 @@ proto.file_service.ShareFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.ShareFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserIdentifiersList()
+  f = message.getUserIdentifiersList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -6450,14 +6375,14 @@ proto.file_service.ShareFileRequest.serializeBinaryToWriter = function(message, 
  * @return {string}
  */
 proto.file_service.ShareFileRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.ShareFileRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -6465,14 +6390,14 @@ proto.file_service.ShareFileRequest.prototype.setIdentifier = function(value) {
  * @return {!Array<string>}
  */
 proto.file_service.ShareFileRequest.prototype.getUserIdentifiersList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2))
-}
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
 
 
 /** @param {!Array<string>} value */
 proto.file_service.ShareFileRequest.prototype.setUserIdentifiersList = function(value) {
-  jspb.Message.setField(this, 2, value || [])
-}
+  jspb.Message.setField(this, 2, value || []);
+};
 
 
 /**
@@ -6480,13 +6405,13 @@ proto.file_service.ShareFileRequest.prototype.setUserIdentifiersList = function(
  * @param {number=} opt_index
  */
 proto.file_service.ShareFileRequest.prototype.addUserIdentifiers = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index)
-}
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
 
 
 proto.file_service.ShareFileRequest.prototype.clearUserIdentifiersList = function() {
-  this.setUserIdentifiersList([])
-}
+  this.setUserIdentifiersList([]);
+};
 
 
 
@@ -6501,11 +6426,11 @@ proto.file_service.ShareFileRequest.prototype.clearUserIdentifiersList = functio
  * @constructor
  */
 proto.file_service.ShareFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.ShareFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.ShareFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.ShareFileResponse.displayName = 'proto.file_service.ShareFileResponse'
+  proto.file_service.ShareFileResponse.displayName = 'proto.file_service.ShareFileResponse';
 }
 
 
@@ -6520,12 +6445,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.ShareFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.ShareFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.ShareFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.ShareFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6534,17 +6459,17 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.ShareFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, '')
-    }
+proto.file_service.ShareFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -6554,10 +6479,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.ShareFileResponse}
  */
 proto.file_service.ShareFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.ShareFileResponse
-  return proto.file_service.ShareFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.ShareFileResponse;
+  return proto.file_service.ShareFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -6570,25 +6495,25 @@ proto.file_service.ShareFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.ShareFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -6596,10 +6521,10 @@ proto.file_service.ShareFileResponse.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.file_service.ShareFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.ShareFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.ShareFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -6610,22 +6535,22 @@ proto.file_service.ShareFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.ShareFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -6633,14 +6558,14 @@ proto.file_service.ShareFileResponse.serializeBinaryToWriter = function(message,
  * @return {string}
  */
 proto.file_service.ShareFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.ShareFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -6648,14 +6573,14 @@ proto.file_service.ShareFileResponse.prototype.setResponseCode = function(value)
  * @return {string}
  */
 proto.file_service.ShareFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.ShareFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 
@@ -6670,11 +6595,11 @@ proto.file_service.ShareFileResponse.prototype.setResponseMessage = function(val
  * @constructor
  */
 proto.file_service.DownloadFileRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.DownloadFileRequest, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.DownloadFileRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.DownloadFileRequest.displayName = 'proto.file_service.DownloadFileRequest'
+  proto.file_service.DownloadFileRequest.displayName = 'proto.file_service.DownloadFileRequest';
 }
 
 
@@ -6689,12 +6614,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.DownloadFileRequest.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.DownloadFileRequest.toObject(opt_includeInstance, this)
-  }
+proto.file_service.DownloadFileRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.DownloadFileRequest.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6703,22 +6628,22 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.DownloadFileRequest.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      userId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      sourceId: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      secretPhrase: msg.getSecretPhrase_asB64(),
-      watermarkImage: msg.getWatermarkImage_asB64(),
-      watermarkMessage: jspb.Message.getFieldWithDefault(msg, 6, ''),
-      steganoMessage: msg.getSteganoMessage_asB64()
-    }
+proto.file_service.DownloadFileRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    userId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    sourceId: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    secretPhrase: msg.getSecretPhrase_asB64(),
+    watermarkImage: msg.getWatermarkImage_asB64(),
+    watermarkMessage: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    steganoMessage: msg.getSteganoMessage_asB64()
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -6728,10 +6653,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.DownloadFileRequest}
  */
 proto.file_service.DownloadFileRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.DownloadFileRequest
-  return proto.file_service.DownloadFileRequest.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.DownloadFileRequest;
+  return proto.file_service.DownloadFileRequest.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -6744,45 +6669,45 @@ proto.file_service.DownloadFileRequest.deserializeBinary = function(bytes) {
 proto.file_service.DownloadFileRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setIdentifier(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setUserId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserId(value);
+      break;
     case 3:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setSourceId(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSourceId(value);
+      break;
     case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSecretPhrase(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecretPhrase(value);
+      break;
     case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setWatermarkImage(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setWatermarkImage(value);
+      break;
     case 6:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setWatermarkMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setWatermarkMessage(value);
+      break;
     case 7:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setSteganoMessage(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSteganoMessage(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -6790,10 +6715,10 @@ proto.file_service.DownloadFileRequest.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.file_service.DownloadFileRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.DownloadFileRequest.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.DownloadFileRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -6804,57 +6729,57 @@ proto.file_service.DownloadFileRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.DownloadFileRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getIdentifier()
+  var f = undefined;
+  f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getUserId()
+  f = message.getUserId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getSourceId()
+  f = message.getSourceId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
-    )
+    );
   }
-  f = message.getSecretPhrase_asU8()
+  f = message.getSecretPhrase_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
       f
-    )
+    );
   }
-  f = message.getWatermarkImage_asU8()
+  f = message.getWatermarkImage_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
       f
-    )
+    );
   }
-  f = message.getWatermarkMessage()
+  f = message.getWatermarkMessage();
   if (f.length > 0) {
     writer.writeString(
       6,
       f
-    )
+    );
   }
-  f = message.getSteganoMessage_asU8()
+  f = message.getSteganoMessage_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       7,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -6862,14 +6787,14 @@ proto.file_service.DownloadFileRequest.serializeBinaryToWriter = function(messag
  * @return {string}
  */
 proto.file_service.DownloadFileRequest.prototype.getIdentifier = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileRequest.prototype.setIdentifier = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -6877,14 +6802,14 @@ proto.file_service.DownloadFileRequest.prototype.setIdentifier = function(value)
  * @return {string}
  */
 proto.file_service.DownloadFileRequest.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileRequest.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -6892,14 +6817,14 @@ proto.file_service.DownloadFileRequest.prototype.setUserId = function(value) {
  * @return {string}
  */
 proto.file_service.DownloadFileRequest.prototype.getSourceId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileRequest.prototype.setSourceId = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value)
-}
+  jspb.Message.setProto3StringField(this, 3, value);
+};
 
 
 /**
@@ -6907,8 +6832,8 @@ proto.file_service.DownloadFileRequest.prototype.setSourceId = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.DownloadFileRequest.prototype.getSecretPhrase = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /**
@@ -6918,8 +6843,8 @@ proto.file_service.DownloadFileRequest.prototype.getSecretPhrase = function() {
  */
 proto.file_service.DownloadFileRequest.prototype.getSecretPhrase_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecretPhrase()))
-}
+      this.getSecretPhrase()));
+};
 
 
 /**
@@ -6931,14 +6856,14 @@ proto.file_service.DownloadFileRequest.prototype.getSecretPhrase_asB64 = functio
  */
 proto.file_service.DownloadFileRequest.prototype.getSecretPhrase_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecretPhrase()))
-}
+      this.getSecretPhrase()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.DownloadFileRequest.prototype.setSecretPhrase = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value)
-}
+  jspb.Message.setProto3BytesField(this, 4, value);
+};
 
 
 /**
@@ -6946,8 +6871,8 @@ proto.file_service.DownloadFileRequest.prototype.setSecretPhrase = function(valu
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.DownloadFileRequest.prototype.getWatermarkImage = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
 
 
 /**
@@ -6957,8 +6882,8 @@ proto.file_service.DownloadFileRequest.prototype.getWatermarkImage = function() 
  */
 proto.file_service.DownloadFileRequest.prototype.getWatermarkImage_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getWatermarkImage()))
-}
+      this.getWatermarkImage()));
+};
 
 
 /**
@@ -6970,14 +6895,14 @@ proto.file_service.DownloadFileRequest.prototype.getWatermarkImage_asB64 = funct
  */
 proto.file_service.DownloadFileRequest.prototype.getWatermarkImage_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getWatermarkImage()))
-}
+      this.getWatermarkImage()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.DownloadFileRequest.prototype.setWatermarkImage = function(value) {
-  jspb.Message.setProto3BytesField(this, 5, value)
-}
+  jspb.Message.setProto3BytesField(this, 5, value);
+};
 
 
 /**
@@ -6985,14 +6910,14 @@ proto.file_service.DownloadFileRequest.prototype.setWatermarkImage = function(va
  * @return {string}
  */
 proto.file_service.DownloadFileRequest.prototype.getWatermarkMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileRequest.prototype.setWatermarkMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value)
-}
+  jspb.Message.setProto3StringField(this, 6, value);
+};
 
 
 /**
@@ -7000,8 +6925,8 @@ proto.file_service.DownloadFileRequest.prototype.setWatermarkMessage = function(
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.DownloadFileRequest.prototype.getSteganoMessage = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
 
 
 /**
@@ -7011,8 +6936,8 @@ proto.file_service.DownloadFileRequest.prototype.getSteganoMessage = function() 
  */
 proto.file_service.DownloadFileRequest.prototype.getSteganoMessage_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSteganoMessage()))
-}
+      this.getSteganoMessage()));
+};
 
 
 /**
@@ -7024,14 +6949,14 @@ proto.file_service.DownloadFileRequest.prototype.getSteganoMessage_asB64 = funct
  */
 proto.file_service.DownloadFileRequest.prototype.getSteganoMessage_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSteganoMessage()))
-}
+      this.getSteganoMessage()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.DownloadFileRequest.prototype.setSteganoMessage = function(value) {
-  jspb.Message.setProto3BytesField(this, 7, value)
-}
+  jspb.Message.setProto3BytesField(this, 7, value);
+};
 
 
 
@@ -7046,11 +6971,11 @@ proto.file_service.DownloadFileRequest.prototype.setSteganoMessage = function(va
  * @constructor
  */
 proto.file_service.DownloadFileResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null)
-}
-goog.inherits(proto.file_service.DownloadFileResponse, jspb.Message)
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.file_service.DownloadFileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.file_service.DownloadFileResponse.displayName = 'proto.file_service.DownloadFileResponse'
+  proto.file_service.DownloadFileResponse.displayName = 'proto.file_service.DownloadFileResponse';
 }
 
 
@@ -7065,12 +6990,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.file_service.DownloadFileResponse.prototype.toObject = function(opt_includeInstance) {
-    return proto.file_service.DownloadFileResponse.toObject(opt_includeInstance, this)
-  }
+proto.file_service.DownloadFileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.file_service.DownloadFileResponse.toObject(opt_includeInstance, this);
+};
 
 
-  /**
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7079,19 +7004,19 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.file_service.DownloadFileResponse.toObject = function(includeInstance, msg) {
-    var f, obj = {
-      responseCode: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
-      content: msg.getContent_asB64()
-    }
+proto.file_service.DownloadFileResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    responseCode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    responseMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    file: (f = msg.getFile()) && proto.file_service.File.toObject(includeInstance, f),
+    content: msg.getContent_asB64()
+  };
 
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg
-    }
-    return obj
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
   }
+  return obj;
+};
 }
 
 
@@ -7101,10 +7026,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!proto.file_service.DownloadFileResponse}
  */
 proto.file_service.DownloadFileResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes)
-  var msg = new proto.file_service.DownloadFileResponse
-  return proto.file_service.DownloadFileResponse.deserializeBinaryFromReader(msg, reader)
-}
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.file_service.DownloadFileResponse;
+  return proto.file_service.DownloadFileResponse.deserializeBinaryFromReader(msg, reader);
+};
 
 
 /**
@@ -7117,34 +7042,34 @@ proto.file_service.DownloadFileResponse.deserializeBinary = function(bytes) {
 proto.file_service.DownloadFileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
-      break
+      break;
     }
-    var field = reader.getFieldNumber()
+    var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseCode(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseCode(value);
+      break;
     case 2:
-      var value = /** @type {string} */ (reader.readString())
-      msg.setResponseMessage(value)
-      break
+      var value = /** @type {string} */ (reader.readString());
+      msg.setResponseMessage(value);
+      break;
     case 3:
-      var value = new proto.file_service.File
-      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader)
-      msg.setFile(value)
-      break
+      var value = new proto.file_service.File;
+      reader.readMessage(value,proto.file_service.File.deserializeBinaryFromReader);
+      msg.setFile(value);
+      break;
     case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
-      msg.setContent(value)
-      break
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setContent(value);
+      break;
     default:
-      reader.skipField()
-      break
+      reader.skipField();
+      break;
     }
   }
-  return msg
-}
+  return msg;
+};
 
 
 /**
@@ -7152,10 +7077,10 @@ proto.file_service.DownloadFileResponse.deserializeBinaryFromReader = function(m
  * @return {!Uint8Array}
  */
 proto.file_service.DownloadFileResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter()
-  proto.file_service.DownloadFileResponse.serializeBinaryToWriter(this, writer)
-  return writer.getResultBuffer()
-}
+  var writer = new jspb.BinaryWriter();
+  proto.file_service.DownloadFileResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
 
 
 /**
@@ -7166,37 +7091,37 @@ proto.file_service.DownloadFileResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.file_service.DownloadFileResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined
-  f = message.getResponseCode()
+  var f = undefined;
+  f = message.getResponseCode();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
-    )
+    );
   }
-  f = message.getResponseMessage()
+  f = message.getResponseMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
-    )
+    );
   }
-  f = message.getFile()
+  f = message.getFile();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
       proto.file_service.File.serializeBinaryToWriter
-    )
+    );
   }
-  f = message.getContent_asU8()
+  f = message.getContent_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
       f
-    )
+    );
   }
-}
+};
 
 
 /**
@@ -7204,14 +7129,14 @@ proto.file_service.DownloadFileResponse.serializeBinaryToWriter = function(messa
  * @return {string}
  */
 proto.file_service.DownloadFileResponse.prototype.getResponseCode = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileResponse.prototype.setResponseCode = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value)
-}
+  jspb.Message.setProto3StringField(this, 1, value);
+};
 
 
 /**
@@ -7219,14 +7144,14 @@ proto.file_service.DownloadFileResponse.prototype.setResponseCode = function(val
  * @return {string}
  */
 proto.file_service.DownloadFileResponse.prototype.getResponseMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''))
-}
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
 
 
 /** @param {string} value */
 proto.file_service.DownloadFileResponse.prototype.setResponseMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value)
-}
+  jspb.Message.setProto3StringField(this, 2, value);
+};
 
 
 /**
@@ -7235,19 +7160,19 @@ proto.file_service.DownloadFileResponse.prototype.setResponseMessage = function(
  */
 proto.file_service.DownloadFileResponse.prototype.getFile = function() {
   return /** @type{?proto.file_service.File} */ (
-    jspb.Message.getWrapperField(this, proto.file_service.File, 3))
-}
+    jspb.Message.getWrapperField(this, proto.file_service.File, 3));
+};
 
 
 /** @param {?proto.file_service.File|undefined} value */
 proto.file_service.DownloadFileResponse.prototype.setFile = function(value) {
-  jspb.Message.setWrapperField(this, 3, value)
-}
+  jspb.Message.setWrapperField(this, 3, value);
+};
 
 
 proto.file_service.DownloadFileResponse.prototype.clearFile = function() {
-  this.setFile(undefined)
-}
+  this.setFile(undefined);
+};
 
 
 /**
@@ -7255,8 +7180,8 @@ proto.file_service.DownloadFileResponse.prototype.clearFile = function() {
  * @return {!boolean}
  */
 proto.file_service.DownloadFileResponse.prototype.hasFile = function() {
-  return jspb.Message.getField(this, 3) != null
-}
+  return jspb.Message.getField(this, 3) != null;
+};
 
 
 /**
@@ -7264,8 +7189,8 @@ proto.file_service.DownloadFileResponse.prototype.hasFile = function() {
  * @return {!(string|Uint8Array)}
  */
 proto.file_service.DownloadFileResponse.prototype.getContent = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''))
-}
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
 
 
 /**
@@ -7275,8 +7200,8 @@ proto.file_service.DownloadFileResponse.prototype.getContent = function() {
  */
 proto.file_service.DownloadFileResponse.prototype.getContent_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getContent()))
-}
+      this.getContent()));
+};
 
 
 /**
@@ -7288,14 +7213,14 @@ proto.file_service.DownloadFileResponse.prototype.getContent_asB64 = function() 
  */
 proto.file_service.DownloadFileResponse.prototype.getContent_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getContent()))
-}
+      this.getContent()));
+};
 
 
 /** @param {!(string|Uint8Array)} value */
 proto.file_service.DownloadFileResponse.prototype.setContent = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value)
-}
+  jspb.Message.setProto3BytesField(this, 4, value);
+};
 
 
 /**
@@ -7308,6 +7233,6 @@ proto.file_service.Type = {
   TXT: 3,
   EXCEL: 4,
   IMAGE: 5
-}
+};
 
-goog.object.extend(exports, proto.file_service)
+goog.object.extend(exports, proto.file_service);

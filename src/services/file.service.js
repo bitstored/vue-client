@@ -40,20 +40,17 @@ export const fileService = {
       rpc_file.setParentIdentifier(file.parent)
       rpc_file.setName(file.name)
       var type = Type.OTHER
-      if (file.type == 'pdf') {
+      if (file.type === 'pdf') {
         type = Type.PDF
       }
       rpc_file.setFileType(type)
-      file.data = file.data.split('').map(function(c) { return c.charCodeAt() })
-      rpc_file.setContent(file.data)
+      rpc_file.setContent(btoa(unescape(encodeURIComponent(file.data))))
       rpc_file.setWritable(file.is_writable)
       rpc_file.setPrivate(file.is_private)
 
       request.setFile(rpc_file)
       request.setUserId(userid)
-      file.secret = file.secret.split('').map(function(c) { return c.charCodeAt() })
       request.setSecretPhrase(file.secret)
-
       const requestOptions = {
         method: 'POST',
         headers: {
@@ -64,7 +61,7 @@ export const fileService = {
           'Content-Type': 'application/grpc',
         }
       }
-      console.log(request)
+
       return new Promise(function (resolve, reject) {
         client.uploadFile(request, requestOptions, (error, response) => {
           if (error != null) {
@@ -98,9 +95,9 @@ export const fileService = {
         client.getFolderContent(request, requestOptions, (error, response) => {
           if (error != null) {
             console.log('err', error)
-            reject(error)
+            console.log(error)
           } else {
-            resolve(response)
+            console.log(response)
           }
         })
       })

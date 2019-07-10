@@ -81,7 +81,7 @@ message File {
     Type file_type = 6;
     bool writable = 7;
     bool private = 8; // should be watermarked
-    bytes content = 9;
+    string content = 9;
     int64 init_size = 10;
     int64 compressed_size = 11;
 }
@@ -96,8 +96,8 @@ message CreateDriveResponse {
 message UploadFileRequest {
   File file = 1;
   string user_id = 4;
-	bytes secret_phrase = 2;
-	bytes encoded_phrase = 3;
+	string secret_phrase = 2;
+	string encoded_phrase = 3;
 }
 message UploadFileResponse {
     string response_code = 1;
