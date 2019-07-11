@@ -121,6 +121,7 @@ export default {
               this.photo = this.no_photo
             } else {
               this.photo = user.getPhoto()
+              console.log(this.photo)
             }
           })
     },

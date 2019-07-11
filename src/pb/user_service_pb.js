@@ -1,5 +1,5 @@
-/* eslint-disable no-redeclare */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-redeclare */
 /* eslint-disable no-undef */
 /**
  * @fileoverview
@@ -95,7 +95,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
       username: jspb.Message.getFieldWithDefault(msg, 5, ''),
       password: jspb.Message.getFieldWithDefault(msg, 6, ''),
       phoneNumber: jspb.Message.getFieldWithDefault(msg, 7, ''),
-      photo: msg.getPhoto_asB64(),
+      photo: jspb.Message.getFieldWithDefault(msg, 8, ''),
       availableMb: jspb.Message.getFieldWithDefault(msg, 9, 0),
       isAdmin: jspb.Message.getFieldWithDefault(msg, 10, false),
       isLocked: jspb.Message.getFieldWithDefault(msg, 11, false),
@@ -168,7 +168,7 @@ proto.account_service.User.deserializeBinaryFromReader = function(msg, reader) {
       msg.setPhoneNumber(value)
       break
     case 8:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes())
+      var value = /** @type {string} */ (reader.readString())
       msg.setPhoto(value)
       break
     case 9:
@@ -277,9 +277,9 @@ proto.account_service.User.serializeBinaryToWriter = function(message, writer) {
       f
     )
   }
-  f = message.getPhoto_asU8()
+  f = message.getPhoto()
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeString(
       8,
       f
     )
@@ -442,41 +442,17 @@ proto.account_service.User.prototype.setPhoneNumber = function(value) {
 
 
 /**
- * optional bytes photo = 8;
- * @return {!(string|Uint8Array)}
- */
-proto.account_service.User.prototype.getPhoto = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ''))
-}
-
-
-/**
- * optional bytes photo = 8;
- * This is a type-conversion wrapper around `getPhoto()`
+ * optional string photo = 8;
  * @return {string}
  */
-proto.account_service.User.prototype.getPhoto_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPhoto()))
+proto.account_service.User.prototype.getPhoto = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ''))
 }
 
 
-/**
- * optional bytes photo = 8;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getPhoto()`
- * @return {!Uint8Array}
- */
-proto.account_service.User.prototype.getPhoto_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPhoto()))
-}
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {string} value */
 proto.account_service.User.prototype.setPhoto = function(value) {
-  jspb.Message.setProto3BytesField(this, 8, value)
+  jspb.Message.setProto3StringField(this, 8, value)
 }
 
 

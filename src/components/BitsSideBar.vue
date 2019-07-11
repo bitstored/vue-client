@@ -17,17 +17,7 @@
           Home
         </router-link>
       </li>
-      <li>
-        <router-link
-          to="/about"
-          class="router-link">
-          <img
-            :src="about_img"
-            class="img_resize"
-            style="height:25px;width:25px;">
-          About
-        </router-link>
-      </li>
+
       <li>
         <router-link
           v-show="logged"
@@ -51,6 +41,17 @@
             class="img_resize"
             style="height:25px;width:25px;">
           My Drive
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          to="/about"
+          class="router-link">
+          <img
+            :src="about_img"
+            class="img_resize"
+            style="height:25px;width:25px;">
+          About
         </router-link>
       </li>
     </ul>

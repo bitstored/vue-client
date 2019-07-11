@@ -25,6 +25,17 @@
       </router-link>
       &nbsp;
       <router-link
+        class="btn btn-primary btn-md"
+       to="/folder/create"
+      >
+        <img
+          :src="create_file_img"
+          class="img_resize"
+          style="height:25px;width:25px;">
+        Create folder
+      </router-link>
+      &nbsp;
+      <router-link
         to="/drive/delete"
         class="btn btn-danger btn-md">
         <img
@@ -36,7 +47,6 @@
     </div>
     <div class="row table">
       <ul
-        v-if="folders.length"
         id="folders-list">
         <li>
           <div class="row">
@@ -74,9 +84,9 @@
             </div>
             <div
               class="row"
-              style="  align-items:center;"
+              style="max-width=40px;  align-items:center;"
             >
-              {{ folder.name }}
+              {{ folder[1].substring(0,10) }}
             </div>
             <div class="button-group">
               <button
@@ -129,7 +139,7 @@
               class="row"
               style="  align-items:center;"
             >
-              {{ file.name }}
+              {{ file[1].substring(0,10) }}
             </div>
             <div class="button-group">
               <button
@@ -176,8 +186,8 @@ export default {
       upload_file_img: upload_file,
       create_file_img: create_file,
       current_folder: '',
-      folders: [{name: 'Folder 1'}, {name: 'Folder 2'}],
-      files: [{name: 'File 1', type: 1}, {name: 'File 2', type: 2}, {name: 'File 2', type:3}, {name: 'File 11', type: 2}, {name: 'File 12', type: 1}],
+      folders: [],
+      files: [],
       edit_icon:edit_icon,
       download_icon:download_icon,
       delete_icon:delete_icon,
@@ -189,16 +199,24 @@ export default {
     ...mapState('files', ['status'])
   },
   created() {
-    this.getDrive()
+    var last = localStorage.getItem('last_folder')
+    if (last == undefined || last.charAt(0) == 'f'){
+      this.getDrive()
+      this.folderContent()
+    } else {
+      this.folderContent()
+    }
   },
   methods: {
-    ...mapActions('files', ['getDriveId']),
+    ...mapActions('files', ['getDriveId', 'getFolderContent']),
     getDrive() {
       var uid = localStorage.getItem('user_id')
       this.getDriveId(uid)
         .then(
           rsp => {
             localStorage.setItem('drive_id', rsp.getDriveId())
+            localStorage.setItem('last_folder', rsp.getDriveId())
+            localStorage.setItem('last_parent', '')
           }
         )
         .catch(
@@ -206,6 +224,28 @@ export default {
             console.log('Drive', err) // eslint-disable-line
           }
         )
+    },
+    folderContent() {
+      var uid = localStorage.getItem('user_id')
+      var did = localStorage.getItem('last_folder')
+      this.getFolderContent({driveId: did, userId: uid})
+        .then(
+          rsp => {
+            console.log(rsp)
+            // this.files = rsp.methods.getContent().getFiles()
+            this.folders = rsp.array[2][1]
+            this.files = rsp.array[2][2]
+
+          }
+        )
+        .catch(
+          err => {
+            console.log('List content', err) // eslint-disable-line
+          }
+        )
+    },
+    createFolder() {
+      console.log('folder')
     },
     get_icon(type) {
       if (type == 1) {

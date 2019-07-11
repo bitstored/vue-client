@@ -43,11 +43,11 @@ const actions = {
         .then(
           user => {
             if (user != null) {
+              localStorage.setItem('user_id', user.getCreated())
               resolve(user)
             } else {
               this.loggedIn = false
               localStorage.removeItem('token')
-              sessionStorage.setItem('user_id', user.getCreated())
               router.go('/login')
             }
           }

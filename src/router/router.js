@@ -68,13 +68,18 @@ export const router = new VueRouter({
     component: require('../pages/CreateFile').default
   },
   {
+    path: '/folder/create',
+    name: 'create_folder',
+    component: require('../pages/CreateFolder').default
+  },
+  {
     path: '/users',
     name: 'users',
     component: require('../pages/Users').default
   },
   {
     path: '/folder/:folderID',
-    name: 'drive',
+    name: 'folder',
     component: require('../pages/Drive').default
   },
   {

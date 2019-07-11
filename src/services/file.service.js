@@ -11,10 +11,13 @@ import {
 
 const {
   File,
+  Folder,
   Type,
+  FSLevel,
   UploadFileRequest,
   GetFolderContentRequest,
   GetMyDriveIdRequest,
+  CreateNewFolderRequest,
 } = require('../pb/file_service_pb')
 
 const {
@@ -51,6 +54,7 @@ export const fileService = {
       request.setFile(rpc_file)
       request.setUserId(userid)
       request.setSecretPhrase(file.secret)
+      console.log(userid, '\n\n\n',request)
       const requestOptions = {
         method: 'POST',
         headers: {
@@ -95,9 +99,41 @@ export const fileService = {
         client.getFolderContent(request, requestOptions, (error, response) => {
           if (error != null) {
             console.log('err', error)
-            console.log(error)
+            reject(error)
+          } else {
+            console.log(response.getContent())
+            resolve(response)
+          }
+        })
+      })
+    },
+    createFolder: function (name, parent) {
+      const request = new CreateNewFolderRequest()
+      const folder = new Folder()
+      folder.setName(name)
+      folder.setParentIdentifier(parent)
+
+      request.setUserId(localStorage.getItem('user_id'))
+      request.setFolder(folder)
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.createNewFolder(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
           } else {
             console.log(response)
+            resolve(response)
           }
         })
       })

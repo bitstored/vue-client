@@ -24,9 +24,7 @@ const actions = {
   upload({ dispatch, commit }, file) {
     commit('uploadRequest', file.name)
     var userId = localStorage.getItem('user_id')
-    file.parent = state.current
-    console.log(file)
-
+    file.parent = localStorage.getItem('last_folder')
     fileService.methods.uploadFile(file, userId)
       .then(
         rsp => {
@@ -57,6 +55,56 @@ const actions = {
               resolve(response)
             } else {
               router.go('/profile')
+            }
+          }
+        )
+        .catch(
+          error => {
+            reject(error)
+            commit('getFailure', {
+              state,
+              error: error.toString()
+            })
+          }
+        )
+    })
+  },
+  createFolder({commit}, {name, parent}) {
+    console.log(name, parent)
+    return new Promise(function (resolve, reject) {
+      fileService.methods.createFolder(name, parent)
+        .then(
+          response => {
+            if (response != null) {
+              console.log(response)
+              resolve(response)
+            } else {
+              router.go('/drive')
+              alert('Unable to create new folder, redirecting')
+            }
+          }
+        )
+        .catch(
+          error => {
+            reject(error)
+            commit('getFailure', {
+              state,
+              error: error.toString()
+            })
+          }
+        )
+    })
+  },
+  getFolderContent({ commit }, {driveId, userId}) {
+    return new Promise(function (resolve, reject) {
+      fileService.methods.getFolderContent(driveId, userId)
+        .then(
+          response => {
+            if (response != null) {
+              console.log(response)
+              resolve(response)
+            } else {
+              router.go('/drive')
             }
           }
         )

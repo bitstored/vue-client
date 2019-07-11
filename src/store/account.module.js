@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { userService } from '../services'
 import { router } from '../router'
-
+import {getByToken} from './users.module'
 const session_token = localStorage.getItem('token')
 const state = session_token != null
   ? { status: { loggedIn: true }, session_token }
@@ -16,6 +16,7 @@ const actions = {
         token => {
           commit('loginSuccess', token)
           this.loggedIn = true
+          getByToken(token)
           router.push('/')
         }
       )

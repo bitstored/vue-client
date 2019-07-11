@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" id="app-container">
     <div class="DefaultLayout">
       <div class="page-header">
         <bits-header/>
@@ -25,6 +25,8 @@
 import BitsHeader from '../components/BitsHeader'
 import BitsFooter from '../components/BitsFooter'
 import BitsSideBar from '../components/BitsSideBar'
+
+
 
 export default {
   name: 'DefaultLayout',

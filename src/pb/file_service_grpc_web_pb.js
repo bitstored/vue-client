@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 /**
  * @fileoverview gRPC-Web generated client stub for file_service
  * @enhanceable
@@ -66,11 +64,25 @@ proto.file_service.FileManagementPromiseClient =
       options['format'] = 'text'
 
       /**
-   * @private @const {!proto.file_service.FileManagementClient} The delegate callback based client
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.delegateClient_ = new proto.file_service.FileManagementClient(
-        hostname, credentials, options)
+      this.client_ = new grpc.web.GrpcWebClientBase(options)
 
+      /**
+   * @private @const {string} The hostname
+   */
+      this.hostname_ = hostname
+
+      /**
+   * @private @const {?Object} The credentials to be used to connect
+   *    to the server
+   */
+      this.credentials_ = credentials
+
+      /**
+   * @private @const {?Object} Options for the client
+   */
+      this.options_ = options
     }
 
 
@@ -105,8 +117,8 @@ proto.file_service.FileManagementClient.prototype.createDrive =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateDrive',
       request,
-      metadata,
-      methodInfo_CreateDrive,
+      metadata || {},
+      methodInfo_FileManagement_CreateDrive,
       callback)
     }
 
@@ -121,12 +133,11 @@ proto.file_service.FileManagementClient.prototype.createDrive =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createDrive =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.createDrive(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/CreateDrive',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_CreateDrive)
     }
 
 
@@ -161,8 +172,8 @@ proto.file_service.FileManagementClient.prototype.createNewFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFile',
       request,
-      metadata,
-      methodInfo_CreateNewFile,
+      metadata || {},
+      methodInfo_FileManagement_CreateNewFile,
       callback)
     }
 
@@ -177,12 +188,11 @@ proto.file_service.FileManagementClient.prototype.createNewFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.createNewFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/CreateNewFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_CreateNewFile)
     }
 
 
@@ -217,8 +227,8 @@ proto.file_service.FileManagementClient.prototype.createNewFolder =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFolder',
       request,
-      metadata,
-      methodInfo_CreateNewFolder,
+      metadata || {},
+      methodInfo_FileManagement_CreateNewFolder,
       callback)
     }
 
@@ -233,12 +243,11 @@ proto.file_service.FileManagementClient.prototype.createNewFolder =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFolder =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.createNewFolder(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/CreateNewFolder',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_CreateNewFolder)
     }
 
 
@@ -273,8 +282,8 @@ proto.file_service.FileManagementClient.prototype.getFolderContent =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFolderContent',
       request,
-      metadata,
-      methodInfo_GetFolderContent,
+      metadata || {},
+      methodInfo_FileManagement_GetFolderContent,
       callback)
     }
 
@@ -289,12 +298,11 @@ proto.file_service.FileManagementClient.prototype.getFolderContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFolderContent =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.getFolderContent(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/GetFolderContent',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_GetFolderContent)
     }
 
 
@@ -329,8 +337,8 @@ proto.file_service.FileManagementClient.prototype.getFileContent =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileContent',
       request,
-      metadata,
-      methodInfo_GetFileContent,
+      metadata || {},
+      methodInfo_FileManagement_GetFileContent,
       callback)
     }
 
@@ -345,12 +353,11 @@ proto.file_service.FileManagementClient.prototype.getFileContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileContent =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.getFileContent(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/GetFileContent',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_GetFileContent)
     }
 
 
@@ -385,8 +392,8 @@ proto.file_service.FileManagementClient.prototype.getFileTree =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileTree',
       request,
-      metadata,
-      methodInfo_GetFileTree,
+      metadata || {},
+      methodInfo_FileManagement_GetFileTree,
       callback)
     }
 
@@ -401,12 +408,11 @@ proto.file_service.FileManagementClient.prototype.getFileTree =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileTree =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.getFileTree(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/GetFileTree',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_GetFileTree)
     }
 
 
@@ -441,8 +447,8 @@ proto.file_service.FileManagementClient.prototype.updateFileContent =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UpdateFileContent',
       request,
-      metadata,
-      methodInfo_UpdateFileContent,
+      metadata || {},
+      methodInfo_FileManagement_UpdateFileContent,
       callback)
     }
 
@@ -457,12 +463,11 @@ proto.file_service.FileManagementClient.prototype.updateFileContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.updateFileContent =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.updateFileContent(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/UpdateFileContent',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_UpdateFileContent)
     }
 
 
@@ -497,8 +502,8 @@ proto.file_service.FileManagementClient.prototype.deleteFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DeleteFile',
       request,
-      metadata,
-      methodInfo_DeleteFile,
+      metadata || {},
+      methodInfo_FileManagement_DeleteFile,
       callback)
     }
 
@@ -513,12 +518,11 @@ proto.file_service.FileManagementClient.prototype.deleteFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.deleteFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.deleteFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/DeleteFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_DeleteFile)
     }
 
 
@@ -553,8 +557,8 @@ proto.file_service.FileManagementClient.prototype.renameFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/RenameFile',
       request,
-      metadata,
-      methodInfo_RenameFile,
+      metadata || {},
+      methodInfo_FileManagement_RenameFile,
       callback)
     }
 
@@ -569,12 +573,11 @@ proto.file_service.FileManagementClient.prototype.renameFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.renameFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.renameFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/RenameFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_RenameFile)
     }
 
 
@@ -609,8 +612,8 @@ proto.file_service.FileManagementClient.prototype.moveFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/MoveFile',
       request,
-      metadata,
-      methodInfo_MoveFile,
+      metadata || {},
+      methodInfo_FileManagement_MoveFile,
       callback)
     }
 
@@ -625,12 +628,11 @@ proto.file_service.FileManagementClient.prototype.moveFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.moveFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.moveFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/MoveFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_MoveFile)
     }
 
 
@@ -665,8 +667,8 @@ proto.file_service.FileManagementClient.prototype.uploadFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UploadFile',
       request,
-      metadata,
-      methodInfo_UploadFile,
+      metadata || {},
+      methodInfo_FileManagement_UploadFile,
       callback)
     }
 
@@ -681,12 +683,11 @@ proto.file_service.FileManagementClient.prototype.uploadFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.uploadFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.uploadFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/UploadFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_UploadFile)
     }
 
 
@@ -721,8 +722,8 @@ proto.file_service.FileManagementClient.prototype.shareFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ShareFile',
       request,
-      metadata,
-      methodInfo_ShareFile,
+      metadata || {},
+      methodInfo_FileManagement_ShareFile,
       callback)
     }
 
@@ -737,12 +738,11 @@ proto.file_service.FileManagementClient.prototype.shareFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.shareFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.shareFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/ShareFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_ShareFile)
     }
 
 
@@ -777,8 +777,8 @@ proto.file_service.FileManagementClient.prototype.downloadFile =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DownloadFile',
       request,
-      metadata,
-      methodInfo_DownloadFile,
+      metadata || {},
+      methodInfo_FileManagement_DownloadFile,
       callback)
     }
 
@@ -793,12 +793,11 @@ proto.file_service.FileManagementClient.prototype.downloadFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.downloadFile =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.downloadFile(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/DownloadFile',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_DownloadFile)
     }
 
 
@@ -833,8 +832,8 @@ proto.file_service.FileManagementClient.prototype.computeSize =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ComputeSize',
       request,
-      metadata,
-      methodInfo_ComputeSize,
+      metadata || {},
+      methodInfo_FileManagement_ComputeSize,
       callback)
     }
 
@@ -849,12 +848,11 @@ proto.file_service.FileManagementClient.prototype.computeSize =
  */
 proto.file_service.FileManagementPromiseClient.prototype.computeSize =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.computeSize(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/ComputeSize',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_ComputeSize)
     }
 
 
@@ -889,8 +887,8 @@ proto.file_service.FileManagementClient.prototype.getMyDriveId =
       return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetMyDriveId',
       request,
-      metadata,
-      methodInfo_GetMyDriveId,
+      metadata || {},
+      methodInfo_FileManagement_GetMyDriveId,
       callback)
     }
 
@@ -905,12 +903,11 @@ proto.file_service.FileManagementClient.prototype.getMyDriveId =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getMyDriveId =
     function(request, metadata) {
-      return new Promise((resolve, reject) => {
-        this.delegateClient_.getMyDriveId(
-          request, metadata, (error, response) => {
-            error ? reject(error) : resolve(response)
-          })
-      })
+      return this.client_.unaryCall(this.hostname_ +
+      '/file_service.FileManagement/GetMyDriveId',
+      request,
+      metadata || {},
+      methodInfo_FileManagement_GetMyDriveId)
     }
 
 

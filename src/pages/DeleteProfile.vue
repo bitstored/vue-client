@@ -1,9 +1,11 @@
+
 <template>
   <div class="container ">
     <div>Are you sure you want to delete profile?</div>
     <div>
       <button
         class="btn-danger"
+
         v-on:click="deleteAccount"
       >
         Delete
