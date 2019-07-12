@@ -13,6 +13,11 @@ export const router = new VueRouter({
     component: require('../pages/FirstPage').default
   },
   {
+    path: '/notfound',
+    name: 'error404',
+    component: require('../pages/404').default
+  },
+  {
     path: '/about',
     name: 'About',
     component: require('../pages/About').default
@@ -26,11 +31,6 @@ export const router = new VueRouter({
     path: '/register',
     name: 'register',
     component: require('../pages/Register').default
-  },
-  {
-    path: '/notfound',
-    name: 'error404',
-    component: require('../pages/404').default
   },
   {
     path: '/profile',
@@ -58,6 +58,16 @@ export const router = new VueRouter({
     component: require('../pages/EditFile').default
   },
   {
+    path: '/file/delete/:id',
+    name: 'delete_file',
+    component: require('../pages/DeleteFile').default
+  },
+  {
+    path: '/file/download/:id',
+    name: 'download_file',
+    component: require('../pages/DownloadFile').default
+  },
+  {
     path: '/file/upload',
     name: 'upload_file',
     component: require('../pages/UploadFile').default
@@ -73,14 +83,29 @@ export const router = new VueRouter({
     component: require('../pages/CreateFolder').default
   },
   {
+    path: '/folder/delete/:id',
+    name: 'delete_folder',
+    component: require('../pages/DeleteFolder').default
+  },
+  {
+    path: '/folder/edit/:id',
+    name: 'edit_folder',
+    component: require('../pages/EditFolder').default
+  },
+  {
+    path: '/file/:id',
+    name: 'view_file',
+    component: require('../pages/ViewFile').default
+  },
+  {
     path: '/users',
     name: 'users',
     component: require('../pages/Users').default
   },
   {
-    path: '/folder/:folderID',
+    path: '/folder/:id',
     name: 'folder',
-    component: require('../pages/Drive').default
+    component: require('../pages/ViewFolder').default
   },
   {
     path: '/drive',

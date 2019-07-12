@@ -33,6 +33,60 @@ const actions = {
           setTimeout(() => {
             dispatch('alert/success', 'Upload successful', { root: true })
           })
+          router.go('/drive')
+
+        }
+      )
+      .catch(
+        error => {
+          commit('uploadFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
+  createFile({ dispatch, commit }, file) {
+    commit('uploadRequest', file.name)
+    var userId = localStorage.getItem('user_id')
+    file.parent = localStorage.getItem('last_folder')
+    fileService.methods.uploadFile(file, userId)
+      .then(
+        rsp => {
+          commit('uploadSuccess', file.name)
+          router.go('/drive')
+        }
+      )
+      .catch(
+        error => {
+          commit('uploadFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
+  deleteFile({ dispatch, commit }, id) {
+    commit('deleteRequest', id)
+    var userId = localStorage.getItem('user_id')
+    fileService.methods.deleteFile(id, userId)
+      .then(
+        rsp => {
+          commit('deleteSuccess', id)
+          router.go('/drive')
+        }
+      )
+      .catch(
+        error => {
+          commit('deleteFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
+  deleteFolder({ dispatch, commit }, id) {
+    commit('deleteRequest', id)
+    var userId = localStorage.getItem('user_id')
+    fileService.methods.deleteFile(id, userId)
+      .then(
+        rsp => {
+          commit('uploadSuccess', id)
+          router.go('/drive')
         }
       )
       .catch(
@@ -52,6 +106,7 @@ const actions = {
             if (response != null) {
               //commit('getSuccess', {state, user})
               state.current = response.array[0]
+
               resolve(response)
             } else {
               router.go('/profile')
@@ -78,6 +133,8 @@ const actions = {
             if (response != null) {
               console.log(response)
               resolve(response)
+              router.go('/drive')
+
             } else {
               router.go('/drive')
               alert('Unable to create new folder, redirecting')
@@ -122,9 +179,20 @@ const actions = {
 }
 
 const mutations = {
-  uploadRequest(state, user) {
+  uploadRequest(state, name) {
+    state.status = {
+      uploading: true,
+    }
   },
-  uploadSuccess(state, user) {
+  uploadSuccess(state, name) {
+    state.status = {
+      uploaded: true,
+    }
+  },
+  deleteRequest(state, id) {
+    state.status = {
+      deleteing: true,
+    }
   },
   uploadFailure(state) {
   },

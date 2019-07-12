@@ -14,6 +14,7 @@ const {
   Folder,
   Type,
   FSLevel,
+  DeleteFileRequest,
   UploadFileRequest,
   GetFolderContentRequest,
   GetMyDriveIdRequest,
@@ -128,6 +129,34 @@ export const fileService = {
 
       return new Promise(function (resolve, reject) {
         client.createNewFolder(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            console.log(response)
+            resolve(response)
+          }
+        })
+      })
+    },
+    deleteFile: function (fileID, userID) {
+      const request = new DeleteFileRequest()
+
+      request.setUserId(localStorage.getItem('user_id'))
+      request.setIdentifier(fileID)
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.deleteFile(request, requestOptions, (error, response) => {
           if (error != null) {
             console.log('err', error)
             reject(error)

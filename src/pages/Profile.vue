@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row">
+    <div class="row profile-menu">
       <router-link
         to="/profile/edit"
         class="btn btn-success btn-md">
@@ -148,5 +148,8 @@ export default {
 }
 .lock-button{
   background: blue;
+}
+.profile-menu{
+  margin-top: 10px;
 }
 </style>

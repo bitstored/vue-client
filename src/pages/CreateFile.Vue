@@ -13,6 +13,7 @@
         <label htmlFor="name">File Name</label>
         <input
           id="file_name"
+          v-model="file.name"
           type="text"
           name="name"
           class="form-control"
@@ -24,7 +25,7 @@
         <label for="type">File Type</label>
         <b-form-select
           v-validate="'required'"
-          v-model="file.Type"
+          v-model="file.type"
           value="txt"
           :options="file_types"
           name="type"
@@ -102,11 +103,11 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 export default {
-  name: 'UploadFile',
+  name: 'CreateFile',
   data() {
     return {
       file_types: [
@@ -131,6 +132,15 @@ export default {
   computed: {
     ...mapState('account', ['status'])
   },
+  methods: {
+    ...mapActions('files', ['createFile']),
+    handleSubmit () {
+      this.submitted = true
+      this.$validator.validate().then(valid => {
+        this.createFile(this.file)
+      })
+    }
+  }
 }
 </script>
 <style>

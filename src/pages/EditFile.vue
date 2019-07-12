@@ -5,6 +5,10 @@
 </template>
 <script>
 export default {
-  name: 'EditFile'
+  name: 'EditFile',
+  created() {
+  console.log('identifier', this.$route.params.id);
+},
+
 }
 </script>
