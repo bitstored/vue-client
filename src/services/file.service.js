@@ -19,6 +19,8 @@ const {
   GetFolderContentRequest,
   GetMyDriveIdRequest,
   CreateNewFolderRequest,
+  ComputeSizeRequest,
+  DownloadFileRequest,
 } = require('../pb/file_service_pb')
 
 const {
@@ -44,8 +46,14 @@ export const fileService = {
       rpc_file.setParentIdentifier(file.parent)
       rpc_file.setName(file.name)
       var type = Type.OTHER
-      if (file.type === 'pdf') {
+      if (file.type =='pdf') {
         type = Type.PDF
+      }
+      if (file.type == 'png') {
+        type = Type.IMAGE
+      }
+      if (file.Type == 'txt') {
+        type = Type.TXT
       }
       rpc_file.setFileType(type)
       rpc_file.setContent(btoa(unescape(encodeURIComponent(file.data))))
@@ -192,6 +200,63 @@ export const fileService = {
           }
         })
       })
+    },
+    computeSize: function (userID) {
+      const request = new ComputeSizeRequest()
+
+      request.setUserId(userID)
+      const requestOptions = {
+        method: 'GET',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.computeSize(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(response)
+          }
+        })
+      })
+    },
+    downloadFile: function( fileID, userID,password, watermarkingMessage, steganoMessage) {
+      const request = new DownloadFileRequest()
+
+      request.setUserId(userID)
+      request.setIdentifier(fileID)
+      request.setSecretPhrase(password)
+      request.setWatermarkMessage(watermarkingMessage)
+      request.setSteganoMessage(steganoMessage)
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.downloadFile(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(response)
+          }
+        })
+      })
+
     },
   }
 }

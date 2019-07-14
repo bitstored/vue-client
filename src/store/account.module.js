@@ -17,7 +17,7 @@ const actions = {
           commit('loginSuccess', token)
           this.loggedIn = true
           getByToken(token)
-          router.push('/')
+          router.go('/')
         }
       )
       .catch(

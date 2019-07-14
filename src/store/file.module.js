@@ -96,6 +96,41 @@ const actions = {
         }
       )
   },
+  downloadFile({ dispatch, commit }, {fileID, userID,password, watermarkingMessage, steganoMessage} ) {
+    return new Promise(function (resolve, reject) {
+      fileService.methods.downloadFile(fileID, userID, password, watermarkingMessage, steganoMessage)
+        .then(
+          rsp => {
+            resolve(rsp)
+          }
+        )
+        .catch(
+          error => {
+            commit('uploadFailure', error)
+            dispatch('alert/error', error, { root: true })
+            reject(error)
+          }
+        )
+    })
+  },
+
+  computeSize({ dispatch, commit }) {
+    var userId = localStorage.getItem('user_id')
+    return new Promise(function (resolve, reject) {
+      fileService.methods.computeSize(userId)
+        .then(
+          rsp => {
+            resolve(rsp)
+          }
+        )
+        .catch(
+          error => {
+            commit('uploadFailure', error)
+            dispatch('alert/error', error, { root: true })
+          }
+        )
+    })
+  },
   getDriveId({
     commit
   }, userId) {

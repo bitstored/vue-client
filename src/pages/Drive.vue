@@ -75,7 +75,7 @@
               <router-link
                 id="folder-button"
                 class="empty-button"
-                :to="{name: 'folder', params: {id: folder.identifier }}">
+                :to="{name: 'drive', params: {id: folder.identifier }}">
                 <img
                   :src="folder_icon"
                   class="img_resize"
@@ -150,7 +150,7 @@
               </router-link>
               <router-link
                 class="empty-button"
-                :to="{name: 'delete_file', params: {id: file.identifier }}">
+                :to="{name: 'download_file', params: {id: file.identifier }}">
                 <img
                   :src="download_icon"
                   class="img_resize"
@@ -189,13 +189,25 @@ export default {
   },
   created() {
     var last = localStorage.getItem('last_folder')
-    if (last == undefined || last.charAt(0) == 'f'){
+    if (last == undefined || !this.$route.params.id ){
       this.getDrive()
       this.folderContent()
     } else {
+      var did = localStorage.setItem('last_folder', this.$route.params.id)
       this.folderContent()
+
     }
   },
+  updated() {
+    var last = localStorage.getItem('last_folder')
+    if (last == undefined || !this.$route.params.id ){
+      this.getDrive()
+      this.folderContent()
+    } else {
+      var did = localStorage.setItem('last_folder', this.$route.params.id)
+      this.folderContent()
+
+    }  },
   methods: {
     ...mapActions('files', ['getDriveId', 'getFolderContent']),
     getDrive() {
@@ -220,11 +232,7 @@ export default {
       this.getFolderContent({driveId: did, userId: uid})
         .then(
           rsp => {
-            console.log(rsp)
-            // this.files = rsp.methods.getContent().getFiles()
             this.folders = rsp.getContent().toObject().foldersList
-                        console.log(this.folders)
-
             this.files = rsp.getContent().toObject().filesList
 
           }

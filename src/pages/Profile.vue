@@ -57,10 +57,10 @@
           Storage available: {{ storage_available }}
         </div>
         <div class="row">
-          Storage used: {{ data_stored }}
+          Storage used compressed: {{ data_stored }} bytes
         </div>
         <div class="row">
-          Storage if no compression: {{ data_stored_no_compression }}
+          Storage if no compression: {{ data_stored_no_compression }} bytes
         </div>
         <div class="row">
           Last login: {{ last_login }}
@@ -105,6 +105,8 @@ export default {
   },
   methods: {
     ...mapActions('users', ['getByToken']),
+    ...mapActions('files', ['computeSize']),
+
     getProfile() {
       var token = localStorage.getItem('token')
       this.getByToken(token)
@@ -120,10 +122,15 @@ export default {
             if (user.getPhoto() == '') {
               this.photo = this.no_photo
             } else {
-              this.photo = user.getPhoto()
-              console.log(this.photo)
+              this.photo = decodeURIComponent(escape(atob( user.getPhoto())))
             }
           })
+      this.computeSize().then(
+        rsp => {
+          this.data_stored_no_compression = rsp.getInitialSize()
+          this.data_stored = rsp.getCompressedSize()
+        }
+      )
     },
     get_photo() {
       return this.photo

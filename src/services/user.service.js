@@ -168,8 +168,6 @@ export const userService = {
 
       //return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse)
     },
-
-
     getByToken: function (token) {
       const request = new GetAccountRequest()
       request.setId(token)

@@ -103,13 +103,13 @@ export const router = new VueRouter({
     component: require('../pages/Users').default
   },
   {
-    path: '/folder/:id',
-    name: 'folder',
-    component: require('../pages/ViewFolder').default
+    path: '/drive/:id',
+    name: 'drive',
+    component: require('../pages/Drive').default
   },
   {
     path: '/drive',
-    name: 'drive',
+    name: 'my_drive',
     component: require('../pages/Drive').default
   },
   {

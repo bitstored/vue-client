@@ -42,6 +42,7 @@
           :editor="editor"
           v-model="file.data"
           name="content"
+          type="text"
           class="ck-editor"
           :config="editorConfig"
          >
@@ -54,7 +55,7 @@
         <input
           v-validate="'required'"
           v-model="file.secret"
-          type="text"
+          type="password"
           name="secret"
           class="form-control"
         >

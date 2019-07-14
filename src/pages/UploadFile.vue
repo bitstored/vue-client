@@ -30,7 +30,7 @@
         <input
           v-validate="'required'"
           v-model="file.secret"
-          type="text"
+          type="password"
           name="secret"
           class="form-control"
         >
