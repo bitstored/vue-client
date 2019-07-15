@@ -53,6 +53,7 @@
             <button
               id="back-button"
               class="empty-button"
+
             >
               <img
                 :src="back_icon"

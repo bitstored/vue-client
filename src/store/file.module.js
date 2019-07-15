@@ -63,6 +63,37 @@ const actions = {
         }
       )
   },
+  rename({ dispatch, commit }, {identifier, name}) {
+    var userId = localStorage.getItem('user_id')
+    fileService.methods.rename(identifier, name, userId)
+      .then(
+        rsp => {
+          alert('Success on rename file')
+        }
+      )
+      .catch(
+        error => {
+          commit('uploadFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
+  updateContent({ dispatch, commit }, {identifier, content, password} ) {
+    var userId = localStorage.getItem('user_id')
+    fileService.methods.updateContent(identifier, content, password, userId)
+      .then(
+        rsp => {
+          alert('Success on update content')
+          //router.push('/drive')
+        }
+      )
+      .catch(
+        error => {
+          commit('uploadFailure', error)
+          dispatch('alert/error', error, { root: true })
+        }
+      )
+  },
   deleteFile({ dispatch, commit }, id) {
     commit('deleteRequest', id)
     var userId = localStorage.getItem('user_id')
@@ -167,7 +198,7 @@ const actions = {
         .then(
           response => {
             if (response != null) {
-              console.log(response)
+              //console.log(response)
               resolve(response)
               router.push('/drive')
 
@@ -194,7 +225,7 @@ const actions = {
         .then(
           response => {
             if (response != null) {
-              console.log(response)
+              //console.log(response)
               resolve(response)
             } else {
               router.push('/drive')

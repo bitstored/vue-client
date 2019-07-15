@@ -121,8 +121,12 @@ export default {
           reader.onload = () => {
             this.upload({...this.file, data: reader.result})
           }
-          reader.readAsText(document.getElementById('uploaded_file').files[0])
-          // reader.readAsDataURL(document.getElementById('uploaded_file').files[0])
+          if (document.getElementById('uploaded_file').files[0].name.split('.').pop() =='txt')
+          {
+            reader.readAsText(document.getElementById('uploaded_file').files[0])
+          } else {
+            reader.readAsDataURL(document.getElementById('uploaded_file').files[0])
+          }
 
         }
       })

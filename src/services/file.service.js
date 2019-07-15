@@ -20,6 +20,8 @@ const {
   GetMyDriveIdRequest,
   CreateNewFolderRequest,
   ComputeSizeRequest,
+  UpdateFileContentRequest,
+  RenameFileRequest,
   DownloadFileRequest,
 } = require('../pb/file_service_pb')
 
@@ -53,7 +55,8 @@ export const fileService = {
       }
       if (file.type == 'png') {
         type = Type.IMAGE
-        rpc_file.setContent(btoa(unescape(encodeURIComponent(file.data))))
+
+        rpc_file.setContent(file.data)
       }
       if (file.Type == 'txt') {
         type = Type.TXT
@@ -113,7 +116,7 @@ export const fileService = {
             console.log('err', error)
             reject(error)
           } else {
-            console.log(response.getContent())
+            //console.log(response.getContent())
             resolve(response)
           }
         })
@@ -144,7 +147,7 @@ export const fileService = {
             console.log('err', error)
             reject(error)
           } else {
-            console.log(response)
+            //console.log(response)
             resolve(response)
           }
         })
@@ -172,7 +175,7 @@ export const fileService = {
             console.log('err', error)
             reject(error)
           } else {
-            console.log(response)
+            //console.log(response)
             resolve(response)
           }
         })
@@ -195,6 +198,64 @@ export const fileService = {
 
       return new Promise(function (resolve, reject) {
         client.getMyDriveId(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(response)
+          }
+        })
+      })
+    },
+    rename: function (identifier, name, userId) {
+      const request = new RenameFileRequest()
+
+      request.setUserId(userId)
+      request.setName(name)
+      request.setIdentifier(identifier)
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.renameFile(request, requestOptions, (error, response) => {
+          if (error != null) {
+            console.log('err', error)
+            reject(error)
+          } else {
+            resolve(response)
+          }
+        })
+      })
+    },
+    updateContent: function (identifier, content, password, userId) {
+      const request = new UpdateFileContentRequest()
+
+      request.setUserId(userId)
+      request.setIdentifier(identifier)
+      request.setFileType(3)
+      request.setNewContent(content)
+      request.setSecretKey(password)
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'mode': 'no-cors', // no-cors, cors, *same-origin
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+          'Content-Type': 'application/grpc',
+        }
+      }
+
+      return new Promise(function (resolve, reject) {
+        client.updateFileContent(request, requestOptions, (error, response) => {
           if (error != null) {
             console.log('err', error)
             reject(error)
