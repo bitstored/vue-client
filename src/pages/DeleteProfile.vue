@@ -6,7 +6,7 @@
       <button
         class="btn-danger"
 
-        v-on:click="deleteAccount"
+        @click="deleteAccount"
       >
         Delete
       </button> &nbsp;

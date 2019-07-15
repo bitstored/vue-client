@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
+    "lint": "eslint --fix --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.26",
+    "file-saver": "^2.0.2",
     "google-protobuf": "^3.8.0-rc.1",
     "grpc-web": "^1.0.4",
     "grpc-web-client": "^0.7.0",

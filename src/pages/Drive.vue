@@ -26,7 +26,7 @@
       &nbsp;
       <router-link
         class="btn btn-primary btn-md"
-       to="/folder/create"
+        to="/folder/create"
       >
         <img
           :src="create_file_img"
@@ -75,8 +75,8 @@
             <div class="row">
               <router-link
                 id="folder-button"
-                class="empty-button"
-                :to="{name: 'drive', params: {id: folder.identifier }}">
+                :to="{name: 'drive', params: {id: folder.identifier }}"
+                class="empty-button">
                 <img
                   :src="folder_icon"
                   class="img_resize"
@@ -91,8 +91,8 @@
             </div>
             <div class="button-group">
               <router-link
-                class="empty-button"
-                :to="{name: 'edit_folder', params: {id: folder.identifier }}">
+                :to="{name: 'edit_folder', params: {id: folder.identifier }}"
+                class="empty-button">
                 <img
                   :src="edit_icon"
                   class="img_resize"
@@ -100,8 +100,8 @@
                 >
               </router-link>
               <router-link
-                class="empty-button"
-                :to="{name: 'delete_folder', params: {id: folder.identifier }}">
+                :to="{name: 'delete_folder', params: {id: folder.identifier }}"
+                class="empty-button">
                 <img
                   :src="delete_icon"
                   class="img_resize"
@@ -118,8 +118,8 @@
             <div class="row">
               <router-link
                 id="folder-button"
-                class="empty-button"
-                :to="{name: 'view_file', params: {id: file.identifier }}">
+                :to="{name: 'view_file', params: {id: file.identifier }}"
+                class="empty-button">
                 <img
                   :src="get_icon(file.fileType)"
                   class="img_resize"
@@ -134,24 +134,24 @@
             </div>
             <div class="button-group">
               <router-link
-                class="empty-button"
-                :to="{name: 'edit_file', params: {id: file.identifier }}">
+                :to="{name: 'edit_file', params: {id: file.identifier }}"
+                class="empty-button">
                 <img
                   :src="edit_icon"
                   class="img_resize"
                   style="height:20px;width:20px;">
               </router-link>
               <router-link
-                class="empty-button"
-                :to="{name: 'delete_file', params: {id: file.identifier }}">
+                :to="{name: 'delete_file', params: {id: file.identifier }}"
+                class="empty-button">
                 <img
                   :src="delete_icon"
                   class="img_resize"
                   style="height:20px;width:20px;">
               </router-link>
               <router-link
-                class="empty-button"
-                :to="{name: 'download_file', params: {id: file.identifier }}">
+                :to="{name: 'download_file', params: {id: file.identifier }}"
+                class="empty-button">
                 <img
                   :src="download_icon"
                   class="img_resize"

@@ -5,6 +5,6 @@
 </template>
 <script>
 export default {
-  name: 'Edit Folder'
+  name: 'EditFolder'
 }
 </script>

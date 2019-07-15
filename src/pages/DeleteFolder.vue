@@ -1,11 +1,11 @@
 <template>
-   <div class="container ">
+  <div class="container ">
     <div>Are you sure you want to delete this folder?</div>
     <div>
       <button
         class="btn-danger"
 
-        v-on:click="_deleteFolder"
+        @click="_deleteFolder"
       >
         Delete
       </button> &nbsp;

@@ -1,16 +1,16 @@
 <template>
   <div>
     <h3>
-      Edit file {{this.identifier}}
+      Edit file {{ this.identifier }}
     </h3>
     <div
-        class="form-group"
+      class="form-group"
     >
       <label htmlFor="password">Password</label>
       <input
         v-validate="{ required: true}"
         v-model="password"
-        :class="{ 'is-invalid':  errors.has('password') }"
+        :class="{ 'is-invalid': errors.has('password') }"
         type="password"
         name="password"
         class="form-control"
@@ -23,41 +23,42 @@
       </div>
     </div>
     <div>
-      <form v-on:submit.prevent="_getContent">
+      <form @submit.prevent="_getContent">
         <button
           class="btn-success"
         >
           Get Content
         </button> &nbsp;
       </form>
-      <router-link v-if="!content" to="/drive">
+      <router-link 
+        v-if="!content" 
+        to="/drive">
         Go to drive
       </router-link>
     </div>
-    <p></p>
+    <p/>
 
     <div v-if="content">
       <label for="content">Content</label>
-        <ckeditor
-          :editor="editor"
-          v-model="content"
-          name="content"
-          type="text"
-          class="ck-editor"
-          :config="editorConfig"
-         >
-        </ckeditor>
+      <ckeditor
+        :editor="editor"
+        v-model="content"
+        :config="editorConfig"
+        name="content"
+        type="text"
+        class="ck-editor"
+      />
       <div>
-        <p></p>
-        <form v-on:submit.prevent="_updateContent">
-        <button
-          class="btn-success"
-        >
-          Update Content
-        </button> &nbsp;
+        <p/>
+        <form @submit.prevent="_updateContent">
+          <button
+            class="btn-success"
+          >
+            Update Content
+          </button> &nbsp;
         </form>
 
-        <p></p>
+        <p/>
 
         <label for="name">
           Name
@@ -67,9 +68,9 @@
           name="name"
           type="text"
         >
-        <p></p>
+        <p/>
         <div>
-          <form v-on:submit.prevent="_rename">
+          <form @submit.prevent="_rename">
             <button
               class="btn-success"
             >
@@ -108,19 +109,19 @@ export default {
       var fileID = this.$route.params.id
       var userID = localStorage.getItem('user_id')
       this.downloadFile({fileID: fileID, userID: userID, password: this.password, watermarkingMessage: '', steganoMessage: ''})
-      .then(
-        rsp => {
-          var file = rsp.toObject().file
-          this.content = file.content
-          this.name = file.name
-        }
-      )
-      .catch(
-        err => {
-          alert('Invalid password')
+        .then(
+          rsp => {
+            var file = rsp.toObject().file
+            this.content = file.content
+            this.name = file.name
+          }
+        )
+        .catch(
+          err => {
+            alert('Invalid password')
           }
 
-      )    },
+        )    },
     _rename() {
       this.rename({identifier: this.$route.params.id, name: this.name})
     },
@@ -130,8 +131,8 @@ export default {
     }
   },
   created() {
-  console.log('identifier', this.$route.params.id);
-},
+    console.log('identifier', this.$route.params.id)
+  },
 
 }
 </script>

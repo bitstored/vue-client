@@ -2,7 +2,7 @@
 <template>
   <div>
     <div >
-      <h3 style="color: green">Create folder</h3></div>
+    <h3 style="color: green">Create folder</h3></div>
     <form
       enctype="multipart/form-data"
       @submit.prevent="handleSubmit"
@@ -12,11 +12,11 @@
       >
         <label htmlFor="name">Folder Name</label>
         <input
+          v-validate="'required'"
           id="file_name"
+          v-model="folder.name"
           type="text"
           name="name"
-          v-model="folder.name"
-          v-validate="'required'"
           class="form-control"
         >
       </div>

@@ -1,65 +1,65 @@
 <template>
-   <div class="container ">
-    <h3>Are you are attempting to download the file <mark style="background-color: white;color:green">{{fileName}}</mark>, are you sure?</h3>
+  <div class="container ">
+    <h3>Are you are attempting to download the file <mark style="background-color: white;color:green">{{ fileName }}</mark>, are you sure?</h3>
     <div
-        class="form-group"
+      class="form-group"
+    >
+      <label htmlFor="password">Password</label>
+      <input
+        v-validate="{ required: true}"
+        v-model="password"
+        :class="{ 'is-invalid': errors.has('password') }"
+        type="password"
+        name="password"
+        class="form-control"
       >
-        <label htmlFor="password">Password</label>
-        <input
-          v-validate="{ required: true}"
-          v-model="password"
-          :class="{ 'is-invalid':  errors.has('password') }"
-          type="password"
-          name="password"
-          class="form-control"
-        >
-        <div
-          v-if=" errors.has('password')"
-          class="invalid-feedback"
-        >
-          {{ errors.first('password') }}
-        </div>
+      <div
+        v-if=" errors.has('password')"
+        class="invalid-feedback"
+      >
+        {{ errors.first('password') }}
+      </div>
     </div>
     <div
-        class="form-group"
+      class="form-group"
+    >
+      <label htmlFor="steganoMessage">Stegano Message</label>
+      <input
+        v-model="steganoMessage"
+        :class="{ 'is-invalid': errors.has('steganoMessage') }"
+        type="text"
+        name="steganoMessage"
+        class="form-control"
       >
-        <label htmlFor="steganoMessage">Stegano Message</label>
-        <input
-          v-model="steganoMessage"
-          :class="{ 'is-invalid':  errors.has('steganoMessage') }"
-          type="text"
-          name="steganoMessage"
-          class="form-control"
-        >
-        <div
-          v-if=" errors.has('steganoMessage')"
-          class="invalid-feedback"
-        >
-          {{ errors.first('steganoMessage') }}
-        </div>
+      <div
+        v-if=" errors.has('steganoMessage')"
+        class="invalid-feedback"
+      >
+        {{ errors.first('steganoMessage') }}
+      </div>
     </div>
     <div
-        class="form-group"
+      class="form-group"
+    >
+      <label htmlFor="watermarkingMessage">Watermarking Message</label>
+      <input
+        v-model="watermarkingMessage"
+        :class="{ 'is-invalid': errors.has('watermarkingMessage') }"
+        type="text"
+        name="watermarkingMessage"
+        class="form-control"
       >
-        <label htmlFor="watermarkingMessage">Watermarking Message</label>
-        <input
-          v-model="watermarkingMessage"
-          :class="{ 'is-invalid':  errors.has('watermarkingMessage') }"
-          type="text"
-          name="watermarkingMessage"
-          class="form-control"
-        >
-        <div
-          v-if=" errors.has('watermarkingMessage')"
-          class="invalid-feedback"
-        >
-          {{ errors.first('watermarkingMessage') }}
-        </div>
+      <div
+        v-if=" errors.has('watermarkingMessage')"
+        class="invalid-feedback"
+      >
+        {{ errors.first('watermarkingMessage') }}
+      </div>
     </div>
     <div>
       <button
         class="btn-success"
-        v-on:click="_downloadFile"
+        @click="_downloadFile"
       >
         Download
       </button> &nbsp;
@@ -69,7 +69,7 @@
 </template>
 <script>
 import { mapState, mapActions} from 'vuex'
-import { saveAs } from 'file-saver';
+import { saveAs } from 'file-saver'
 
 export default {
 
@@ -99,32 +99,32 @@ export default {
       this.fileName = this.fileID
       this.userID = localStorage.getItem('user_id')
       this.downloadFile({fileID: this.fileID, userID: this.userID, password: this.password, watermarkingMessage: this.watermarkingMessage, steganoMessage: this.steganoMessage})
-      .then(
-        rsp => {
-          var file = rsp.toObject().file
-          var FileSaver = require('file-saver');
-          if (file.fileType == 5) {
-            var blob = new Blob([file.content], {type: "image/png;base64"});
-            fetch(file.content)
-              .then(res => res.blob())
-              .then(blob => FileSaver.saveAs(blob, file.name))
+        .then(
+          rsp => {
+            var file = rsp.toObject().file
+            var FileSaver = require('file-saver')
+            if (file.fileType == 5) {
+              var blob = new Blob([file.content], {type: 'image/png;base64'})
+              fetch(file.content)
+                .then(res => res.blob())
+                .then(blob => FileSaver.saveAs(blob, file.name))
+
+            }
+            else  {
+              var blob = new Blob([file.content] , {type: 'text/plain;charset=utf-8'})
+              FileSaver.saveAs(blob, file.name)
+
+            }
 
           }
-          else  {
-            var blob = new Blob([file.content] , {type: "text/plain;charset=utf-8"});
-                   FileSaver.saveAs(blob, file.name)
-
-         }
-
-        }
-      )
-      .catch(
-        err => {
-          status = {
-            error : err.message
+        )
+        .catch(
+          err => {
+            status = {
+              error : err.message
+            }
           }
-        }
-      )
+        )
 
 
     },
