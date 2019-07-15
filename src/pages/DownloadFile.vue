@@ -104,12 +104,15 @@ export default {
           var file = rsp.toObject().file
           var FileSaver = require('file-saver');
           if (file.fileType == 5) {
-            var blob = new Blob([ btoa(unescape(decodeURIComponent(file.content)))], {type: "image/base64;charset=utf-8"});
+            var blob = new Blob([btoa(unescape(decodeURIComponent(file.content)))], {type: "image/png"});
+                                     localStorage.setItem('b', file.content)
+
           }
           else  {
-            var blob = new Blob([atob(file.content)], {type: "text/base64;charset=utf-8"});
+            var blob = new Blob([file.content] , {type: "text/base64;charset=utf-8"});
           }
           FileSaver.saveAs(blob, file.name);
+
         }
       )
       .catch(

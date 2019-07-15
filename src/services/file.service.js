@@ -46,24 +46,27 @@ export const fileService = {
       rpc_file.setParentIdentifier(file.parent)
       rpc_file.setName(file.name)
       var type = Type.OTHER
+      rpc_file.setContent(file.data)
+
       if (file.type =='pdf') {
         type = Type.PDF
       }
       if (file.type == 'png') {
         type = Type.IMAGE
+        rpc_file.setContent(btoa(unescape(encodeURIComponent(file.data))))
       }
       if (file.Type == 'txt') {
         type = Type.TXT
+        rpc_file.setContent(file.data)
+
       }
       rpc_file.setFileType(type)
-      rpc_file.setContent(btoa(unescape(encodeURIComponent(file.data))))
       rpc_file.setWritable(file.is_writable)
       rpc_file.setPrivate(file.is_private)
 
       request.setFile(rpc_file)
       request.setUserId(userid)
       request.setSecretPhrase(file.secret)
-      console.log(userid, '\n\n\n',request)
       const requestOptions = {
         method: 'POST',
         headers: {
@@ -227,7 +230,7 @@ export const fileService = {
         })
       })
     },
-    downloadFile: function( fileID, userID,password, watermarkingMessage, steganoMessage) {
+    downloadFile: function( fileID, userID, password, watermarkingMessage, steganoMessage) {
       const request = new DownloadFileRequest()
 
       request.setUserId(userID)

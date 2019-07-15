@@ -25,6 +25,7 @@ const actions = {
     commit('uploadRequest', file.name)
     var userId = localStorage.getItem('user_id')
     file.parent = localStorage.getItem('last_folder')
+    console.log(file.data)
     fileService.methods.uploadFile(file, userId)
       .then(
         rsp => {
@@ -33,7 +34,7 @@ const actions = {
           setTimeout(() => {
             dispatch('alert/success', 'Upload successful', { root: true })
           })
-          router.go('/drive')
+          router.push('/drive')
 
         }
       )
@@ -52,7 +53,7 @@ const actions = {
       .then(
         rsp => {
           commit('uploadSuccess', file.name)
-          router.go('/drive')
+          router.push('/drive')
         }
       )
       .catch(
@@ -69,7 +70,7 @@ const actions = {
       .then(
         rsp => {
           commit('deleteSuccess', id)
-          router.go('/drive')
+          router.push('/drive')
         }
       )
       .catch(
@@ -86,7 +87,7 @@ const actions = {
       .then(
         rsp => {
           commit('uploadSuccess', id)
-          router.go('/drive')
+          router.push('/drive')
         }
       )
       .catch(
@@ -144,7 +145,7 @@ const actions = {
 
               resolve(response)
             } else {
-              router.go('/profile')
+              router.push('/profile')
             }
           }
         )
@@ -168,10 +169,10 @@ const actions = {
             if (response != null) {
               console.log(response)
               resolve(response)
-              router.go('/drive')
+              router.push('/drive')
 
             } else {
-              router.go('/drive')
+              router.push('/drive')
               alert('Unable to create new folder, redirecting')
             }
           }
@@ -196,7 +197,7 @@ const actions = {
               console.log(response)
               resolve(response)
             } else {
-              router.go('/drive')
+              router.push('/drive')
             }
           }
         )

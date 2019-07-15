@@ -188,7 +188,6 @@ export const userService = {
 
       return new Promise(function (resolve, reject) {
         client.getAccount(request, requestOptions, (error, response) => {
-          console.log('plm\n\n\n\n', response, error)
           if (error != null) {
             console.log('err', error)
             reject(error)

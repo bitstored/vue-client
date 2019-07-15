@@ -8,11 +8,11 @@
 
 
 
-const grpc = {}
-grpc.web = require('grpc-web')
+const grpc = {};
+grpc.web = require('grpc-web');
 
-const proto = {}
-proto.account_service = require('./user_service_pb.js')
+const proto = {};
+proto.account_service = require('./user_service_pb.js');
 
 /**
  * @param {string} hostname
@@ -24,30 +24,30 @@ proto.account_service = require('./user_service_pb.js')
  */
 proto.account_service.AccountClient =
     function(hostname, credentials, options) {
-      if (!options) options = {}
-      options['format'] = 'text'
+  if (!options) options = {};
+  options['format'] = 'text';
 
-      /**
+  /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.client_ = new grpc.web.GrpcWebClientBase(options)
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-      /**
+  /**
    * @private @const {string} The hostname
    */
-      this.hostname_ = hostname
+  this.hostname_ = hostname;
 
-      /**
+  /**
    * @private @const {?Object} The credentials to be used to connect
    *    to the server
    */
-      this.credentials_ = credentials
+  this.credentials_ = credentials;
 
-      /**
+  /**
    * @private @const {?Object} Options for the client
    */
-      this.options_ = options
-    }
+  this.options_ = options;
+};
 
 
 /**
@@ -60,30 +60,30 @@ proto.account_service.AccountClient =
  */
 proto.account_service.AccountPromiseClient =
     function(hostname, credentials, options) {
-      if (!options) options = {}
-      options['format'] = 'text'
+  if (!options) options = {};
+  options['format'] = 'text';
 
-      /**
+  /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.client_ = new grpc.web.GrpcWebClientBase(options)
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-      /**
+  /**
    * @private @const {string} The hostname
    */
-      this.hostname_ = hostname
+  this.hostname_ = hostname;
 
-      /**
+  /**
    * @private @const {?Object} The credentials to be used to connect
    *    to the server
    */
-      this.credentials_ = credentials
+  this.credentials_ = credentials;
 
-      /**
+  /**
    * @private @const {?Object} Options for the client
    */
-      this.options_ = options
-    }
+  this.options_ = options;
+};
 
 
 /**
@@ -96,10 +96,10 @@ const methodInfo_Account_CreateAccount = new grpc.web.AbstractClientBase.MethodI
   proto.account_service.CreateAccountResponse,
   /** @param {!proto.account_service.CreateAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.CreateAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -114,13 +114,13 @@ const methodInfo_Account_CreateAccount = new grpc.web.AbstractClientBase.MethodI
  */
 proto.account_service.AccountClient.prototype.createAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/CreateAccount',
       request,
       metadata || {},
       methodInfo_Account_CreateAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -133,12 +133,12 @@ proto.account_service.AccountClient.prototype.createAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.createAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/CreateAccount',
       request,
       metadata || {},
-      methodInfo_Account_CreateAccount)
-    }
+      methodInfo_Account_CreateAccount);
+};
 
 
 /**
@@ -151,10 +151,10 @@ const methodInfo_Account_ResendActivationMail = new grpc.web.AbstractClientBase.
   proto.account_service.ResendActivationMailResponse,
   /** @param {!proto.account_service.ResendActivationMailRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.ResendActivationMailResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -169,13 +169,13 @@ const methodInfo_Account_ResendActivationMail = new grpc.web.AbstractClientBase.
  */
 proto.account_service.AccountClient.prototype.resendActivationMail =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ResendActivationMail',
       request,
       metadata || {},
       methodInfo_Account_ResendActivationMail,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -188,12 +188,12 @@ proto.account_service.AccountClient.prototype.resendActivationMail =
  */
 proto.account_service.AccountPromiseClient.prototype.resendActivationMail =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/ResendActivationMail',
       request,
       metadata || {},
-      methodInfo_Account_ResendActivationMail)
-    }
+      methodInfo_Account_ResendActivationMail);
+};
 
 
 /**
@@ -206,10 +206,10 @@ const methodInfo_Account_ActivateAccount = new grpc.web.AbstractClientBase.Metho
   proto.account_service.ActivateAccountResponse,
   /** @param {!proto.account_service.ActivateAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.ActivateAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -224,13 +224,13 @@ const methodInfo_Account_ActivateAccount = new grpc.web.AbstractClientBase.Metho
  */
 proto.account_service.AccountClient.prototype.activateAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ActivateAccount',
       request,
       metadata || {},
       methodInfo_Account_ActivateAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -243,12 +243,12 @@ proto.account_service.AccountClient.prototype.activateAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.activateAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/ActivateAccount',
       request,
       metadata || {},
-      methodInfo_Account_ActivateAccount)
-    }
+      methodInfo_Account_ActivateAccount);
+};
 
 
 /**
@@ -261,10 +261,10 @@ const methodInfo_Account_UpdateAccount = new grpc.web.AbstractClientBase.MethodI
   proto.account_service.UpdateAccountResponse,
   /** @param {!proto.account_service.UpdateAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.UpdateAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -279,13 +279,13 @@ const methodInfo_Account_UpdateAccount = new grpc.web.AbstractClientBase.MethodI
  */
 proto.account_service.AccountClient.prototype.updateAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/UpdateAccount',
       request,
       metadata || {},
       methodInfo_Account_UpdateAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -298,12 +298,12 @@ proto.account_service.AccountClient.prototype.updateAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.updateAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/UpdateAccount',
       request,
       metadata || {},
-      methodInfo_Account_UpdateAccount)
-    }
+      methodInfo_Account_UpdateAccount);
+};
 
 
 /**
@@ -316,10 +316,10 @@ const methodInfo_Account_DeleteAccount = new grpc.web.AbstractClientBase.MethodI
   proto.account_service.DeleteAccountResponse,
   /** @param {!proto.account_service.DeleteAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.DeleteAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -334,13 +334,13 @@ const methodInfo_Account_DeleteAccount = new grpc.web.AbstractClientBase.MethodI
  */
 proto.account_service.AccountClient.prototype.deleteAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/DeleteAccount',
       request,
       metadata || {},
       methodInfo_Account_DeleteAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -353,12 +353,12 @@ proto.account_service.AccountClient.prototype.deleteAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.deleteAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/DeleteAccount',
       request,
       metadata || {},
-      methodInfo_Account_DeleteAccount)
-    }
+      methodInfo_Account_DeleteAccount);
+};
 
 
 /**
@@ -371,10 +371,10 @@ const methodInfo_Account_GetAccount = new grpc.web.AbstractClientBase.MethodInfo
   proto.account_service.GetAccountResponse,
   /** @param {!proto.account_service.GetAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.GetAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -389,13 +389,13 @@ const methodInfo_Account_GetAccount = new grpc.web.AbstractClientBase.MethodInfo
  */
 proto.account_service.AccountClient.prototype.getAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/GetAccount',
       request,
       metadata || {},
       methodInfo_Account_GetAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -408,12 +408,12 @@ proto.account_service.AccountClient.prototype.getAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.getAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/GetAccount',
       request,
       metadata || {},
-      methodInfo_Account_GetAccount)
-    }
+      methodInfo_Account_GetAccount);
+};
 
 
 /**
@@ -426,10 +426,10 @@ const methodInfo_Account_Login = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.LoginResponse,
   /** @param {!proto.account_service.LoginRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.LoginResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -444,13 +444,13 @@ const methodInfo_Account_Login = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.account_service.AccountClient.prototype.login =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/Login',
       request,
       metadata || {},
       methodInfo_Account_Login,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -463,12 +463,12 @@ proto.account_service.AccountClient.prototype.login =
  */
 proto.account_service.AccountPromiseClient.prototype.login =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/Login',
       request,
       metadata || {},
-      methodInfo_Account_Login)
-    }
+      methodInfo_Account_Login);
+};
 
 
 /**
@@ -481,10 +481,10 @@ const methodInfo_Account_Logout = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.LogoutResponse,
   /** @param {!proto.account_service.LogoutRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.LogoutResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -499,13 +499,13 @@ const methodInfo_Account_Logout = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.account_service.AccountClient.prototype.logout =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/Logout',
       request,
       metadata || {},
       methodInfo_Account_Logout,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -518,12 +518,12 @@ proto.account_service.AccountClient.prototype.logout =
  */
 proto.account_service.AccountPromiseClient.prototype.logout =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/Logout',
       request,
       metadata || {},
-      methodInfo_Account_Logout)
-    }
+      methodInfo_Account_Logout);
+};
 
 
 /**
@@ -536,10 +536,10 @@ const methodInfo_Account_ResetPassword = new grpc.web.AbstractClientBase.MethodI
   proto.account_service.ResetPasswordResponse,
   /** @param {!proto.account_service.ResetPasswordRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.ResetPasswordResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -554,13 +554,13 @@ const methodInfo_Account_ResetPassword = new grpc.web.AbstractClientBase.MethodI
  */
 proto.account_service.AccountClient.prototype.resetPassword =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ResetPassword',
       request,
       metadata || {},
       methodInfo_Account_ResetPassword,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -573,12 +573,12 @@ proto.account_service.AccountClient.prototype.resetPassword =
  */
 proto.account_service.AccountPromiseClient.prototype.resetPassword =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/ResetPassword',
       request,
       metadata || {},
-      methodInfo_Account_ResetPassword)
-    }
+      methodInfo_Account_ResetPassword);
+};
 
 
 /**
@@ -591,10 +591,10 @@ const methodInfo_Account_LockAccount = new grpc.web.AbstractClientBase.MethodInf
   proto.account_service.LockAccountResponse,
   /** @param {!proto.account_service.LockAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.LockAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -609,13 +609,13 @@ const methodInfo_Account_LockAccount = new grpc.web.AbstractClientBase.MethodInf
  */
 proto.account_service.AccountClient.prototype.lockAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/LockAccount',
       request,
       metadata || {},
       methodInfo_Account_LockAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -628,12 +628,12 @@ proto.account_service.AccountClient.prototype.lockAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.lockAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/LockAccount',
       request,
       metadata || {},
-      methodInfo_Account_LockAccount)
-    }
+      methodInfo_Account_LockAccount);
+};
 
 
 /**
@@ -646,10 +646,10 @@ const methodInfo_Account_RequestUnlockAccount = new grpc.web.AbstractClientBase.
   proto.account_service.RequestUnlockAccountResponse,
   /** @param {!proto.account_service.RequestUnlockAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.RequestUnlockAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -664,13 +664,13 @@ const methodInfo_Account_RequestUnlockAccount = new grpc.web.AbstractClientBase.
  */
 proto.account_service.AccountClient.prototype.requestUnlockAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/RequestUnlockAccount',
       request,
       metadata || {},
       methodInfo_Account_RequestUnlockAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -683,12 +683,12 @@ proto.account_service.AccountClient.prototype.requestUnlockAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.requestUnlockAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/RequestUnlockAccount',
       request,
       metadata || {},
-      methodInfo_Account_RequestUnlockAccount)
-    }
+      methodInfo_Account_RequestUnlockAccount);
+};
 
 
 /**
@@ -701,10 +701,10 @@ const methodInfo_Account_UnlockAccount = new grpc.web.AbstractClientBase.MethodI
   proto.account_service.UnlockAccountResponse,
   /** @param {!proto.account_service.UnlockAccountRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.UnlockAccountResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -719,13 +719,13 @@ const methodInfo_Account_UnlockAccount = new grpc.web.AbstractClientBase.MethodI
  */
 proto.account_service.AccountClient.prototype.unlockAccount =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/UnlockAccount',
       request,
       metadata || {},
       methodInfo_Account_UnlockAccount,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -738,12 +738,12 @@ proto.account_service.AccountClient.prototype.unlockAccount =
  */
 proto.account_service.AccountPromiseClient.prototype.unlockAccount =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/UnlockAccount',
       request,
       metadata || {},
-      methodInfo_Account_UnlockAccount)
-    }
+      methodInfo_Account_UnlockAccount);
+};
 
 
 /**
@@ -756,10 +756,10 @@ const methodInfo_Account_ListUsers = new grpc.web.AbstractClientBase.MethodInfo(
   proto.account_service.ListUsersResponse,
   /** @param {!proto.account_service.ListUsersRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.account_service.ListUsersResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -774,13 +774,13 @@ const methodInfo_Account_ListUsers = new grpc.web.AbstractClientBase.MethodInfo(
  */
 proto.account_service.AccountClient.prototype.listUsers =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/account_service.Account/ListUsers',
       request,
       metadata || {},
       methodInfo_Account_ListUsers,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -793,13 +793,13 @@ proto.account_service.AccountClient.prototype.listUsers =
  */
 proto.account_service.AccountPromiseClient.prototype.listUsers =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/account_service.Account/ListUsers',
       request,
       metadata || {},
-      methodInfo_Account_ListUsers)
-    }
+      methodInfo_Account_ListUsers);
+};
 
 
-module.exports = proto.account_service
+module.exports = proto.account_service;
 

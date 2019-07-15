@@ -17,7 +17,7 @@ const actions = {
           commit('loginSuccess', token)
           this.loggedIn = true
           getByToken(token)
-          router.go('/')
+          router.push('/')
         }
       )
       .catch(
@@ -35,7 +35,7 @@ const actions = {
           commit('logoutFailure', error)
         }
       )
-    router.go('/login')
+    router.push('/login')
     commit('logout')
   },
 
@@ -63,6 +63,8 @@ const actions = {
 
   update({ dispatch, commit }, user) {
     commit('updateRequest', user)
+    console.log(user.photo)
+
     userService.methods.update(user)
       .then(
         rsp => {

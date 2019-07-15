@@ -8,11 +8,11 @@
 
 
 
-const grpc = {}
-grpc.web = require('grpc-web')
+const grpc = {};
+grpc.web = require('grpc-web');
 
-const proto = {}
-proto.file_service = require('./file_service_pb.js')
+const proto = {};
+proto.file_service = require('./file_service_pb.js');
 
 /**
  * @param {string} hostname
@@ -24,30 +24,30 @@ proto.file_service = require('./file_service_pb.js')
  */
 proto.file_service.FileManagementClient =
     function(hostname, credentials, options) {
-      if (!options) options = {}
-      options['format'] = 'text'
+  if (!options) options = {};
+  options['format'] = 'text';
 
-      /**
+  /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.client_ = new grpc.web.GrpcWebClientBase(options)
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-      /**
+  /**
    * @private @const {string} The hostname
    */
-      this.hostname_ = hostname
+  this.hostname_ = hostname;
 
-      /**
+  /**
    * @private @const {?Object} The credentials to be used to connect
    *    to the server
    */
-      this.credentials_ = credentials
+  this.credentials_ = credentials;
 
-      /**
+  /**
    * @private @const {?Object} Options for the client
    */
-      this.options_ = options
-    }
+  this.options_ = options;
+};
 
 
 /**
@@ -60,30 +60,30 @@ proto.file_service.FileManagementClient =
  */
 proto.file_service.FileManagementPromiseClient =
     function(hostname, credentials, options) {
-      if (!options) options = {}
-      options['format'] = 'text'
+  if (!options) options = {};
+  options['format'] = 'text';
 
-      /**
+  /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
    */
-      this.client_ = new grpc.web.GrpcWebClientBase(options)
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-      /**
+  /**
    * @private @const {string} The hostname
    */
-      this.hostname_ = hostname
+  this.hostname_ = hostname;
 
-      /**
+  /**
    * @private @const {?Object} The credentials to be used to connect
    *    to the server
    */
-      this.credentials_ = credentials
+  this.credentials_ = credentials;
 
-      /**
+  /**
    * @private @const {?Object} Options for the client
    */
-      this.options_ = options
-    }
+  this.options_ = options;
+};
 
 
 /**
@@ -96,10 +96,10 @@ const methodInfo_FileManagement_CreateDrive = new grpc.web.AbstractClientBase.Me
   proto.file_service.CreateDriveResponse,
   /** @param {!proto.file_service.CreateDriveRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.CreateDriveResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -114,13 +114,13 @@ const methodInfo_FileManagement_CreateDrive = new grpc.web.AbstractClientBase.Me
  */
 proto.file_service.FileManagementClient.prototype.createDrive =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateDrive',
       request,
       metadata || {},
       methodInfo_FileManagement_CreateDrive,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -133,12 +133,12 @@ proto.file_service.FileManagementClient.prototype.createDrive =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createDrive =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/CreateDrive',
       request,
       metadata || {},
-      methodInfo_FileManagement_CreateDrive)
-    }
+      methodInfo_FileManagement_CreateDrive);
+};
 
 
 /**
@@ -151,10 +151,10 @@ const methodInfo_FileManagement_CreateNewFile = new grpc.web.AbstractClientBase.
   proto.file_service.CreateNewFileResponse,
   /** @param {!proto.file_service.CreateNewFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.CreateNewFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -169,13 +169,13 @@ const methodInfo_FileManagement_CreateNewFile = new grpc.web.AbstractClientBase.
  */
 proto.file_service.FileManagementClient.prototype.createNewFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFile',
       request,
       metadata || {},
       methodInfo_FileManagement_CreateNewFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -188,12 +188,12 @@ proto.file_service.FileManagementClient.prototype.createNewFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_CreateNewFile)
-    }
+      methodInfo_FileManagement_CreateNewFile);
+};
 
 
 /**
@@ -206,10 +206,10 @@ const methodInfo_FileManagement_CreateNewFolder = new grpc.web.AbstractClientBas
   proto.file_service.CreateNewFolderResponse,
   /** @param {!proto.file_service.CreateNewFolderRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.CreateNewFolderResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -224,13 +224,13 @@ const methodInfo_FileManagement_CreateNewFolder = new grpc.web.AbstractClientBas
  */
 proto.file_service.FileManagementClient.prototype.createNewFolder =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFolder',
       request,
       metadata || {},
       methodInfo_FileManagement_CreateNewFolder,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -243,12 +243,12 @@ proto.file_service.FileManagementClient.prototype.createNewFolder =
  */
 proto.file_service.FileManagementPromiseClient.prototype.createNewFolder =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/CreateNewFolder',
       request,
       metadata || {},
-      methodInfo_FileManagement_CreateNewFolder)
-    }
+      methodInfo_FileManagement_CreateNewFolder);
+};
 
 
 /**
@@ -261,10 +261,10 @@ const methodInfo_FileManagement_GetFolderContent = new grpc.web.AbstractClientBa
   proto.file_service.GetFolderContentResponse,
   /** @param {!proto.file_service.GetFolderContentRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.GetFolderContentResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -279,13 +279,13 @@ const methodInfo_FileManagement_GetFolderContent = new grpc.web.AbstractClientBa
  */
 proto.file_service.FileManagementClient.prototype.getFolderContent =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFolderContent',
       request,
       metadata || {},
       methodInfo_FileManagement_GetFolderContent,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -298,12 +298,12 @@ proto.file_service.FileManagementClient.prototype.getFolderContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFolderContent =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/GetFolderContent',
       request,
       metadata || {},
-      methodInfo_FileManagement_GetFolderContent)
-    }
+      methodInfo_FileManagement_GetFolderContent);
+};
 
 
 /**
@@ -316,10 +316,10 @@ const methodInfo_FileManagement_GetFileContent = new grpc.web.AbstractClientBase
   proto.file_service.GetFileContentResponse,
   /** @param {!proto.file_service.GetFileContentRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.GetFileContentResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -334,13 +334,13 @@ const methodInfo_FileManagement_GetFileContent = new grpc.web.AbstractClientBase
  */
 proto.file_service.FileManagementClient.prototype.getFileContent =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileContent',
       request,
       metadata || {},
       methodInfo_FileManagement_GetFileContent,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -353,12 +353,12 @@ proto.file_service.FileManagementClient.prototype.getFileContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileContent =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/GetFileContent',
       request,
       metadata || {},
-      methodInfo_FileManagement_GetFileContent)
-    }
+      methodInfo_FileManagement_GetFileContent);
+};
 
 
 /**
@@ -371,10 +371,10 @@ const methodInfo_FileManagement_GetFileTree = new grpc.web.AbstractClientBase.Me
   proto.file_service.GetFileTreeResponse,
   /** @param {!proto.file_service.GetFileTreeRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.GetFileTreeResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -389,13 +389,13 @@ const methodInfo_FileManagement_GetFileTree = new grpc.web.AbstractClientBase.Me
  */
 proto.file_service.FileManagementClient.prototype.getFileTree =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetFileTree',
       request,
       metadata || {},
       methodInfo_FileManagement_GetFileTree,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -408,12 +408,12 @@ proto.file_service.FileManagementClient.prototype.getFileTree =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getFileTree =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/GetFileTree',
       request,
       metadata || {},
-      methodInfo_FileManagement_GetFileTree)
-    }
+      methodInfo_FileManagement_GetFileTree);
+};
 
 
 /**
@@ -426,10 +426,10 @@ const methodInfo_FileManagement_UpdateFileContent = new grpc.web.AbstractClientB
   proto.file_service.UpdateFileContentResponse,
   /** @param {!proto.file_service.UpdateFileContentRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.UpdateFileContentResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -444,13 +444,13 @@ const methodInfo_FileManagement_UpdateFileContent = new grpc.web.AbstractClientB
  */
 proto.file_service.FileManagementClient.prototype.updateFileContent =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UpdateFileContent',
       request,
       metadata || {},
       methodInfo_FileManagement_UpdateFileContent,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -463,12 +463,12 @@ proto.file_service.FileManagementClient.prototype.updateFileContent =
  */
 proto.file_service.FileManagementPromiseClient.prototype.updateFileContent =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/UpdateFileContent',
       request,
       metadata || {},
-      methodInfo_FileManagement_UpdateFileContent)
-    }
+      methodInfo_FileManagement_UpdateFileContent);
+};
 
 
 /**
@@ -481,10 +481,10 @@ const methodInfo_FileManagement_DeleteFile = new grpc.web.AbstractClientBase.Met
   proto.file_service.DeleteFileResponse,
   /** @param {!proto.file_service.DeleteFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.DeleteFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -499,13 +499,13 @@ const methodInfo_FileManagement_DeleteFile = new grpc.web.AbstractClientBase.Met
  */
 proto.file_service.FileManagementClient.prototype.deleteFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DeleteFile',
       request,
       metadata || {},
       methodInfo_FileManagement_DeleteFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -518,12 +518,12 @@ proto.file_service.FileManagementClient.prototype.deleteFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.deleteFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/DeleteFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_DeleteFile)
-    }
+      methodInfo_FileManagement_DeleteFile);
+};
 
 
 /**
@@ -536,10 +536,10 @@ const methodInfo_FileManagement_RenameFile = new grpc.web.AbstractClientBase.Met
   proto.file_service.RenameFileResponse,
   /** @param {!proto.file_service.RenameFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.RenameFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -554,13 +554,13 @@ const methodInfo_FileManagement_RenameFile = new grpc.web.AbstractClientBase.Met
  */
 proto.file_service.FileManagementClient.prototype.renameFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/RenameFile',
       request,
       metadata || {},
       methodInfo_FileManagement_RenameFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -573,12 +573,12 @@ proto.file_service.FileManagementClient.prototype.renameFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.renameFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/RenameFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_RenameFile)
-    }
+      methodInfo_FileManagement_RenameFile);
+};
 
 
 /**
@@ -591,10 +591,10 @@ const methodInfo_FileManagement_MoveFile = new grpc.web.AbstractClientBase.Metho
   proto.file_service.MoveFileResponse,
   /** @param {!proto.file_service.MoveFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.MoveFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -609,13 +609,13 @@ const methodInfo_FileManagement_MoveFile = new grpc.web.AbstractClientBase.Metho
  */
 proto.file_service.FileManagementClient.prototype.moveFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/MoveFile',
       request,
       metadata || {},
       methodInfo_FileManagement_MoveFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -628,12 +628,12 @@ proto.file_service.FileManagementClient.prototype.moveFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.moveFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/MoveFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_MoveFile)
-    }
+      methodInfo_FileManagement_MoveFile);
+};
 
 
 /**
@@ -646,10 +646,10 @@ const methodInfo_FileManagement_UploadFile = new grpc.web.AbstractClientBase.Met
   proto.file_service.UploadFileResponse,
   /** @param {!proto.file_service.UploadFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.UploadFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -664,13 +664,13 @@ const methodInfo_FileManagement_UploadFile = new grpc.web.AbstractClientBase.Met
  */
 proto.file_service.FileManagementClient.prototype.uploadFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/UploadFile',
       request,
       metadata || {},
       methodInfo_FileManagement_UploadFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -683,12 +683,12 @@ proto.file_service.FileManagementClient.prototype.uploadFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.uploadFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/UploadFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_UploadFile)
-    }
+      methodInfo_FileManagement_UploadFile);
+};
 
 
 /**
@@ -701,10 +701,10 @@ const methodInfo_FileManagement_ShareFile = new grpc.web.AbstractClientBase.Meth
   proto.file_service.ShareFileResponse,
   /** @param {!proto.file_service.ShareFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.ShareFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -719,13 +719,13 @@ const methodInfo_FileManagement_ShareFile = new grpc.web.AbstractClientBase.Meth
  */
 proto.file_service.FileManagementClient.prototype.shareFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ShareFile',
       request,
       metadata || {},
       methodInfo_FileManagement_ShareFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -738,12 +738,12 @@ proto.file_service.FileManagementClient.prototype.shareFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.shareFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/ShareFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_ShareFile)
-    }
+      methodInfo_FileManagement_ShareFile);
+};
 
 
 /**
@@ -756,10 +756,10 @@ const methodInfo_FileManagement_DownloadFile = new grpc.web.AbstractClientBase.M
   proto.file_service.DownloadFileResponse,
   /** @param {!proto.file_service.DownloadFileRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.DownloadFileResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -774,13 +774,13 @@ const methodInfo_FileManagement_DownloadFile = new grpc.web.AbstractClientBase.M
  */
 proto.file_service.FileManagementClient.prototype.downloadFile =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/DownloadFile',
       request,
       metadata || {},
       methodInfo_FileManagement_DownloadFile,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -793,12 +793,12 @@ proto.file_service.FileManagementClient.prototype.downloadFile =
  */
 proto.file_service.FileManagementPromiseClient.prototype.downloadFile =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/DownloadFile',
       request,
       metadata || {},
-      methodInfo_FileManagement_DownloadFile)
-    }
+      methodInfo_FileManagement_DownloadFile);
+};
 
 
 /**
@@ -811,10 +811,10 @@ const methodInfo_FileManagement_ComputeSize = new grpc.web.AbstractClientBase.Me
   proto.file_service.ComputeSizeResponse,
   /** @param {!proto.file_service.ComputeSizeRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.ComputeSizeResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -829,13 +829,13 @@ const methodInfo_FileManagement_ComputeSize = new grpc.web.AbstractClientBase.Me
  */
 proto.file_service.FileManagementClient.prototype.computeSize =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/ComputeSize',
       request,
       metadata || {},
       methodInfo_FileManagement_ComputeSize,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -848,12 +848,12 @@ proto.file_service.FileManagementClient.prototype.computeSize =
  */
 proto.file_service.FileManagementPromiseClient.prototype.computeSize =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/ComputeSize',
       request,
       metadata || {},
-      methodInfo_FileManagement_ComputeSize)
-    }
+      methodInfo_FileManagement_ComputeSize);
+};
 
 
 /**
@@ -866,10 +866,10 @@ const methodInfo_FileManagement_GetMyDriveId = new grpc.web.AbstractClientBase.M
   proto.file_service.GetMyDriveIdResponse,
   /** @param {!proto.file_service.GetMyDriveIdRequest} request */
   function(request) {
-    return request.serializeBinary()
+    return request.serializeBinary();
   },
   proto.file_service.GetMyDriveIdResponse.deserializeBinary
-)
+);
 
 
 /**
@@ -884,13 +884,13 @@ const methodInfo_FileManagement_GetMyDriveId = new grpc.web.AbstractClientBase.M
  */
 proto.file_service.FileManagementClient.prototype.getMyDriveId =
     function(request, metadata, callback) {
-      return this.client_.rpcCall(this.hostname_ +
+  return this.client_.rpcCall(this.hostname_ +
       '/file_service.FileManagement/GetMyDriveId',
       request,
       metadata || {},
       methodInfo_FileManagement_GetMyDriveId,
-      callback)
-    }
+      callback);
+};
 
 
 /**
@@ -903,13 +903,13 @@ proto.file_service.FileManagementClient.prototype.getMyDriveId =
  */
 proto.file_service.FileManagementPromiseClient.prototype.getMyDriveId =
     function(request, metadata) {
-      return this.client_.unaryCall(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/file_service.FileManagement/GetMyDriveId',
       request,
       metadata || {},
-      methodInfo_FileManagement_GetMyDriveId)
-    }
+      methodInfo_FileManagement_GetMyDriveId);
+};
 
 
-module.exports = proto.file_service
+module.exports = proto.file_service;
 

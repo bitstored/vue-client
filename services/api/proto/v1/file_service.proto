@@ -37,182 +37,181 @@ service FileManagement {
 		// TODO add methods for shared files
 }
 message GetMyDriveIdRequest {
-    string user_id = 1;
+  string user_id = 1;
 }
 message GetMyDriveIdResponse {
-    string drive_id = 1;
+  string drive_id = 1;
 }
 message ComputeSizeRequest {
-    string user_id = 1;
+  string user_id = 1;
 }
 message ComputeSizeResponse {
-    int64 initial_size = 1;
-    int64 compressed_size = 2;
+  int64 initial_size = 1;
+  int64 compressed_size = 2;
 }
 enum Type {
-    OTHER = 0;
-    DOC = 1;
-    PDF = 2;
-    TXT = 3;
-    EXCEL = 4;
-    IMAGE = 5;
+  OTHER = 0;
+  DOC = 1;
+  PDF = 2;
+  TXT = 3;
+  EXCEL = 4;
+  IMAGE = 5;
 }
 message Folder {
-    string parent_identifier = 1;
-    string name = 2;
-    string identifier = 3;
-    string creation_date = 4;
+  string parent_identifier = 1;
+  string name = 2;
+  string identifier = 3;
+  string creation_date = 4;
 }
 message FSLevel {
-    Folder folder = 1;
-    repeated Folder folders = 2;
-    repeated File files = 3;
+  Folder folder = 1;
+  repeated Folder folders = 2;
+  repeated File files = 3;
 }
 message FSTree {
-    Folder folder = 1;
-    repeated FSLevel children = 2;
-    repeated File files = 3;
+  Folder folder = 1;
+  repeated FSLevel children = 2;
+  repeated File files = 3;
 }
 message File {
-    string parent_identifier = 1;
-    string name = 2;
-    string identifier = 3;
-    string creation_date = 4;
-    Type file_type = 6;
-    bool writable = 7;
-    bool private = 8; // should be watermarked
-    string content = 9;
-    int64 init_size = 10;
-    int64 compressed_size = 11;
+  string parent_identifier = 1;
+  string name = 2;
+  string identifier = 3;
+  string creation_date = 4;
+  Type file_type = 6;
+  bool writable = 7;
+  bool private = 8; // should be watermarked
+  string content = 9;
+  int64 init_size = 10;
+  int64 compressed_size = 11;
 }
 message CreateDriveRequest {
-    string user_id = 1;
+  string user_id = 1;
 }
 message CreateDriveResponse {
-    string response_code = 1;
-	string response_message = 2;
-	string drive_id = 3;
+  string response_code = 1;
+string response_message = 2;
+string drive_id = 3;
 }
 message UploadFileRequest {
   File file = 1;
   string user_id = 4;
-	string secret_phrase = 2;
-	string encoded_phrase = 3;
+  string secret_phrase = 2;
+  string encoded_phrase = 3;
 }
 message UploadFileResponse {
-    string response_code = 1;
-	string response_message = 2;
-	string file_id = 3;
-    bytes watermark_message = 4;
+string response_code = 1;
+string response_message = 2;
+string file_id = 3;
+string watermark_message = 4;
 }
 message CreateNewFileRequest {
-    File file = 1;
-    bytes secret_phrase = 2;
-    string user_id = 3;
+  File file = 1;
+  string secret_phrase = 2;
+  string user_id = 3;
 }
 message CreateNewFileResponse {
-    string response_code = 1;
-	string response_message = 2;
-	string file_id = 3;
+  string response_code = 1;
+string response_message = 2;
+string file_id = 3;
 }
 message CreateNewFolderRequest {
-    Folder folder = 1;
-    string user_id = 2;
+  Folder folder = 1;
+  string user_id = 2;
 }
 message CreateNewFolderResponse {
-    string response_code = 1;
-	string response_message = 2;
-	string folder_id = 3;
+  string response_code = 1;
+string response_message = 2;
+string folder_id = 3;
 }
 message DeleteFileRequest {
-    string identifier = 1;
-    string user_id = 2;
+  string identifier = 1;
+  string user_id = 2;
 }
 message DeleteFileResponse {
-    string response_code = 1;
-    string response_message = 2;
+  string response_code = 1;
+  string response_message = 2;
 }
 message RenameFileRequest {
-    string identifier = 1;
-    string name = 2;
-    string user_id = 3;
+  string identifier = 1;
+  string name = 2;
+  string user_id = 3;
 }
 message RenameFileResponse {
-    string response_code = 1;
-    string response_message = 2;
+  string response_code = 1;
+  string response_message = 2;
 }
 message MoveFileRequest {
-    string identifier = 1;
-    string destination = 2;
-    string source = 3;
-    string user_id = 4;
-    bool copy = 5;
+  string identifier = 1;
+  string destination = 2;
+  string source = 3;
+  string user_id = 4;
+  bool copy = 5;
 }
 message MoveFileResponse {
-    string response_code = 1;
-    string response_message = 2;
+  string response_code = 1;
+  string response_message = 2;
 }
 message GetFolderContentRequest {
-    string identifier = 1;
-    string user_id = 2;
+  string identifier = 1;
+  string user_id = 2;
 }
 message GetFolderContentResponse {
-    string response_code = 1;
-    string response_message = 2;
-    FSLevel content = 3;
+  string response_code = 1;
+  string response_message = 2;
+  FSLevel content = 3;
 }
 message GetFileContentRequest {
-    string identifier = 1;
-    string user_id = 2;
-    bytes secret_key = 3;
-    Type type = 4;
+  string identifier = 1;
+  string user_id = 2;
+  string secret_key = 3;
+  Type type = 4;
 }
 message GetFileContentResponse {
-    string response_code = 1;
-    string response_message = 2;
-    File file = 3;
+  string response_code = 1;
+  string response_message = 2;
+  File file = 3;
 }
 message GetFileTreeRequest {
-    string root_identifier = 1;
-    string user_id = 2;
+  string root_identifier = 1;
+  string user_id = 2;
 }
 message GetFileTreeResponse {
-    string response_code = 1;
-    string response_message = 2;
-    FSTree tree = 3;
+  string response_code = 1;
+  string response_message = 2;
+  FSTree tree = 3;
 }
 message UpdateFileContentRequest {
-    string identifier = 1;
-    bytes new_content = 2;
-    string user_id = 3;
-    Type file_type = 4;
-    bytes secret_key = 5;
+  string identifier = 1;
+  string new_content = 2;
+  string user_id = 3;
+  Type file_type = 4;
+  string secret_key = 5;
 }
 message UpdateFileContentResponse {
-    string response_code = 1;
-    string response_message = 2;
+  string response_code = 1;
+  string response_message = 2;
 }
 message ShareFileRequest {
-    string identifier = 1;
-    repeated string user_identifiers = 2;
+  string identifier = 1;
+  repeated string user_identifiers = 2;
 }
 message ShareFileResponse {
-    string response_code = 1;
-    string response_message = 2;
+  string response_code = 1;
+  string response_message = 2;
 }
 message DownloadFileRequest {
-    string identifier = 1;
-    string user_id = 2;
-    string source_id = 3;
-    bytes secret_phrase = 4;
-    bytes watermark_image = 5;
-    string watermark_message = 6;
-    bytes stegano_message =7;
+  string identifier = 1;
+  string user_id = 2;
+  string source_id = 3;
+  string secret_phrase = 4;
+  string watermark_image = 5;
+  string watermark_message = 6;
+  string stegano_message =7;
 }
 message DownloadFileResponse {
-    string response_code = 1;
-    string response_message = 2;
-    File file = 3;
-    bytes content = 4;
+  string response_code = 1;
+  string response_message = 2;
+  File file = 3;
+  string content = 4;
 }
-

@@ -120,7 +120,7 @@
                 class="empty-button"
                 :to="{name: 'view_file', params: {id: file.identifier }}">
                 <img
-                  :src="get_icon(file.type)"
+                  :src="get_icon(file.fileType)"
                   class="img_resize"
                   style="height:80px;width:80px;">
               </router-link>
@@ -247,13 +247,13 @@ export default {
       console.log('folder')
     },
     get_icon(type) {
-      if (type == 1) {
+      if (type == 5) {
         return image_icon
       }
-      if (type == 2) {
+      if (type == 3 || type == 1) {
         return file_icon
       }
-      if (type == 3) {
+      if (type == 2) {
         return pdf_icon
       }
       return other_icon

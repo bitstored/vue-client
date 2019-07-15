@@ -123,6 +123,8 @@ export default {
               this.photo = this.no_photo
             } else {
               this.photo = decodeURIComponent(escape(atob( user.getPhoto())))
+                         localStorage.setItem('p', this.photo)
+
             }
           })
       this.computeSize().then(
