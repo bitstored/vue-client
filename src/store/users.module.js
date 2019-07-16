@@ -37,7 +37,6 @@ const actions = {
   },
 
   getByToken({ commit}, token) {
-    commit('getByTokenRequest', token)
     return new Promise(function (resolve, reject) {
       userService.methods.getByToken(token)
         .then(
